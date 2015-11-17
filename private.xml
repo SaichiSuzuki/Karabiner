@@ -51,12 +51,12 @@
      </autogen>
    </item>
 
-    <!--Ctrl+'でカタカナ-->
+    <!--Ctrl+Fでカタカナ-->
    <item>
-      <name>Ctrl-L+QUOTE also works as F7(katakana)</name>
+      <name>Ctrl-L+F also works as F7(katakana)</name>
       <identifier>private.ctrl_quote_to_f7</identifier>
       <autogen>__KeyToKey__
-       KeyCode::QUOTE, ModifierFlag::CONTROL_L,| ModifierFlag::NONE,
+       KeyCode::F, ModifierFlag::CONTROL_L,| ModifierFlag::NONE,
        KeyCode::F7
      </autogen>
    </item>
@@ -110,9 +110,9 @@
   <autogen>--KeyToKey-- KeyCode::J, ModifierFlag::CONTROL_L |ModifierFlag::COMMAND_L|ModifierFlag::NONE, KeyCode::VK_MOUSEKEY_DOWN</autogen>
   <autogen>--KeyToKey-- KeyCode::K, ModifierFlag::CONTROL_L |ModifierFlag::COMMAND_L|ModifierFlag::NONE, KeyCode::VK_MOUSEKEY_UP</autogen>
   <autogen>--KeyToKey-- KeyCode::L, ModifierFlag::CONTROL_L |ModifierFlag::COMMAND_L|ModifierFlag::NONE, KeyCode::VK_MOUSEKEY_RIGHT</autogen>
-  <autogen>--KeyToPointingButton-- KeyCode::N, ModifierFlag::CONTROL_L |ModifierFlag::NONE, PointingButton::LEFT</autogen>
+  <autogen>--KeyToPointingButton-- KeyCode::N, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L |ModifierFlag::NONE, PointingButton::LEFT</autogen>
   <autogen>--KeyToPointingButton-- KeyCode::BRACKET_RIGHT, ModifierFlag::CONTROL_L |ModifierFlag::NONE, PointingButton::MIDDLE</autogen>
-  <autogen>--KeyToPointingButton-- KeyCode::P, ModifierFlag::CONTROL_L |ModifierFlag::NONE, PointingButton::RIGHT</autogen>
+  <autogen>--KeyToPointingButton-- KeyCode::P, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L |ModifierFlag::NONE, PointingButton::RIGHT</autogen>
   <autogen>--KeyToKey-- KeyCode::M, ModifierFlag::CONTROL_L |ModifierFlag::NONE, KeyCode::VK_MOUSEKEY_SCROLL_DOWN</autogen>
   <autogen>--KeyToKey-- KeyCode::COMMA, ModifierFlag::CONTROL_L |ModifierFlag::NONE, KeyCode::VK_MOUSEKEY_SCROLL_UP</autogen>
 </item>

@@ -1,3 +1,2 @@
 # Karabiner -Config file-
-fff
-ooo
+~/Library/Application Support/Karabiner
