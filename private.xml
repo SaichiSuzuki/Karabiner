@@ -19,8 +19,8 @@
     <name>with EISUU (escape, Ctrl_L + Space, Ctrl_L + bracket+left)</name>
     <identifier>private.vim_alfred_with_eisuu</identifier>
     <autogen>--KeyToKey-- KeyCode::ESCAPE, KeyCode::ESCAPE, KeyCode::JIS_EISUU</autogen>
-    <autogen>--KeyToKey-- KeyCode::SPACE, ModifierFlag::CONTROL_L,KeyCode::SPACE, ModifierFlag::CONTROL_L, KeyCode::JIS_EISUU</autogen>
-    <autogen>--KeyToKey-- KeyCode::BRACKET_LEFT, ModifierFlag::CONTROL_L,KeyCode::BRACKET_LEFT, ModifierFlag::CONTROL_L, KeyCode::JIS_EISUU</autogen>
+    <autogen>--KeyToKey-- KeyCode::SPACE, ModifierFlag::CONTROL_L, KeyCode::SPACE, ModifierFlag::CONTROL_L, KeyCode::JIS_EISUU</autogen>
+    <autogen>--KeyToKey-- KeyCode::BRACKET_LEFT, ModifierFlag::CONTROL_L, KeyCode::BRACKET_LEFT, ModifierFlag::CONTROL_L, KeyCode::JIS_EISUU</autogen>
     <autogen>--KeyToKey-- KeyCode::JIS_BRACKET_LEFT, VK_CONTROL, KeyCode::JIS_BRACKET_LEFT, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
   </item>
 
@@ -31,7 +31,7 @@
     <identifier>remap.custom_vi_mode</identifier>
     <autogen>
       __KeyOverlaidModifier__
-      KeyCode::F, ModifierFlag::NONE,
+      KeyCode::F
       @begin
       KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_custom_vi_mode,
       @end
@@ -71,7 +71,6 @@
   <autogen>--KeyToKey-- KeyCode::M, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L  |ModifierFlag::NONE, KeyCode::VK_MOUSEKEY_SCROLL_DOWN</autogen>
   <autogen>--KeyToKey-- KeyCode::COMMA, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L  |ModifierFlag::NONE, KeyCode::VK_MOUSEKEY_SCROLL_UP</autogen>
 </item>
-
    <item>
     <name>Stickies Ordely mode</name>
     <identifier>stickies_mode</identifier>
@@ -87,18 +86,26 @@
     </autogen>
   </item>
   <item hidden="true">
-    <identifier vk_config="true">notsave_stickies_mode</identifier>
-    <autogen>
-      __BlockUntilKeyUp__ KeyCode::S
-    </autogen>
-      <autogen>__KeyToKey__
-              KeyCode::F4,
-              KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN,
-              KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN,
-              KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN, KeyCode::CURSOR_RIGHT, 
-              KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN, KeyCode::CURSOR_RIGHT, 
-              KeyCode::RETURN              
-     </autogen>
+          <identifier vk_config="true">notsave_stickies_mode</identifier>
+          <autogen>
+                  __BlockUntilKeyUp__ KeyCode::S
+          </autogen>
+          <autogen>__KeyToKey__
+                  KeyCode::F4,
+                  KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN,
+                  KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN,
+                  KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN, KeyCode::CURSOR_RIGHT, 
+                  KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN, KeyCode::CURSOR_RIGHT, 
+                  KeyCode::RETURN              
+          </autogen>
+          <autogen>__KeyToKey__ KeyCode::H, KeyCode::CURSOR_LEFT, KeyCode::CURSOR_LEFT, KeyCode::CURSOR_LEFT,
+                  KeyCode::CURSOR_LEFT, KeyCode::CURSOR_LEFT</autogen>
+          <autogen>__KeyToKey__ KeyCode::J, KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN,
+                  KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN</autogen>
+          <autogen>__KeyToKey__ KeyCode::K, KeyCode::CURSOR_UP, KeyCode::CURSOR_UP, KeyCode::CURSOR_UP,
+                  KeyCode::CURSOR_UP, KeyCode::CURSOR_UP</autogen>
+          <autogen>__KeyToKey__ KeyCode::L, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT,
+                  KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT</autogen>
   </item>
 
 </list>
