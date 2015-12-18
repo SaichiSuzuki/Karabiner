@@ -51,7 +51,6 @@
     <autogen>__KeyToKey__ KeyCode::L, KeyCode::CURSOR_RIGHT</autogen>
     <autogen>__KeyToKey__ KeyCode::O, KeyCode::DELETE</autogen>
     <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::RETURN</autogen>
-    <autogen>__KeyToKey__ KeyCode::M, KeyCode::F10</autogen>
   </item>
 
  
@@ -98,6 +97,7 @@
                   KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN, KeyCode::CURSOR_RIGHT, 
                   KeyCode::RETURN              
           </autogen>
+          <!--
           <autogen>__KeyToKey__ KeyCode::H, KeyCode::CURSOR_LEFT, KeyCode::CURSOR_LEFT, KeyCode::CURSOR_LEFT,
                   KeyCode::CURSOR_LEFT, KeyCode::CURSOR_LEFT</autogen>
           <autogen>__KeyToKey__ KeyCode::J, KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN,
@@ -106,6 +106,12 @@
                   KeyCode::CURSOR_UP, KeyCode::CURSOR_UP</autogen>
           <autogen>__KeyToKey__ KeyCode::L, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT,
                   KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT</autogen>
+          -->
+          <autogen>__KeyToKey__ KeyCode::H, KeyCode::VK_MOUSEKEY_LEFT</autogen>
+          <autogen>__KeyToKey__ KeyCode::J, KeyCode::VK_MOUSEKEY_DOWN</autogen>
+          <autogen>__KeyToKey__ KeyCode::K, KeyCode::VK_MOUSEKEY_UP</autogen>
+          <autogen>__KeyToKey__ KeyCode::L, KeyCode::VK_MOUSEKEY_RIGHT</autogen>
+          <autogen>__KeyToKey__ KeyCode::N, KeyCode::F6, ModifierFlag::OPTION_L</autogen>
   </item>
 
 </list>
