@@ -1,278 +1,160 @@
 <?xml version="1.0"?>
 <root>
-  <appdef>
+    <appdef>
 
+<!-- アプリケーション名定義 -->
     <appname>ECLIPSE_MARS</appname>
     <equal>org.eclipse.platform.ide</equal>
-  </appdef>
-  <appdef>
+</appdef>
+<appdef>
     <appname>iTERM2</appname>
     <equal>com.googlecode.iterm2</equal>
-  </appdef>
-  <appdef>
+</appdef>
+<appdef>
     <appname>MACVIM</appname>
     <equal>org.vim.MacVim</equal>
-  </appdef>
-  <list>
-    
+</appdef>
+<list>
+
+<!-- Escapeでusに変更 -->
    <item>
-    <name>with EISUU (escape, Ctrl_L + Space, Ctrl_L + bracket+left)</name>
-    <identifier>private.vim_alfred_with_eisuu</identifier>
-    <autogen>--KeyToKey-- KeyCode::ESCAPE, KeyCode::ESCAPE, KeyCode::JIS_EISUU</autogen>
-    <autogen>--KeyToKey-- KeyCode::SPACE, ModifierFlag::CONTROL_L, KeyCode::SPACE, ModifierFlag::CONTROL_L, KeyCode::JIS_EISUU</autogen>
-    <autogen>--KeyToKey-- KeyCode::BRACKET_LEFT, ModifierFlag::CONTROL_L, KeyCode::BRACKET_LEFT, ModifierFlag::CONTROL_L, KeyCode::JIS_EISUU</autogen>
-    <autogen>--KeyToKey-- KeyCode::JIS_BRACKET_LEFT, VK_CONTROL, KeyCode::JIS_BRACKET_LEFT, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
+       <name>with EISUU (escape, Ctrl_L + Space, Ctrl_L + bracket+left)</name>
+       <identifier>private.vim_alfred_with_eisuu</identifier>
+       <autogen>--KeyToKey-- KeyCode::ESCAPE, KeyCode::ESCAPE, KeyCode::JIS_EISUU</autogen>
+       <autogen>--KeyToKey-- KeyCode::SPACE, ModifierFlag::CONTROL_L, KeyCode::SPACE, ModifierFlag::CONTROL_L, KeyCode::JIS_EISUU</autogen>
+       <autogen>--KeyToKey-- KeyCode::BRACKET_LEFT, ModifierFlag::CONTROL_L, KeyCode::BRACKET_LEFT, ModifierFlag::CONTROL_L, KeyCode::JIS_EISUU</autogen>
+       <autogen>--KeyToKey-- KeyCode::JIS_BRACKET_LEFT, VK_CONTROL, KeyCode::JIS_BRACKET_LEFT, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
+   </item>
+
+<!-- スティッキーズ整理 -->
+  <item>
+      <name> Stickeys clean </name>
+      <identifier>private.stickeys</identifier>
+      <autogen>--KeyToKey-- KeyCode::F4, ModifierFlag::COMMAND_L | ModifierFlag::NONE, 
+          KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN,
+          KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN,
+          KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN, KeyCode::CURSOR_RIGHT, 
+          KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN, KeyCode::CURSOR_RIGHT, 
+          KeyCode::RETURN              
+      </autogen>
   </item>
 
-
-
+<!-- Fキーで矢印、DELETE、RETURNモード  -->
    <item>
-    <name>Custom Vi mode (F+)</name>
-    <identifier>remap.custom_vi_mode</identifier>
-    <autogen>
-      __KeyOverlaidModifier__
-      KeyCode::F
-      @begin
-      KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_custom_vi_mode,
-      @end
-      @begin
-      KeyCode::F
-      @end
-    </autogen>
-  </item>
-  <item hidden="true">
-    <identifier vk_config="true">notsave_custom_vi_mode</identifier>
-    <autogen>
-      __BlockUntilKeyUp__ KeyCode::F
-    </autogen>
-    <autogen>__KeyToKey__ KeyCode::H, KeyCode::CURSOR_LEFT</autogen>
-    <autogen>__KeyToKey__ KeyCode::J, KeyCode::CURSOR_DOWN</autogen>
-    <autogen>__KeyToKey__ KeyCode::K, KeyCode::CURSOR_UP</autogen>
-    <autogen>__KeyToKey__ KeyCode::L, KeyCode::CURSOR_RIGHT</autogen>
-    <autogen>__KeyToKey__ KeyCode::O, KeyCode::DELETE</autogen>
-    <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::RETURN</autogen>
-  </item>
+       <name>Custom Vi mode (F+)</name>
+       <identifier>remap.custom_vi_mode</identifier>
+       <autogen>
+           __KeyOverlaidModifier__
+           KeyCode::F
+           @begin
+           KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_custom_vi_mode,
+           @end
+           @begin
+           KeyCode::F
+           @end
+       </autogen>
+   </item>
+   <item hidden="true">
+       <identifier vk_config="true">notsave_custom_vi_mode</identifier>
+       <autogen>
+           __BlockUntilKeyUp__ KeyCode::F
+       </autogen>
+       <autogen>__KeyToKey__ KeyCode::H, KeyCode::CURSOR_LEFT</autogen>
+       <autogen>__KeyToKey__ KeyCode::J, KeyCode::CURSOR_DOWN</autogen>
+       <autogen>__KeyToKey__ KeyCode::K, KeyCode::CURSOR_UP</autogen>
+       <autogen>__KeyToKey__ KeyCode::L, KeyCode::CURSOR_RIGHT</autogen>
+       <autogen>__KeyToKey__ KeyCode::O, KeyCode::DELETE</autogen>
+       <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::RETURN</autogen>
+   </item>
 
- 
-<item>
-  <name>Mouse Keys (CONTROL_L, COMMAND_L)</name>
-  <appendix>CONTROL_L+Y/U/I/O to Left/Down/Up/Right</appendix>
-  <appendix>CONTROL_L+N/]/P to left/middle/right click</appendix>
-  <appendix>CONTROL_L+M/. to mouse wheel down/up</appendix>
-  <identifier>private.my_mousekeys_arrow_2</identifier>
-  <autogen>--KeyToKey-- KeyCode::H, ModifierFlag::CONTROL_L |ModifierFlag::COMMAND_L |ModifierFlag::NONE, KeyCode::VK_MOUSEKEY_LEFT</autogen>
-  <autogen>--KeyToKey-- KeyCode::J, ModifierFlag::CONTROL_L |ModifierFlag::COMMAND_L|ModifierFlag::NONE, KeyCode::VK_MOUSEKEY_DOWN</autogen>
-  <autogen>--KeyToKey-- KeyCode::K, ModifierFlag::CONTROL_L |ModifierFlag::COMMAND_L|ModifierFlag::NONE, KeyCode::VK_MOUSEKEY_UP</autogen>
-  <autogen>--KeyToKey-- KeyCode::L, ModifierFlag::CONTROL_L |ModifierFlag::COMMAND_L|ModifierFlag::NONE, KeyCode::VK_MOUSEKEY_RIGHT</autogen>
-  <autogen>--KeyToPointingButton-- KeyCode::N, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L |ModifierFlag::NONE, PointingButton::LEFT</autogen>
-  <autogen>--KeyToPointingButton-- KeyCode::BRACKET_RIGHT, ModifierFlag::CONTROL_L |ModifierFlag::NONE, PointingButton::MIDDLE</autogen>
-  <autogen>--KeyToPointingButton-- KeyCode::P, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L |ModifierFlag::NONE, PointingButton::RIGHT</autogen>
-  <autogen>--KeyToKey-- KeyCode::M, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L  |ModifierFlag::NONE, KeyCode::VK_MOUSEKEY_SCROLL_DOWN</autogen>
-  <autogen>--KeyToKey-- KeyCode::COMMA, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L  |ModifierFlag::NONE, KeyCode::VK_MOUSEKEY_SCROLL_UP</autogen>
-</item>
+<!-- Dキーでダッシュモード(Fキーの5倍) -->
+<!-- <でurl貼り付けに便利なDELETE機能もある -->
    <item>
-    <name>Stickies Ordely mode</name>
-    <identifier>stickies_mode</identifier>
-    <autogen>
-      __KeyOverlaidModifier__
-      KeyCode::S, ModifierFlag::NONE,
-      @begin
-      KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_stickies_mode
-      @end
-      @begin
-      KeyCode::S
-      @end
-    </autogen>
-  </item>
-  <item hidden="true">
-          <identifier vk_config="true">notsave_stickies_mode</identifier>
-          <autogen>
-                  __BlockUntilKeyUp__ KeyCode::S
-          </autogen>
-          <autogen>__KeyToKey__
-                  KeyCode::F4,
-                  KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN,
-                  KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN,
-                  KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN, KeyCode::CURSOR_RIGHT, 
-                  KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN, KeyCode::CURSOR_RIGHT, 
-                  KeyCode::RETURN              
-          </autogen>
-          <!--
-          <autogen>__KeyToKey__ KeyCode::H, KeyCode::CURSOR_LEFT, KeyCode::CURSOR_LEFT, KeyCode::CURSOR_LEFT,
-                  KeyCode::CURSOR_LEFT, KeyCode::CURSOR_LEFT</autogen>
-          <autogen>__KeyToKey__ KeyCode::J, KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN,
-                  KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN</autogen>
-          <autogen>__KeyToKey__ KeyCode::K, KeyCode::CURSOR_UP, KeyCode::CURSOR_UP, KeyCode::CURSOR_UP,
-                  KeyCode::CURSOR_UP, KeyCode::CURSOR_UP</autogen>
-          <autogen>__KeyToKey__ KeyCode::L, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT,
-                  KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT</autogen>
-          -->
-          <autogen>__KeyToKey__ KeyCode::H, KeyCode::VK_MOUSEKEY_LEFT</autogen>
-          <autogen>__KeyToKey__ KeyCode::J, KeyCode::VK_MOUSEKEY_DOWN</autogen>
-          <autogen>__KeyToKey__ KeyCode::K, KeyCode::VK_MOUSEKEY_UP</autogen>
-          <autogen>__KeyToKey__ KeyCode::L, KeyCode::VK_MOUSEKEY_RIGHT</autogen>
-          <autogen>__KeyToKey__ KeyCode::N, KeyCode::F6, ModifierFlag::OPTION_L</autogen>
-  </item>
+       <name>Cursor dash mode (D+)</name>
+       <identifier>remap.cursor_dash_mode</identifier>
+       <autogen>
+           __KeyOverlaidModifier__
+           KeyCode::D
+           @begin
+           KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_cursor_dash_mode,
+           @end
+           @begin
+           KeyCode::D
+           @end
+       </autogen>
+   </item>
+   <item hidden="true">
+       <identifier vk_config="true">notsave_cursor_dash_mode</identifier>
+       <autogen>
+           __BlockUntilKeyUp__ KeyCode::D
+       </autogen>
+       <autogen>__KeyToKey__ KeyCode::H, KeyCode::CURSOR_LEFT, KeyCode::CURSOR_LEFT, KeyCode::CURSOR_LEFT,
+           KeyCode::CURSOR_LEFT, KeyCode::CURSOR_LEFT</autogen>
+       <autogen>__KeyToKey__ KeyCode::J, KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN,
+           KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN</autogen>
+       <autogen>__KeyToKey__ KeyCode::K, KeyCode::CURSOR_UP, KeyCode::CURSOR_UP, KeyCode::CURSOR_UP,
+           KeyCode::CURSOR_UP, KeyCode::CURSOR_UP</autogen>
+       <autogen>__KeyToKey__ KeyCode::L, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT,
+           KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT</autogen>
+       <autogen>__KeyToKey__ KeyCode::O, KeyCode::DELETE, KeyCode::DELETE, KeyCode::DELETE, KeyCode::DELETE</autogen>
+       <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::RETURN, KeyCode::RETURN, KeyCode::RETURN, KeyCode::RETURN</autogen>
+       <!-- <autogen>__KeyToKey__ KeyCode::COMMA, KeyCode::DELETE, ModifierFlag::CONTROL_L | KeyCode::A, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, KeyCode::DELETE</autogen> -->
+   </item>
+<!-- Sキーでマウス移動、クリック -->
+   <item>
+       <name> Mouse mode</name>
+       <identifier>mouse_mode</identifier>
+       <autogen>
+           __KeyOverlaidModifier__
+           KeyCode::S, ModifierFlag::NONE,
+           @begin
+           KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_mouse_mode
+           @end
+           @begin
+           KeyCode::S
+           @end
+       </autogen>
+   </item>
+   <item hidden="true">
+       <identifier vk_config="true">notsave_mouse_mode</identifier>
+       <autogen>
+           __BlockUntilKeyUp__ KeyCode::S
+       </autogen>
+       <autogen>__KeyToKey__ KeyCode::H, KeyCode::VK_MOUSEKEY_LEFT</autogen>
+       <autogen>__KeyToKey__ KeyCode::J, KeyCode::VK_MOUSEKEY_DOWN</autogen>
+       <autogen>__KeyToKey__ KeyCode::K, KeyCode::VK_MOUSEKEY_UP</autogen>
+       <autogen>__KeyToKey__ KeyCode::L, KeyCode::VK_MOUSEKEY_RIGHT</autogen>
+       <autogen>__KeyToKey__ KeyCode::N, PointingButton::LEFT</autogen>
+       <autogen>__KeyToKey__ KeyCode::M, PointingButton::RIGHT</autogen>
+   </item>
 
+<!-- Aキーでウィンドウ位置変更(BetterTouchToolと連携) -->
+   <item>
+       <name>Window mode(A+)</name>
+       <identifier>window_mode</identifier>
+       <autogen>
+           __KeyOverlaidModifier__
+           KeyCode::A, ModifierFlag::NONE,
+           @begin
+           KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_window_mode
+           @end
+           @begin
+           KeyCode::A
+           @end
+       </autogen>
+   </item>
+   <item hidden="true">
+       <identifier vk_config="true">notsave_window_mode</identifier>
+       <autogen>
+           __BlockUntilKeyUp__ KeyCode::A
+       </autogen>
+       <autogen>__KeyToKey__ KeyCode::G, KeyCode::F7, ModifierFlag::OPTION_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::H, KeyCode::F8, ModifierFlag::OPTION_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::J, KeyCode::F9, ModifierFlag::OPTION_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::K, KeyCode::F10, ModifierFlag::OPTION_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::L, KeyCode::F11, ModifierFlag::OPTION_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::F12, ModifierFlag::OPTION_L</autogen>
+   </item>
 </list>
+
 </root>
-
-<!--  
-   <item>
-      <name>Ctrl-L+O also works as DELETE</name>
-      <identifier>private.ctrl_p_to_delete</identifier>
-      <autogen>__KeyToKey__
-       KeyCode::O, ModifierFlag::CONTROL_L,| ModifierFlag::NONE,
-       KeyCode::DELETE
-     </autogen>
-   </item>
-   <item>
-      <name>Ctrl-L+SEMICOLON also works as RETURN</name>
-      <identifier>private.ctrl_semicolon_to_cursor_return</identifier>
-      <autogen>__KeyToKey__
-       KeyCode::SEMICOLON, ModifierFlag::CONTROL_L,| ModifierFlag::NONE,
-       KeyCode::RETURN
-     </autogen>
-   </item>
-    <item>
-      <name>Ctrl-L+F also works as F7(katakana)</name>
-      <identifier>private.ctrl_quote_to_f7</identifier>
-      <autogen>__KeyToKey__
-       KeyCode::F, ModifierFlag::CONTROL_L,| ModifierFlag::NONE,
-       KeyCode::F7
-     </autogen>
-   </item> 
-
- <item>
-  <name>VI mode with CONTROL_L</name>
-  <appendix>CONTROL_L+H/J/K/L to cursor Left/Down/Up/Right</appendix>
-  <identifier>private.my_cursor</identifier>
-  <autogen>--KeyToKey-- KeyCode::H, ModifierFlag::CONTROL_L|ModifierFlag::NONE, KeyCode::CURSOR_LEFT</autogen>
-  <autogen>--KeyToKey-- KeyCode::J, ModifierFlag::CONTROL_L|ModifierFlag::NONE, KeyCode::CURSOR_DOWN</autogen>
-  <autogen>--KeyToKey-- KeyCode::K, ModifierFlag::CONTROL_L|ModifierFlag::NONE, KeyCode::CURSOR_UP</autogen>
-  <autogen>--KeyToKey-- KeyCode::L, ModifierFlag::CONTROL_L|ModifierFlag::NONE, KeyCode::CURSOR_RIGHT</autogen>
-</item>
-   <item hidden="true">
-      <name>Ctrl-L+H also works as CURSOR_LEFT</name>
-      <identifier>private.ctrl_h_to_cursor_left</identifier>
-      <autogen>__KeyToKey__
-       KeyCode::H, ModifierFlag::CONTROL_L,
-       KeyCode::CURSOR_LEFT
-     </autogen>
-   </item>
-
-   <item hidden="true">
-      <name>Ctrl-L+J also works as CURSOR_DOWN</name>
-      <identifier>private.ctrl_j_to_cursor_down</identifier>
-      <autogen>__KeyToKey__
-       KeyCode::J, ModifierFlag::CONTROL_L,
-       KeyCode::CURSOR_DOWN
-     </autogen>
-   </item>
-
-   <item hidden="true">
-      <name>Ctrl-L+K also works as CURSOR_UP</name>
-      <identifier>private.ctrl_k_to_cursor_up</identifier>
-      <autogen>__KeyToKey__
-       KeyCode::K, ModifierFlag::CONTROL_L,
-       KeyCode::CURSOR_UP
-     </autogen>
-   </item>
-
-   <item hidden="true">
-      <name>Ctrl-L+L also works as CURSOR_RIGHT</name>
-      <identifier>private.ctrl_l_to_cursor_right</identifier>
-      <autogen>__KeyToKey__
-       KeyCode::L, ModifierFlag::CONTROL_L,
-       KeyCode::CURSOR_RIGHT
-     </autogen>
-   </item>
-
-   <item hidden="true">
-      <name>Ctrl-L+[ also works as Escape</name>
-      <identifier>private.ctrl_[_to_escape</identifier>
-      <autogen>__KeyToKey__
-       KeyCode::BRACKET_LEFT, ModifierFlag::CONTROL_L,
-       KeyCode::ESCAPE, KeyCode::JIS_EISUU
-     </autogen>
-   </item>
-    -->
-
-
-<!--Vim ctrl+shift
-    <item hidden="true">
-      <name>Ctrl-L+J also works as Escape</name>
-      <identifier>private.ctrl_j_to_escape</identifier>
-      <autogen>__KeyToKey__
-       KeyCode::J, ModifierFlag::CONTROL_L, ModifierFlag::NONE,
-       KeyCode::ESCAPE, KeyCode::JIS_EISUU
-     </autogen>
-   </item>
-   <item hidden="true">
-      <name>Ctrl-L+SHIFT-L+H also works as CURSOR_LEFT</name>
-      <identifier>private.ctrl_h_to_cursor_left</identifier>
-      <autogen>__KeyToKey__
-       KeyCode::H, ModifierFlag::CONTROL_L, ModifierFlag::SHIFT_L,
-       KeyCode::CURSOR_LEFT
-     </autogen>
-   </item>
-   <item hidden="true">
-      <name>Ctrl-L+SHIFT-L+J also works as CURSOR_DOWN</name>
-      <identifier>private.ctrl_j_to_cursor_down</identifier>
-      <autogen>__KeyToKey__
-       KeyCode::J, ModifierFlag::CONTROL_L, ModifierFlag::SHIFT_L,
-       KeyCode::CURSOR_DOWN
-     </autogen>
-   </item>
-   <item hidden="true">
-      <name>Ctrl-L+SHIFT-L+K also works as CURSOR_UP</name>
-      <identifier>private.ctrl_k_to_cursor_up</identifier>
-      <autogen>__KeyToKey__
-       KeyCode::K, ModifierFlag::CONTROL_L, ModifierFlag::SHIFT_L,
-       KeyCode::CURSOR_UP
-     </autogen>
-   </item>
-   <item hidden="true">
-      <name>Ctrl-L+SHIFT-L+L also works as CURSOR_RIGHT</name>
-      <identifier>private.ctrl_l_to_cursor_right</identifier>
-      <autogen>__KeyToKey__
-       KeyCode::L, ModifierFlag::CONTROL_L, ModifierFlag::SHIFT_L,
-       KeyCode::CURSOR_RIGHT
-     </autogen>
-   </item>
-   <item hidden="true">
-      <name>Ctrl-L+P also works as DELETE</name>
-      <identifier>private.ctrl_p_to_delete</identifier>
-      <autogen>__KeyToKey__
-       KeyCode::P, ModifierFlag::CONTROL_L,
-       KeyCode::DELETE
-     </autogen>
-   </item>
-   <item hidden="true">
-      <name>Ctrl-L+SEMICOLON also works as RETURN</name>
-      <identifier>private.ctrl_semicolon_to_cursor_return</identifier>
-      <autogen>__KeyToKey__
-       KeyCode::SEMICOLON, ModifierFlag::CONTROL_L,
-       KeyCode::RETURN
-     </autogen>
-   </item>
-  -->
-
-
-  <!--Eclipse
-    <item>
-      <name>Eclipse LineUp and LineDown n, p</name>
-      <identifier>private.vim_contents_next_and_prev</identifier>
-      <only>ECLIPSE_MARS</only>
-      <autogen>
-        __KeyToKey__
-        KeyCode::N, ModifierFlag::CONTROL_L, | ModifierFlag::NONE,
-        KeyCode::CURSOR_DOWN
-      </autogen>
-      <autogen>
-        __KeyToKey__
-        KeyCode::P, ModifierFlag::CONTROL_L, | ModifierFlag::NONE,
-        KeyCode::CURSOR_UP
-      </autogen>
-    </item>
-    -->
