@@ -98,7 +98,7 @@
            KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT</autogen>
        <autogen>__KeyToKey__ KeyCode::O, KeyCode::DELETE, KeyCode::DELETE, KeyCode::DELETE, KeyCode::DELETE</autogen>
        <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::RETURN, KeyCode::RETURN, KeyCode::RETURN, KeyCode::RETURN</autogen>
-       <!-- <autogen>__KeyToKey__ KeyCode::COMMA, KeyCode::DELETE, ModifierFlag::CONTROL_L | KeyCode::A, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, KeyCode::DELETE</autogen> -->
+       <autogen>__KeyToKey__ KeyCode::COMMA, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, KeyCode::DELETE, KeyCode::DELETE</autogen>
    </item>
 <!-- Sキーでマウス移動、クリック -->
    <item>
