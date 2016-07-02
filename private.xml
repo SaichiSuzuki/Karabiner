@@ -1,22 +1,22 @@
 <?xml version="1.0"?>
 <root>
-    <appdef>
 
 <!-- アプリケーション名定義 -->
-    <appname>ECLIPSE_MARS</appname>
-    <equal>org.eclipse.platform.ide</equal>
-</appdef>
-<appdef>
-    <appname>iTERM2</appname>
-    <equal>com.googlecode.iterm2</equal>
-</appdef>
-<appdef>
-    <appname>MACVIM</appname>
-    <equal>org.vim.MacVim</equal>
-</appdef>
-<list>
+    <!-- <appdef> -->
+    <!--     <appname>ECLIPSE_MARS</appname> -->
+    <!--     <equal>org.eclipse.platform.ide</equal> -->
+    <!-- </appdef> -->
+    <!-- <appdef> -->
+    <!--     <appname>iTERM2</appname> -->
+    <!--     <equal>com.googlecode.iterm2</equal> -->
+    <!-- </appdef> -->
+    <!-- <appdef> -->
+    <!--     <appname>MACVIM</appname> -->
+    <!--     <equal>org.vim.MacVim</equal> -->
+    <!-- </appdef> -->
 
 <!-- Escapeでusに変更 -->
+<list>
    <item>
        <name>with EISUU (escape, Ctrl_L + Space, Ctrl_L + bracket+left)</name>
        <identifier>private.vim_alfred_with_eisuu</identifier>
@@ -41,11 +41,11 @@
 
 <!-- terminal clean  -->
 <item>
-  <name> terminal clean</name>
-  <identifier>private.terminalclean</identifier>
-  <autogen>--KeyToKey-- KeyCode::L, ModifierFlag::COMMAND_L | ModifierFlag::NONE, 
-          KeyCode::C, KeyCode::L, KeyCode::E, KeyCode::A, KeyCode::R, KeyCode::RETURN
-  </autogen>
+    <name> terminal clean</name>
+    <identifier>private.terminalclean</identifier>
+    <autogen>--KeyToKey-- KeyCode::L, ModifierFlag::COMMAND_L | ModifierFlag::NONE, 
+        KeyCode::C, KeyCode::L, KeyCode::E, KeyCode::A, KeyCode::R, KeyCode::RETURN
+    </autogen>
 </item>
 
 <!-- Fキーで矢印、DELETE、RETURNモード  -->
