@@ -30,12 +30,12 @@
   <item>
       <name> Stickeys clean </name>
       <identifier>private.stickeys</identifier>
-      <autogen>--KeyToKey-- KeyCode::F4, ModifierFlag::COMMAND_L | ModifierFlag::NONE, 
+      <autogen>--KeyToKey-- KeyCode::F4, ModifierFlag::COMMAND_L | ModifierFlag::NONE,
           KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN,
           KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN,
-          KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN, KeyCode::CURSOR_RIGHT, 
-          KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN, KeyCode::CURSOR_RIGHT, 
-          KeyCode::RETURN              
+          KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN, KeyCode::CURSOR_RIGHT,
+          KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN, KeyCode::CURSOR_RIGHT,
+          KeyCode::RETURN
       </autogen>
   </item>
 
@@ -43,20 +43,29 @@
 <item>
     <name> terminal clean</name>
     <identifier>private.terminalclean</identifier>
-    <autogen>--KeyToKey-- KeyCode::L, ModifierFlag::COMMAND_L | ModifierFlag::NONE, 
+    <autogen>--KeyToKey-- KeyCode::L, ModifierFlag::COMMAND_L | ModifierFlag::NONE,
         KeyCode::C, KeyCode::L, KeyCode::E, KeyCode::A, KeyCode::R, KeyCode::RETURN
+    </autogen>
+</item>
+
+<!-- <C-w> word delete  -->
+<item>
+    <name> word delete</name>
+    <identifier>private.worddelete</identifier>
+    <autogen>--KeyToKey-- KeyCode::W, ModifierFlag::CONTROL_L | ModifierFlag::NONE,
+        KeyCode::DELETE, ModifierFlag::OPTION_L
     </autogen>
 </item>
 
 <!-- Fキーで矢印、DELETE、RETURNモード  -->
    <item>
        <name>Custom Vi mode (F+)</name>
-       <identifier>remap.custom_vi_mode</identifier>
+       <identifier>remap.custom_vi_mode_f</identifier>
        <autogen>
            __KeyOverlaidModifier__
            KeyCode::F
            @begin
-           KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_custom_vi_mode,
+           KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_custom_vi_mode_f,
            @end
            @begin
            KeyCode::F
@@ -64,7 +73,7 @@
        </autogen>
    </item>
    <item hidden="true">
-       <identifier vk_config="true">notsave_custom_vi_mode</identifier>
+       <identifier vk_config="true">notsave_custom_vi_mode_f</identifier>
        <autogen>
            __BlockUntilKeyUp__ KeyCode::F
        </autogen>
@@ -74,6 +83,30 @@
        <autogen>__KeyToKey__ KeyCode::L, KeyCode::CURSOR_RIGHT</autogen>
        <autogen>__KeyToKey__ KeyCode::O, KeyCode::DELETE</autogen>
        <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::RETURN</autogen>
+   </item>
+
+<!-- ;キーでw, bモード  -->
+   <item>
+       <name>Custom Vi mode (semicoron+)</name>
+       <identifier>remap.custom_vi_mode_semicoron</identifier>
+       <autogen>
+           __KeyOverlaidModifier__
+           KeyCode::SEMICOLON
+           @begin
+           KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_custom_vi_mode_semicoron,
+           @end
+           @begin
+           KeyCode::SEMICOLON
+           @end
+       </autogen>
+   </item>
+   <item hidden="true">
+       <identifier vk_config="true">notsave_custom_vi_mode_semicoron</identifier>
+       <autogen>
+           __BlockUntilKeyUp__ KeyCode::SEMICOLON
+       </autogen>
+       <autogen>__KeyToKey__ KeyCode::W, KeyCode::F, ModifierFlag::OPTION_L | ModifierFlag::NONE </autogen>
+       <autogen>__KeyToKey__ KeyCode::B, KeyCode::B, ModifierFlag::OPTION_L | ModifierFlag::NONE </autogen>
    </item>
 
 <!-- Dキーでダッシュモード(Fキーの5倍) -->
