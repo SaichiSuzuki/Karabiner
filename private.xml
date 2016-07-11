@@ -167,8 +167,8 @@
        <autogen>__KeyToKey__ KeyCode::J, KeyCode::VK_MOUSEKEY_DOWN</autogen>
        <autogen>__KeyToKey__ KeyCode::K, KeyCode::VK_MOUSEKEY_UP</autogen>
        <autogen>__KeyToKey__ KeyCode::L, KeyCode::VK_MOUSEKEY_RIGHT</autogen>
-       <autogen>__KeyToKey__ KeyCode::N, PointingButton::LEFT</autogen>
-       <autogen>__KeyToKey__ KeyCode::M, PointingButton::RIGHT</autogen>
+       <autogen>__KeyToKey__ KeyCode::SEMICOLON, PointingButton::LEFT</autogen>
+       <autogen>__KeyToKey__ KeyCode::R, PointingButton::RIGHT</autogen>
    </item>
 
 <!-- Aキーでウィンドウ位置変更(BetterTouchToolと連携) -->
