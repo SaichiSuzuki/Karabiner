@@ -92,7 +92,7 @@
        <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::RETURN</autogen>
    </item>
 
-<!-- ;キーでw, bモード  -->
+<!-- ;キーでw, bモード(ターミナル限定)  -->
    <item>
        <name>Custom Vi mode (semicoron+)</name>
        <identifier>remap.custom_vi_mode_semicoron</identifier>
@@ -109,15 +109,35 @@
    </item>
    <item hidden="true">
        <identifier vk_config="true">notsave_custom_vi_mode_semicoron</identifier>
-       <autogen>
-           __BlockUntilKeyUp__ KeyCode::SEMICOLON
-       </autogen>
        <only>TERMINAL</only>
        <autogen>__KeyToKey__ KeyCode::W, KeyCode::F, ModifierFlag::OPTION_L | ModifierFlag::NONE </autogen>
        <autogen>__KeyToKey__ KeyCode::B, KeyCode::B, ModifierFlag::OPTION_L | ModifierFlag::NONE </autogen>
-       <!-- <not>TERMINAL</not> -->
-       <!-- <autogen>__KeyToKey__ KeyCode::W, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L | ModifierFlag::NONE </autogen> -->
-       <!-- <autogen>__KeyToKey__ KeyCode::B, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L | ModifierFlag::NONE </autogen> -->
+       <autogen>
+           __BlockUntilKeyUp__ KeyCode::SEMICOLON
+       </autogen>
+   </item>
+<!-- 'キーでw, bモード  -->
+   <item>
+       <name>Custom Vi mode (quote+)</name>
+       <identifier>remap.custom_vi_mode_quote</identifier>
+       <autogen>
+           __KeyOverlaidModifier__
+           KeyCode::QUOTE
+           @begin
+           KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_custom_vi_mode_quote,
+           @end
+           @begin
+           KeyCode::QUOTE
+           @end
+       </autogen>
+   </item>
+   <item hidden="true">
+       <identifier vk_config="true">notsave_custom_vi_mode_quote</identifier>
+       <autogen>__KeyToKey__ KeyCode::W, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L | ModifierFlag::NONE </autogen>
+       <autogen>__KeyToKey__ KeyCode::B, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L | ModifierFlag::NONE </autogen>
+       <autogen>
+           __BlockUntilKeyUp__ KeyCode::QUOTE
+       </autogen>
    </item>
    <!-- <item hidden="true"> -->
    <!--     <identifier vk_config="true">notsave_custom_vi_mode_semicoron_not_terminal</identifier> -->
