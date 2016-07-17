@@ -230,7 +230,7 @@
        <autogen>
            __BlockUntilKeyUp__ KeyCode::A
        </autogen>
-       <autogen>__KeyToKey__ KeyCode::G, KeyCode::F7, ModifierFlag::OPTION_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::D, KeyCode::F7, ModifierFlag::OPTION_L</autogen>
        <autogen>__KeyToKey__ KeyCode::H, KeyCode::F8, ModifierFlag::OPTION_L</autogen>
        <autogen>__KeyToKey__ KeyCode::J, KeyCode::F9, ModifierFlag::OPTION_L</autogen>
        <autogen>__KeyToKey__ KeyCode::K, KeyCode::F10, ModifierFlag::OPTION_L</autogen>
