@@ -59,6 +59,7 @@
 <item>
     <name> word delete</name>
     <identifier>private.worddelete</identifier>
+    <not>TERMINAL</not>
     <autogen>--KeyToKey-- KeyCode::W, ModifierFlag::CONTROL_L | ModifierFlag::NONE,
         KeyCode::DELETE, ModifierFlag::OPTION_L
     </autogen>
