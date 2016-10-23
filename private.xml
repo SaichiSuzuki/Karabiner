@@ -93,7 +93,7 @@
        <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::RETURN</autogen>
    </item>
 
-<!-- ;キーでw, bモード(ターミナル限定)  -->
+<!-- ;キーでw, bモード -->
    <item>
        <name>Custom Vi mode (semicoron+)</name>
        <identifier>remap.custom_vi_mode_semicoron</identifier>
@@ -110,9 +110,11 @@
    </item>
    <item hidden="true">
        <identifier vk_config="true">notsave_custom_vi_mode_semicoron</identifier>
-       <only>TERMINAL</only>
-       <autogen>__KeyToKey__ KeyCode::W, KeyCode::F, ModifierFlag::OPTION_L | ModifierFlag::NONE </autogen>
-       <autogen>__KeyToKey__ KeyCode::B, KeyCode::B, ModifierFlag::OPTION_L | ModifierFlag::NONE </autogen>
+       <!-- <only>TERMINAL</only> -->
+       <!-- <autogen>__KeyToKey__ KeyCode::W, KeyCode::F, ModifierFlag::OPTION_L | ModifierFlag::NONE </autogen> -->
+       <!-- <autogen>__KeyToKey__ KeyCode::B, KeyCode::B, ModifierFlag::OPTION_L | ModifierFlag::NONE </autogen> -->
+       <autogen>__KeyToKey__ KeyCode::W, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L | ModifierFlag::NONE </autogen>
+       <autogen>__KeyToKey__ KeyCode::B, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L | ModifierFlag::NONE </autogen>
        <autogen>
            __BlockUntilKeyUp__ KeyCode::SEMICOLON
        </autogen>
