@@ -93,7 +93,7 @@
        <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::RETURN</autogen>
    </item>
 
-<!-- ;キーでw, bモード -->
+<!-- word jump and addressbar mode) -->
    <item>
        <name>Custom Vi mode (semicoron+)</name>
        <identifier>remap.custom_vi_mode_semicoron</identifier>
@@ -110,49 +110,15 @@
    </item>
    <item hidden="true">
        <identifier vk_config="true">notsave_custom_vi_mode_semicoron</identifier>
-       <!-- <only>TERMINAL</only> -->
-       <!-- <autogen>__KeyToKey__ KeyCode::W, KeyCode::F, ModifierFlag::OPTION_L | ModifierFlag::NONE </autogen> -->
-       <!-- <autogen>__KeyToKey__ KeyCode::B, KeyCode::B, ModifierFlag::OPTION_L | ModifierFlag::NONE </autogen> -->
        <autogen>__KeyToKey__ KeyCode::W, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L | ModifierFlag::NONE </autogen>
        <autogen>__KeyToKey__ KeyCode::B, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L | ModifierFlag::NONE </autogen>
+       <autogen>__KeyToKey__ KeyCode::Q, KeyCode::F, ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L | ModifierFlag::NONE, KeyCode::ESCAPE, KeyCode::CURSOR_RIGHT </autogen>
+       <autogen>__KeyToKey__ KeyCode::A, KeyCode::A, ModifierFlag::COMMAND_L | ModifierFlag::NONE, KeyCode::U, KeyCode::RETURN </autogen>
        <autogen>
            __BlockUntilKeyUp__ KeyCode::SEMICOLON
        </autogen>
    </item>
-<!-- 'キーでw, bモード  -->
-   <item>
-       <name>Custom Vi mode (quote+)</name>
-       <identifier>remap.custom_vi_mode_quote</identifier>
-       <autogen>
-           __KeyOverlaidModifier__
-           KeyCode::QUOTE
-           @begin
-           KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_custom_vi_mode_quote,
-           @end
-           @begin
-           KeyCode::QUOTE
-           @end
-       </autogen>
-   </item>
-   <item hidden="true">
-       <identifier vk_config="true">notsave_custom_vi_mode_quote</identifier>
-       <autogen>__KeyToKey__ KeyCode::W, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L | ModifierFlag::NONE </autogen>
-       <autogen>__KeyToKey__ KeyCode::B, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L | ModifierFlag::NONE </autogen>
-       <autogen>
-           __BlockUntilKeyUp__ KeyCode::QUOTE
-       </autogen>
-   </item>
-   <!-- <item hidden="true"> -->
-   <!--     <identifier vk_config="true">notsave_custom_vi_mode_semicoron_not_terminal</identifier> -->
-   <!--     <not>TERMINAL</not> -->
-   <!--     <autogen> -->
-   <!--         __BlockUntilKeyUp__ KeyCode::SEMICOLON -->
-   <!--     </autogen> -->
-   <!--     <autogen>__KeyToKey__ KeyCode::W, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L | ModifierFlag::NONE </autogen> -->
-   <!--     <autogen>__KeyToKey__ KeyCode::B, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L | ModifierFlag::NONE </autogen> -->
-   <!-- </item> -->
 <!-- Dキーでダッシュモード(Fキーの5倍) -->
-<!-- <でurl貼り付けに便利なDELETE機能もある -->
    <item>
        <name>Cursor dash mode (D+)</name>
        <identifier>remap.cursor_dash_mode</identifier>
@@ -183,7 +149,6 @@
        <autogen>__KeyToKey__ KeyCode::O, KeyCode::DELETE, KeyCode::DELETE, KeyCode::DELETE, KeyCode::DELETE</autogen>
        <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::RETURN, KeyCode::RETURN, KeyCode::RETURN, KeyCode::RETURN</autogen>
        <autogen>__KeyToKey__ KeyCode::SPACE, KeyCode::SPACE, KeyCode::SPACE, KeyCode::SPACE, KeyCode::SPACE</autogen>
-       <autogen>__KeyToKey__ KeyCode::COMMA, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, KeyCode::DELETE, KeyCode::DELETE</autogen>
    </item>
 <!-- Sキーでマウス移動、クリック -->
    <item>
