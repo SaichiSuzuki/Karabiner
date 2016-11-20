@@ -70,7 +70,7 @@
     <name>vim open</name>
     <identifier>private.vimopen</identifier>
     <autogen>--KeyToKey-- KeyCode::V, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L | ModifierFlag::NONE,
-        KeyCode::A, ModifierFlag::CONTROL_L, KeyCode::V, KeyCode::I, KeyCode::M, KeyCode::SPACE, KeyCode::COMMA, ModifierFlag::SHIFT_L, KeyCode::9, ModifierFlag::SHIFT_L, KeyCode::E, ModifierFlag::CONTROL_L, KeyCode::0, ModifierFlag::SHIFT_L
+        KeyCode::A, ModifierFlag::CONTROL_L, KeyCode::V, KeyCode::I, KeyCode::M, KeyCode::SPACE, KeyCode::COMMA, ModifierFlag::SHIFT_L, KeyCode::9, ModifierFlag::SHIFT_L, KeyCode::E, ModifierFlag::CONTROL_L, KeyCode::0, ModifierFlag::SHIFT_L, KeyCode::RETURN
     </autogen>
 </item>
 
