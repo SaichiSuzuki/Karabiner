@@ -123,6 +123,7 @@
        <autogen>__KeyToKey__ KeyCode::B, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L | ModifierFlag::NONE </autogen>
        <autogen>__KeyToKey__ KeyCode::Q, KeyCode::F, ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L | ModifierFlag::NONE, KeyCode::ESCAPE, KeyCode::CURSOR_RIGHT </autogen>
        <autogen>__KeyToKey__ KeyCode::A, KeyCode::A, ModifierFlag::COMMAND_L | ModifierFlag::NONE, KeyCode::U, KeyCode::RETURN </autogen>
+       <autogen>__KeyToKey__ KeyCode::Z, KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::Z</autogen>
        <autogen>
            __BlockUntilKeyUp__ KeyCode::SEMICOLON
        </autogen>
@@ -161,7 +162,7 @@
    </item>
 <!-- Sキーでマウス移動、クリック -->
    <item>
-       <name> Mouse mode</name>
+       <name> Mouse mode(S+)</name>
        <identifier>mouse_mode</identifier>
        <autogen>
            __KeyOverlaidModifier__
@@ -187,6 +188,35 @@
        <autogen>__KeyToKey__ KeyCode::P, PointingButton::RIGHT</autogen>
        <autogen>__KeyToKey__ KeyCode::N, PointingButton::LEFT</autogen>
        <autogen>__KeyToKey__ KeyCode::SEMICOLON, PointingButton::LEFT</autogen>
+   </item>
+
+<!-- Gキーでtmux画面移動 -->
+   <item>
+       <name> tmux mode(G+)</name>
+       <identifier>tmux_mode</identifier>
+       <autogen>
+           __KeyOverlaidModifier__
+           KeyCode::G, ModifierFlag::NONE,
+           @begin
+           KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_tmux_mode
+           @end
+           @begin
+           KeyCode::G
+           @end
+       </autogen>
+   </item>
+   <item hidden="true">
+       <identifier vk_config="true">notsave_tmux_mode</identifier>
+       <autogen>
+           __BlockUntilKeyUp__ KeyCode::G
+       </autogen>
+       <autogen>__KeyToKey__ KeyCode::H, KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::H</autogen>
+       <autogen>__KeyToKey__ KeyCode::J, KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::J</autogen>
+       <autogen>__KeyToKey__ KeyCode::K, KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::K</autogen>
+       <autogen>__KeyToKey__ KeyCode::L, KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::L</autogen>
+       <autogen>__KeyToKey__ KeyCode::N, KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::N</autogen>
+       <autogen>__KeyToKey__ KeyCode::P, KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::P</autogen>
+       <autogen>__KeyToKey__ KeyCode::Z, KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::Z</autogen>
    </item>
 
 <!-- Aキーでウィンドウ位置変更(BetterTouchToolと連携) -->
