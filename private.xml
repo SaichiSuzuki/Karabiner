@@ -160,25 +160,25 @@
        <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::RETURN, KeyCode::RETURN, KeyCode::RETURN, KeyCode::RETURN</autogen>
        <autogen>__KeyToKey__ KeyCode::SPACE, KeyCode::SPACE, KeyCode::SPACE, KeyCode::SPACE, KeyCode::SPACE</autogen>
    </item>
-<!-- Sキーでマウス移動、クリック -->
+<!-- Gキーでマウス移動、クリック -->
    <item>
-       <name> Mouse mode(S+)</name>
+       <name> Mouse mode(G+)</name>
        <identifier>mouse_mode</identifier>
        <autogen>
            __KeyOverlaidModifier__
-           KeyCode::S, ModifierFlag::NONE,
+           KeyCode::G, ModifierFlag::NONE,
            @begin
            KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_mouse_mode
            @end
            @begin
-           KeyCode::S
+           KeyCode::G
            @end
        </autogen>
    </item>
    <item hidden="true">
        <identifier vk_config="true">notsave_mouse_mode</identifier>
        <autogen>
-           __BlockUntilKeyUp__ KeyCode::S
+           __BlockUntilKeyUp__ KeyCode::G
        </autogen>
        <autogen>__KeyToKey__ KeyCode::H, KeyCode::VK_MOUSEKEY_LEFT</autogen>
        <autogen>__KeyToKey__ KeyCode::J, KeyCode::VK_MOUSEKEY_DOWN</autogen>
@@ -190,25 +190,25 @@
        <autogen>__KeyToKey__ KeyCode::SEMICOLON, PointingButton::LEFT</autogen>
    </item>
 
-<!-- Gキーでtmux画面移動 -->
+<!-- Sキーでtmux画面移動 -->
    <item>
-       <name> tmux mode(G+)</name>
+       <name> tmux mode(S+)</name>
        <identifier>tmux_mode</identifier>
        <autogen>
            __KeyOverlaidModifier__
-           KeyCode::G, ModifierFlag::NONE,
+           KeyCode::S, ModifierFlag::NONE,
            @begin
            KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_tmux_mode
            @end
            @begin
-           KeyCode::G
+           KeyCode::S
            @end
        </autogen>
    </item>
    <item hidden="true">
        <identifier vk_config="true">notsave_tmux_mode</identifier>
        <autogen>
-           __BlockUntilKeyUp__ KeyCode::G
+           __BlockUntilKeyUp__ KeyCode::S
        </autogen>
        <autogen>__KeyToKey__ KeyCode::H, KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::H</autogen>
        <autogen>__KeyToKey__ KeyCode::J, KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::J</autogen>
