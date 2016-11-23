@@ -162,29 +162,29 @@
    </item>
 <!-- Gキーでマウス移動、クリック -->
    <item>
-       <name> Mouse mode(G+)</name>
+       <name> Mouse mode(V+)</name>
        <identifier>mouse_mode</identifier>
        <autogen>
            __KeyOverlaidModifier__
-           KeyCode::G, ModifierFlag::NONE,
+           KeyCode::V, ModifierFlag::NONE,
            @begin
            KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_mouse_mode
            @end
            @begin
-           KeyCode::G
+           KeyCode::V
            @end
        </autogen>
    </item>
    <item hidden="true">
        <identifier vk_config="true">notsave_mouse_mode</identifier>
        <autogen>
-           __BlockUntilKeyUp__ KeyCode::G
+           __BlockUntilKeyUp__ KeyCode::V
        </autogen>
        <autogen>__KeyToKey__ KeyCode::H, KeyCode::VK_MOUSEKEY_LEFT</autogen>
        <autogen>__KeyToKey__ KeyCode::J, KeyCode::VK_MOUSEKEY_DOWN</autogen>
        <autogen>__KeyToKey__ KeyCode::K, KeyCode::VK_MOUSEKEY_UP</autogen>
        <autogen>__KeyToKey__ KeyCode::L, KeyCode::VK_MOUSEKEY_RIGHT</autogen>
-       <autogen>__KeyToKey__ KeyCode::F, KeyCode::VK_MOUSEKEY_HIGHSPEED</autogen>
+       <autogen>__KeyToKey__ KeyCode::B, KeyCode::VK_MOUSEKEY_HIGHSPEED</autogen>
        <autogen>__KeyToKey__ KeyCode::P, PointingButton::RIGHT</autogen>
        <autogen>__KeyToKey__ KeyCode::N, PointingButton::LEFT</autogen>
        <autogen>__KeyToKey__ KeyCode::SEMICOLON, PointingButton::LEFT</autogen>
@@ -218,6 +218,7 @@
        <autogen>__KeyToKey__ KeyCode::P, KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::P</autogen>
        <autogen>__KeyToKey__ KeyCode::Z, KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::Z</autogen>
        <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::Z</autogen>
+       <autogen>__KeyToKey__ KeyCode::R, KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::R</autogen>
    </item>
 
 <!-- Aキーでウィンドウ位置変更(BetterTouchToolと連携) -->
@@ -249,6 +250,30 @@
        <autogen>__KeyToKey__ KeyCode::W, KeyCode::F6, ModifierFlag::CONTROL_L</autogen>
        <autogen>__KeyToKey__ KeyCode::R, KeyCode::F7, ModifierFlag::CONTROL_L</autogen>
    </item>
-</list>
 
+<!-- Gキー gadget -->
+   <item>
+       <name>Gadget mode(G+)</name>
+       <identifier>gadget_mode</identifier>
+       <autogen>
+           __KeyOverlaidModifier__
+           KeyCode::G, ModifierFlag::NONE,
+           @begin
+           KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_gadget_mode
+           @end
+           @begin
+           KeyCode::G
+           @end
+       </autogen>
+   </item>
+   <item hidden="true">
+       <identifier vk_config="true">notsave_gadget_mode</identifier>
+       <autogen>
+           __BlockUntilKeyUp__ KeyCode::G
+       </autogen>
+       <autogen>__KeyToKey__ KeyCode::R, KeyCode::F, ModifierFlag::CONTROL_L, KeyCode::8, ModifierFlag::SHIFT_L, KeyCode::R</autogen>
+       <autogen>__KeyToKey__ KeyCode::SLASH, KeyCode::BACKQUOTE, ModifierFlag::SHIFT_L</autogen>
+   </item>
+
+</list>
 </root>
