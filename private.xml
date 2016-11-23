@@ -100,6 +100,7 @@
        <autogen>__KeyToKey__ KeyCode::L, KeyCode::CURSOR_RIGHT</autogen>
        <autogen>__KeyToKey__ KeyCode::O, KeyCode::DELETE</autogen>
        <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::RETURN</autogen>
+       <autogen>__KeyToKey__ KeyCode::SLASH, KeyCode::BACKQUOTE, ModifierFlag::SHIFT_L</autogen>
    </item>
 
 <!-- word jump and addressbar mode) -->
@@ -272,7 +273,6 @@
            __BlockUntilKeyUp__ KeyCode::G
        </autogen>
        <autogen>__KeyToKey__ KeyCode::R, KeyCode::F, ModifierFlag::CONTROL_L, KeyCode::8, ModifierFlag::SHIFT_L, KeyCode::R</autogen>
-       <autogen>__KeyToKey__ KeyCode::SLASH, KeyCode::BACKQUOTE, ModifierFlag::SHIFT_L</autogen>
    </item>
 
 </list>
