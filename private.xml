@@ -273,6 +273,7 @@
            __BlockUntilKeyUp__ KeyCode::G
        </autogen>
        <autogen>__KeyToKey__ KeyCode::R, KeyCode::F, ModifierFlag::CONTROL_L, KeyCode::8, ModifierFlag::SHIFT_L, KeyCode::R</autogen>
+       <autogen>__KeyToKey__ KeyCode::Y, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L, ModifierFlag::SHIFT_L, KeyCode::C, ModifierFlag::COMMAND_L</autogen>
    </item>
 
 </list>
