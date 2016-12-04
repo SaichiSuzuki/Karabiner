@@ -125,7 +125,6 @@
        <autogen>__KeyToKey__ KeyCode::Q, KeyCode::F, ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L | ModifierFlag::NONE, KeyCode::ESCAPE, KeyCode::CURSOR_RIGHT </autogen>
        <autogen>__KeyToKey__ KeyCode::A, KeyCode::A, ModifierFlag::COMMAND_L | ModifierFlag::NONE, KeyCode::U, KeyCode::RETURN </autogen>
        <autogen>__KeyToKey__ KeyCode::Z, KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::Z</autogen>
-       <autogen>__KeyToKey__ KeyCode::V, KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::V</autogen>
        <autogen>
            __BlockUntilKeyUp__ KeyCode::SEMICOLON
        </autogen>
@@ -221,6 +220,7 @@
        <autogen>__KeyToKey__ KeyCode::Z, KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::Z</autogen>
        <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::Z</autogen>
        <autogen>__KeyToKey__ KeyCode::R, KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::R</autogen>
+       <autogen>__KeyToKey__ KeyCode::V, KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::V</autogen>
    </item>
 
 <!-- Aキーでウィンドウ位置変更(BetterTouchToolと連携) -->
