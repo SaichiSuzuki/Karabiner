@@ -218,6 +218,7 @@
        <autogen>__KeyToKey__ KeyCode::O, KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::Z</autogen>
        <autogen>__KeyToKey__ KeyCode::R, KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::R</autogen>
        <autogen>__KeyToKey__ KeyCode::V, KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::V</autogen>
+       <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::V</autogen>
    </item>
 
 <!-- Aキーでウィンドウ位置変更(BetterTouchToolと連携) -->
