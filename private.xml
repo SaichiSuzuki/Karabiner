@@ -129,7 +129,7 @@
    </item>
 <!-- Dキーでダッシュモード(Fキーの5倍) -->
    <item>
-       <name>Cursor dash mode (D+)</name>
+       <name>Cursor dash mode (null+)</name>
        <identifier>remap.cursor_dash_mode</identifier>
        <autogen>
            __KeyOverlaidModifier__
@@ -161,23 +161,23 @@
    </item>
 <!-- Gキーでマウス移動、クリック -->
    <item>
-       <name> Mouse mode(V+)</name>
+       <name> Mouse mode(D+)</name>
        <identifier>mouse_mode</identifier>
        <autogen>
            __KeyOverlaidModifier__
-           KeyCode::V, ModifierFlag::NONE,
+           KeyCode::D, ModifierFlag::NONE,
            @begin
            KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_mouse_mode
            @end
            @begin
-           KeyCode::V
+           KeyCode::D
            @end
        </autogen>
    </item>
    <item hidden="true">
        <identifier vk_config="true">notsave_mouse_mode</identifier>
        <autogen>
-           __BlockUntilKeyUp__ KeyCode::V
+           __BlockUntilKeyUp__ KeyCode::D
        </autogen>
        <autogen>__KeyToKey__ KeyCode::H, KeyCode::VK_MOUSEKEY_LEFT</autogen>
        <autogen>__KeyToKey__ KeyCode::J, KeyCode::VK_MOUSEKEY_DOWN</autogen>
