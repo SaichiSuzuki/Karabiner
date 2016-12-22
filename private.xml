@@ -159,6 +159,30 @@
        <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::RETURN, KeyCode::RETURN, KeyCode::RETURN, KeyCode::RETURN</autogen>
        <autogen>__KeyToKey__ KeyCode::SPACE, KeyCode::SPACE, KeyCode::SPACE, KeyCode::SPACE, KeyCode::SPACE</autogen>
    </item>
+
+<!-- XキーでXcode編集(x+) -->
+   <item>
+       <name> Xcode mode (x+)</name>
+       <identifier>remap.xcode_mode</identifier>
+       <autogen>
+           __KeyOverlaidModifier__
+           KeyCode::X
+           @begin
+           KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_xcode_mode,
+           @end
+           @begin
+           KeyCode::X
+           @end
+       </autogen>
+   </item>
+   <item hidden="true">
+       <identifier vk_config="true">notsave_xcode_mode</identifier>
+       <autogen>
+           __BlockUntilKeyUp__ KeyCode::X
+       </autogen>
+       <autogen>__KeyToKey__ KeyCode::H, KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L, ModifierFlag::COMMAND_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::L, KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_L, ModifierFlag::COMMAND_L</autogen>
+   </item>
 <!-- Gキーでマウス移動、クリック -->
    <item>
        <name> Mouse mode(D+)</name>
