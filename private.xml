@@ -1,39 +1,41 @@
 <?xml version="1.0"?>
 <root>
 
-<!-- アプリケーション名定義 -->
-    <!-- <appdef> -->
-    <!--     <appname>ECLIPSE_MARS</appname> -->
-    <!--     <equal>org.eclipse.platform.ide</equal> -->
-    <!-- </appdef> -->
-    <!-- <appdef> -->
-    <!--     <appname>iTERM2</appname> -->
-    <!--     <equal>com.googlecode.iterm2</equal> -->
-    <!-- </appdef> -->
-    <!-- <appdef> -->
-    <!--     <appname>MACVIM</appname> -->
-    <!--     <equal>org.vim.MacVim</equal> -->
-    <!-- </appdef> -->
+<!-- デバイス名定義 -->
+ <devicevendordef>
+    <vendorname>HHKB-BT</vendorname>
+    <vendorid>0x21701c27</vendorid>
+</devicevendordef>
 
-<appdef>
-    <appname>TERMINAL</appname>
-    <equal>com.googlecode.iterm2</equal>
-</appdef>
-<appdef>
-    <appname>XCODE</appname>
-    <equal>com.apple.dt.Xcode</equal>
-</appdef>
+<devicevendordef>
+    <vendorname>HHKB_VendorID</vendorname>
+    <vendorid>0x04fe</vendorid>
+</devicevendordef>
+<deviceproductdef>
+    <productname>HHKB_KEYBOARD</productname>
+    <productid>0x0202</productid>
+</deviceproductdef>
+
+<!-- アプリケーション名定義 -->
+    <appdef>
+        <appname>TERMINAL</appname>
+        <equal>com.googlecode.iterm2</equal>
+    </appdef>
+    <appdef>
+        <appname>XCODE</appname>
+        <equal>com.apple.dt.Xcode</equal>
+    </appdef>
 
 <!-- Escapeでusに変更 -->
 <list>
-   <item>
-       <name>with EISUU (escape, Ctrl_L + Space, Ctrl_L + bracket+left)</name>
-       <identifier>private.vim_alfred_with_eisuu</identifier>
-       <autogen>--KeyToKey-- KeyCode::ESCAPE, KeyCode::ESCAPE, KeyCode::JIS_EISUU</autogen>
-       <autogen>--KeyToKey-- KeyCode::SPACE, ModifierFlag::CONTROL_L, KeyCode::SPACE, ModifierFlag::CONTROL_L, KeyCode::JIS_EISUU</autogen>
-       <autogen>--KeyToKey-- KeyCode::BRACKET_LEFT, ModifierFlag::CONTROL_L, KeyCode::BRACKET_LEFT, ModifierFlag::CONTROL_L, KeyCode::JIS_EISUU</autogen>
-       <autogen>--KeyToKey-- KeyCode::JIS_BRACKET_LEFT, VK_CONTROL, KeyCode::JIS_BRACKET_LEFT, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
-   </item>
+    <item>
+        <name>with EISUU (escape, Ctrl_L + Space, Ctrl_L + bracket+left)</name>
+        <identifier>private.vim_alfred_with_eisuu</identifier>
+        <autogen>--KeyToKey-- KeyCode::ESCAPE, KeyCode::ESCAPE, KeyCode::JIS_EISUU</autogen>
+        <autogen>--KeyToKey-- KeyCode::SPACE, ModifierFlag::CONTROL_L, KeyCode::SPACE, ModifierFlag::CONTROL_L, KeyCode::JIS_EISUU</autogen>
+        <autogen>--KeyToKey-- KeyCode::BRACKET_LEFT, ModifierFlag::CONTROL_L, KeyCode::BRACKET_LEFT, ModifierFlag::CONTROL_L, KeyCode::JIS_EISUU</autogen>
+        <autogen>--KeyToKey-- KeyCode::JIS_BRACKET_LEFT, VK_CONTROL, KeyCode::JIS_BRACKET_LEFT, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
+    </item>
 
 <!-- スティッキーズ整理 -->
   <item>
@@ -72,6 +74,14 @@
     <autogen>--KeyToKey-- KeyCode::V, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L | ModifierFlag::NONE,
         KeyCode::A, ModifierFlag::CONTROL_L, KeyCode::V, KeyCode::I, KeyCode::M, KeyCode::SPACE, KeyCode::COMMA, ModifierFlag::SHIFT_L, KeyCode::9, ModifierFlag::SHIFT_L, KeyCode::E, ModifierFlag::CONTROL_L, KeyCode::0, ModifierFlag::SHIFT_L, KeyCode::RETURN
     </autogen>
+</item>
+
+<item>
+    <name>HHKB mode</name>
+    <identifier>private.hhkbmode</identifier>
+    <device_only>DeviceVendor::HHKB_VendorID, DeviceProduct::HHKB_KEYBOARD</device_only>
+    <autogen>--KeyToKey-- KeyCode::RETURN, KeyCode::BACKSLASH</autogen>
+    <autogen>--KeyToKey-- KeyCode::RETURN, ModifierFlag::SHIFT_L, KeyCode::BACKSLASH, ModifierFlag::SHIFT_L</autogen>
 </item>
 
 <!-- Fキーで矢印、DELETE、RETURNモード  -->
@@ -129,38 +139,39 @@
            __BlockUntilKeyUp__ KeyCode::SEMICOLON
        </autogen>
    </item>
+
 <!-- Dキーでダッシュモード(Fキーの5倍) -->
-   <item>
-       <name>Cursor dash mode (null+)</name>
-       <identifier>remap.cursor_dash_mode</identifier>
-       <autogen>
-           __KeyOverlaidModifier__
-           KeyCode::D
-           @begin
-           KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_cursor_dash_mode,
-           @end
-           @begin
-           KeyCode::D
-           @end
-       </autogen>
-   </item>
-   <item hidden="true">
-       <identifier vk_config="true">notsave_cursor_dash_mode</identifier>
-       <autogen>
-           __BlockUntilKeyUp__ KeyCode::D
-       </autogen>
-       <autogen>__KeyToKey__ KeyCode::H, KeyCode::CURSOR_LEFT, KeyCode::CURSOR_LEFT, KeyCode::CURSOR_LEFT,
-           KeyCode::CURSOR_LEFT, KeyCode::CURSOR_LEFT</autogen>
-       <autogen>__KeyToKey__ KeyCode::J, KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN,
-           KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN</autogen>
-       <autogen>__KeyToKey__ KeyCode::K, KeyCode::CURSOR_UP, KeyCode::CURSOR_UP, KeyCode::CURSOR_UP,
-           KeyCode::CURSOR_UP, KeyCode::CURSOR_UP</autogen>
-       <autogen>__KeyToKey__ KeyCode::L, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT,
-           KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT</autogen>
-       <autogen>__KeyToKey__ KeyCode::O, KeyCode::DELETE, KeyCode::DELETE, KeyCode::DELETE, KeyCode::DELETE</autogen>
-       <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::RETURN, KeyCode::RETURN, KeyCode::RETURN, KeyCode::RETURN</autogen>
-       <autogen>__KeyToKey__ KeyCode::SPACE, KeyCode::SPACE, KeyCode::SPACE, KeyCode::SPACE, KeyCode::SPACE</autogen>
-   </item>
+   <!-- <item> -->
+   <!--     <name>Cursor dash mode (null+)</name> -->
+   <!--     <identifier>remap.cursor_dash_mode</identifier> -->
+   <!--     <autogen> -->
+   <!--         __KeyOverlaidModifier__ -->
+   <!--         KeyCode::D -->
+   <!--         @begin -->
+   <!--         KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_cursor_dash_mode, -->
+   <!--         @end -->
+   <!--         @begin -->
+   <!--         KeyCode::D -->
+   <!--         @end -->
+   <!--     </autogen> -->
+   <!-- </item> -->
+   <!-- <item hidden="true"> -->
+   <!--     <identifier vk_config="true">notsave_cursor_dash_mode</identifier> -->
+   <!--     <autogen> -->
+   <!--         __BlockUntilKeyUp__ KeyCode::D -->
+   <!--     </autogen> -->
+   <!--     <autogen>__KeyToKey__ KeyCode::H, KeyCode::CURSOR_LEFT, KeyCode::CURSOR_LEFT, KeyCode::CURSOR_LEFT, -->
+   <!--         KeyCode::CURSOR_LEFT, KeyCode::CURSOR_LEFT</autogen> -->
+   <!--     <autogen>__KeyToKey__ KeyCode::J, KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN, -->
+   <!--         KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN</autogen> -->
+   <!--     <autogen>__KeyToKey__ KeyCode::K, KeyCode::CURSOR_UP, KeyCode::CURSOR_UP, KeyCode::CURSOR_UP, -->
+   <!--         KeyCode::CURSOR_UP, KeyCode::CURSOR_UP</autogen> -->
+   <!--     <autogen>__KeyToKey__ KeyCode::L, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, -->
+   <!--         KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT</autogen> -->
+   <!--     <autogen>__KeyToKey__ KeyCode::O, KeyCode::DELETE, KeyCode::DELETE, KeyCode::DELETE, KeyCode::DELETE</autogen> -->
+   <!--     <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::RETURN, KeyCode::RETURN, KeyCode::RETURN, KeyCode::RETURN</autogen> -->
+   <!--     <autogen>__KeyToKey__ KeyCode::SPACE, KeyCode::SPACE, KeyCode::SPACE, KeyCode::SPACE, KeyCode::SPACE</autogen> -->
+   <!-- </item> -->
 
 <!-- XキーでXcodeタブ切替(S+) -->
    <item>
@@ -185,34 +196,42 @@
        </autogen>
        <autogen>__KeyToKey__ KeyCode::N, KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_L, ModifierFlag::COMMAND_L</autogen>
        <autogen>__KeyToKey__ KeyCode::P, KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L, ModifierFlag::COMMAND_L</autogen>
+       <!-- mouse mode -->
+       <autogen>__KeyToKey__ KeyCode::H, KeyCode::VK_MOUSEKEY_LEFT</autogen>
+       <autogen>__KeyToKey__ KeyCode::J, KeyCode::VK_MOUSEKEY_DOWN</autogen>
+       <autogen>__KeyToKey__ KeyCode::K, KeyCode::VK_MOUSEKEY_UP</autogen>
+       <autogen>__KeyToKey__ KeyCode::L, KeyCode::VK_MOUSEKEY_RIGHT</autogen>
+       <autogen>__KeyToKey__ KeyCode::SHIFT_L, KeyCode::VK_MOUSEKEY_HIGHSPEED</autogen>
+       <autogen>__KeyToKey__ KeyCode::SEMICOLON, PointingButton::LEFT</autogen>
    </item>
-<!-- Gキーでマウス移動、クリック -->
+
    <item>
-       <name> Mouse mode(D+)</name>
+       <name> Mouse mode(S+)</name>
        <identifier>mouse_mode</identifier>
+       <not>TERMINAL</not>
        <autogen>
            __KeyOverlaidModifier__
-           KeyCode::D, ModifierFlag::NONE,
+           KeyCode::S, ModifierFlag::NONE,
            @begin
            KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_mouse_mode
            @end
            @begin
-           KeyCode::D
+           KeyCode::S
            @end
        </autogen>
    </item>
    <item hidden="true">
        <identifier vk_config="true">notsave_mouse_mode</identifier>
        <autogen>
-           __BlockUntilKeyUp__ KeyCode::D
+           __BlockUntilKeyUp__ KeyCode::S
        </autogen>
        <autogen>__KeyToKey__ KeyCode::H, KeyCode::VK_MOUSEKEY_LEFT</autogen>
        <autogen>__KeyToKey__ KeyCode::J, KeyCode::VK_MOUSEKEY_DOWN</autogen>
        <autogen>__KeyToKey__ KeyCode::K, KeyCode::VK_MOUSEKEY_UP</autogen>
        <autogen>__KeyToKey__ KeyCode::L, KeyCode::VK_MOUSEKEY_RIGHT</autogen>
-       <autogen>__KeyToKey__ KeyCode::B, KeyCode::VK_MOUSEKEY_HIGHSPEED</autogen>
-       <autogen>__KeyToKey__ KeyCode::P, PointingButton::RIGHT</autogen>
-       <autogen>__KeyToKey__ KeyCode::N, PointingButton::LEFT</autogen>
+       <autogen>__KeyToKey__ KeyCode::SHIFT_L, KeyCode::VK_MOUSEKEY_HIGHSPEED</autogen>
+       <!-- <autogen>__KeyToKey__ KeyCode::P, PointingButton::RIGHT</autogen> -->
+       <!-- <autogen>__KeyToKey__ KeyCode::N, PointingButton::LEFT</autogen> -->
        <autogen>__KeyToKey__ KeyCode::SEMICOLON, PointingButton::LEFT</autogen>
    </item>
 
