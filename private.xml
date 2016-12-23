@@ -17,11 +17,13 @@
 
 <appdef>
     <appname>TERMINAL</appname>
-    <equal>com.apple.Terminal</equal>
-    <equal>iTerm</equal>
-    <equal>net.sourceforge.iTerm</equal>
     <equal>com.googlecode.iterm2</equal>
 </appdef>
+<appdef>
+    <appname>XCODE</appname>
+    <equal>com.apple.dt.Xcode</equal>
+</appdef>
+
 <!-- Escapeでusに変更 -->
 <list>
    <item>
@@ -160,25 +162,26 @@
        <autogen>__KeyToKey__ KeyCode::SPACE, KeyCode::SPACE, KeyCode::SPACE, KeyCode::SPACE, KeyCode::SPACE</autogen>
    </item>
 
-<!-- XキーでXcode編集(x+) -->
+<!-- XキーでXcodeタブ切替(S+) -->
    <item>
-       <name> Xcode mode (x+)</name>
+       <name> Xcode mode (S+)</name>
        <identifier>remap.xcode_mode</identifier>
+       <only>XCODE</only>
        <autogen>
            __KeyOverlaidModifier__
-           KeyCode::X
+           KeyCode::S
            @begin
            KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_xcode_mode,
            @end
            @begin
-           KeyCode::X
+           KeyCode::S
            @end
        </autogen>
    </item>
    <item hidden="true">
        <identifier vk_config="true">notsave_xcode_mode</identifier>
        <autogen>
-           __BlockUntilKeyUp__ KeyCode::X
+           __BlockUntilKeyUp__ KeyCode::S
        </autogen>
        <autogen>__KeyToKey__ KeyCode::N, KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_L, ModifierFlag::COMMAND_L</autogen>
        <autogen>__KeyToKey__ KeyCode::P, KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L, ModifierFlag::COMMAND_L</autogen>
