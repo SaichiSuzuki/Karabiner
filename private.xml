@@ -173,7 +173,14 @@
    <!--     <autogen>__KeyToKey__ KeyCode::SPACE, KeyCode::SPACE, KeyCode::SPACE, KeyCode::SPACE, KeyCode::SPACE</autogen> -->
    <!-- </item> -->
 
-<!-- XキーでXcodeタブ切替(S+) -->
+<item>
+    <name>xcode editor focus</name>
+    <identifier>private.xcode_editor_focus</identifier>
+    <autogen>--KeyToKey-- KeyCode::J, ModifierFlag::COMMAND_L | ModifierFlag::NONE,
+        KeyCode::J, ModifierFlag::COMMAND_L, KeyCode::RETURN
+    </autogen>
+</item>
+
    <item>
        <name> Xcode mode (S+)</name>
        <identifier>remap.xcode_mode</identifier>
