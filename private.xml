@@ -25,6 +25,14 @@
         <appname>XCODE</appname>
         <equal>com.apple.dt.Xcode</equal>
     </appdef>
+    <appdef>
+        <appname>ANDROID_STUDIO</appname>
+        <equal>com.google.android.studio</equal>
+    </appdef>
+    <appdef>
+        <appname>CHROME</appname>
+        <equal>com.google.Chrome</equal>
+    </appdef>
 
 <!-- Escapeでusに変更 -->
 <list>
@@ -82,6 +90,7 @@
     <device_only>DeviceVendor::HHKB_VendorID, DeviceProduct::HHKB_KEYBOARD</device_only>
     <autogen>--KeyToKey-- KeyCode::RETURN, KeyCode::BACKSLASH</autogen>
     <autogen>--KeyToKey-- KeyCode::RETURN, ModifierFlag::SHIFT_L, KeyCode::BACKSLASH, ModifierFlag::SHIFT_L</autogen>
+    <autogen>--KeyToKey-- KeyCode::RETURN, ModifierFlag::FN, KeyCode::RETURN</autogen>
 </item>
 
 <!-- Fキーで矢印、DELETE、RETURNモード  -->
@@ -173,16 +182,15 @@
    <!--     <autogen>__KeyToKey__ KeyCode::SPACE, KeyCode::SPACE, KeyCode::SPACE, KeyCode::SPACE, KeyCode::SPACE</autogen> -->
    <!-- </item> -->
 
-<!-- XキーでXcodeタブ切替(S+) -->
    <item>
-       <name> Xcode mode (S+)</name>
-       <identifier>remap.xcode_mode</identifier>
-       <only>XCODE</only>
+       <name> tab and mouse mode (S+)</name>
+       <identifier>remap.tab_mouse_mode</identifier>
+       <only>XCODE, CHROME, ANDROID_STUDIO</only>
        <autogen>
            __KeyOverlaidModifier__
            KeyCode::S
            @begin
-           KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_xcode_mode,
+           KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_tab_mouse_mode,
            @end
            @begin
            KeyCode::S
@@ -190,7 +198,7 @@
        </autogen>
    </item>
    <item hidden="true">
-       <identifier vk_config="true">notsave_xcode_mode</identifier>
+       <identifier vk_config="true">notsave_tab_mouse_mode</identifier>
        <autogen>
            __BlockUntilKeyUp__ KeyCode::S
        </autogen>
