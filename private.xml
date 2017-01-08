@@ -33,6 +33,10 @@
         <appname>CHROME</appname>
         <equal>com.google.Chrome</equal>
     </appdef>
+    <appdef>
+        <appname>SAFARI</appname>
+        <equal>com.apple.Safari</equal>
+    </appdef>
 
 <!-- Escapeでusに変更 -->
 <list>
@@ -201,7 +205,7 @@
    <item>
        <name> tab and mouse mode (S+)</name>
        <identifier>remap.tab_mouse_mode</identifier>
-       <only>XCODE, CHROME, ANDROID_STUDIO</only>
+       <only>XCODE, CHROME, SAFARI, ANDROID_STUDIO</only>
        <autogen>
            __KeyOverlaidModifier__
            KeyCode::S
