@@ -38,6 +38,69 @@
         <equal>com.apple.Safari</equal>
     </appdef>
 
+<!-- アプリ起動Launcher -->
+<vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_APP_Chrome</name>
+    <url type="file">/Applications/Google Chrome.app</url>
+  </vkopenurldef>
+
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_APP_Macvim</name>
+    <url type="file">/Applications/MacVim.app</url>
+  </vkopenurldef>
+
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_APP_Iterm</name>
+    <url type="file">/Applications/iTerm.app</url>
+  </vkopenurldef>
+
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_APP_CocosStudio</name>
+    <url type="file">/Applications/Cocos/Cocos Studio 2.app</url>
+  </vkopenurldef>
+
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_APP_Itunes</name>
+    <url type="file">/Applications/iTunes.app</url>
+  </vkopenurldef>
+
+  <replacementdef>
+    <replacementname>LAUNCHER_MODE_V2_EXTRA</replacementname>
+    <replacementvalue>
+      <![CDATA[
+        <autogen>
+          __KeyDownUpToKey__
+          KeyCode::C,
+          KeyCode::VK_OPEN_URL_APP_Chrome,
+        </autogen>
+
+        <autogen>
+          __KeyDownUpToKey__
+          KeyCode::V,
+          KeyCode::VK_OPEN_URL_APP_Macvim,
+        </autogen>
+
+        <autogen>
+          __KeyDownUpToKey__
+          KeyCode::I,
+          KeyCode::VK_OPEN_URL_APP_Iterm,
+        </autogen>
+
+        <autogen>
+          __KeyDownUpToKey__
+          KeyCode::T,
+          KeyCode::VK_OPEN_URL_APP_CocosStudio,
+        </autogen>
+
+        <autogen>
+          __KeyDownUpToKey__
+          KeyCode::M,
+          KeyCode::VK_OPEN_URL_APP_Itunes,
+        </autogen>
+      ]]>
+    </replacementvalue>
+  </replacementdef>
+
 <!-- Escapeでusに変更 -->
 <list>
     <item>
@@ -230,12 +293,16 @@
        <autogen>__KeyToKey__ KeyCode::J, KeyCode::VK_MOUSEKEY_DOWN</autogen>
        <autogen>__KeyToKey__ KeyCode::K, KeyCode::VK_MOUSEKEY_UP</autogen>
        <autogen>__KeyToKey__ KeyCode::L, KeyCode::VK_MOUSEKEY_RIGHT</autogen>
+       <autogen>__KeyToKey__ KeyCode::M, KeyCode::VK_MOUSEKEY_SCROLL_DOWN</autogen>
+       <autogen>__KeyToKey__ KeyCode::COMMA, KeyCode::VK_MOUSEKEY_SCROLL_UP</autogen>
        <autogen>__KeyToKey__ KeyCode::F, KeyCode::VK_MOUSEKEY_HIGHSPEED</autogen>
        <autogen>__KeyToKey__ KeyCode::SEMICOLON, PointingButton::LEFT</autogen>
+       <autogen>__KeyToKey__ KeyCode::G, KeyCode::VK_OPEN_URL_SHELL_warp_mouse_cursor_position_front_window_center</autogen>
+       <autogen>__KeyToKey__ KeyCode::I, KeyCode::VK_OPEN_URL_SHELL_warp_mouse_cursor_position_front_window_center</autogen>
    </item>
 
    <item>
-       <name> Mouse mode(S+)</name>
+       <name>Mouse mode(S+)</name>
        <identifier>mouse_mode</identifier>
        <not>TERMINAL</not>
        <autogen>
@@ -258,8 +325,12 @@
        <autogen>__KeyToKey__ KeyCode::J, KeyCode::VK_MOUSEKEY_DOWN</autogen>
        <autogen>__KeyToKey__ KeyCode::K, KeyCode::VK_MOUSEKEY_UP</autogen>
        <autogen>__KeyToKey__ KeyCode::L, KeyCode::VK_MOUSEKEY_RIGHT</autogen>
+       <autogen>__KeyToKey__ KeyCode::M, KeyCode::VK_MOUSEKEY_SCROLL_DOWN</autogen>
+       <autogen>__KeyToKey__ KeyCode::COMMA, KeyCode::VK_MOUSEKEY_SCROLL_UP</autogen>
        <autogen>__KeyToKey__ KeyCode::F, KeyCode::VK_MOUSEKEY_HIGHSPEED</autogen>
        <autogen>__KeyToKey__ KeyCode::SEMICOLON, PointingButton::LEFT</autogen>
+       <autogen>__KeyToKey__ KeyCode::G, KeyCode::VK_OPEN_URL_SHELL_warp_mouse_cursor_position_front_window_center</autogen>
+       <autogen>__KeyToKey__ KeyCode::I, KeyCode::VK_OPEN_URL_SHELL_warp_mouse_cursor_position_front_window_center</autogen>
    </item>
 
 <!-- Sキーでtmux画面移動 -->
