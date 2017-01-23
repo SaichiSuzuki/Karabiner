@@ -37,69 +37,88 @@
         <appname>SAFARI</appname>
         <equal>com.apple.Safari</equal>
     </appdef>
+    <appdef>
+        <appname>VIVALDI</appname>
+        <equal>com.vivaldi.Vivaldi</equal>
+    </appdef>
+    <appdef>
+        <appname>CHATWORK</appname>
+        <equal>com.electron.chatwork</equal>
+    </appdef>
 
 <!-- アプリ起動Launcher -->
-<vkopenurldef>
-    <name>KeyCode::VK_OPEN_URL_APP_Chrome</name>
-    <url type="file">/Applications/Google Chrome.app</url>
-  </vkopenurldef>
+  <!-- <vkopenurldef> -->
+  <!--   <name>KeyCode::VK_OPEN_URL_APP_Chrome</name> -->
+  <!--   <url type="file">/Applications/Google Chrome.app</url> -->
+  <!-- </vkopenurldef> -->
+  <!--  -->
+  <!-- <vkopenurldef> -->
+  <!--   <name>KeyCode::VK_OPEN_URL_APP_Vivaldi</name> -->
+  <!--   <url type="file">/Applications/Vivaldi.app</url> -->
+  <!-- </vkopenurldef> -->
+  <!--  -->
+  <!-- <vkopenurldef> -->
+  <!--   <name>KeyCode::VK_OPEN_URL_APP_Macvim</name> -->
+  <!--   <url type="file">/Applications/MacVim.app</url> -->
+  <!-- </vkopenurldef> -->
+  <!--  -->
+  <!-- <vkopenurldef> -->
+  <!--   <name>KeyCode::VK_OPEN_URL_APP_Iterm</name> -->
+  <!--   <url type="file">/Applications/iTerm.app</url> -->
+  <!-- </vkopenurldef> -->
+  <!--  -->
+  <!-- <vkopenurldef> -->
+  <!--   <name>KeyCode::VK_OPEN_URL_APP_CocosStudio</name> -->
+  <!--   <url type="file">/Applications/Cocos/Cocos Studio 2.app</url> -->
+  <!-- </vkopenurldef> -->
+  <!--  -->
+  <!-- <vkopenurldef> -->
+  <!--   <name>KeyCode::VK_OPEN_URL_APP_Itunes</name> -->
+  <!--   <url type="file">/Applications/iTunes.app</url> -->
+  <!-- </vkopenurldef> -->
 
-  <vkopenurldef>
-    <name>KeyCode::VK_OPEN_URL_APP_Macvim</name>
-    <url type="file">/Applications/MacVim.app</url>
-  </vkopenurldef>
-
-  <vkopenurldef>
-    <name>KeyCode::VK_OPEN_URL_APP_Iterm</name>
-    <url type="file">/Applications/iTerm.app</url>
-  </vkopenurldef>
-
-  <vkopenurldef>
-    <name>KeyCode::VK_OPEN_URL_APP_CocosStudio</name>
-    <url type="file">/Applications/Cocos/Cocos Studio 2.app</url>
-  </vkopenurldef>
-
-  <vkopenurldef>
-    <name>KeyCode::VK_OPEN_URL_APP_Itunes</name>
-    <url type="file">/Applications/iTunes.app</url>
-  </vkopenurldef>
-
-  <replacementdef>
-    <replacementname>LAUNCHER_MODE_V2_EXTRA</replacementname>
-    <replacementvalue>
-      <![CDATA[
-        <autogen>
-          __KeyDownUpToKey__
-          KeyCode::C,
-          KeyCode::VK_OPEN_URL_APP_Chrome,
-        </autogen>
-
-        <autogen>
-          __KeyDownUpToKey__
-          KeyCode::V,
-          KeyCode::VK_OPEN_URL_APP_Macvim,
-        </autogen>
-
-        <autogen>
-          __KeyDownUpToKey__
-          KeyCode::I,
-          KeyCode::VK_OPEN_URL_APP_Iterm,
-        </autogen>
-
-        <autogen>
-          __KeyDownUpToKey__
-          KeyCode::T,
-          KeyCode::VK_OPEN_URL_APP_CocosStudio,
-        </autogen>
-
-        <autogen>
-          __KeyDownUpToKey__
-          KeyCode::M,
-          KeyCode::VK_OPEN_URL_APP_Itunes,
-        </autogen>
-      ]]>
-    </replacementvalue>
-  </replacementdef>
+  <!-- <replacementdef> -->
+  <!--   <replacementname>LAUNCHER_MODE_V2_EXTRA</replacementname> -->
+  <!--   <replacementvalue> -->
+  <!--     <![CDATA[ -->
+  <!--       <autogen> -->
+  <!--         __KeyDownUpToKey__ -->
+  <!--         KeyCode::C, -->
+  <!--         KeyCode::VK_OPEN_URL_APP_Chrome, -->
+  <!--       </autogen> -->
+  <!--  -->
+  <!--       <autogen> -->
+  <!--         __KeyDownUpToKey__ -->
+  <!--         KeyCode::V, -->
+  <!--         KeyCode::VK_OPEN_URL_APP_Vivaldi, -->
+  <!--       </autogen> -->
+  <!--  -->
+  <!--       <autogen> -->
+  <!--         __KeyDownUpToKey__ -->
+  <!--         KeyCode::M, -->
+  <!--         KeyCode::VK_OPEN_URL_APP_Macvim, -->
+  <!--       </autogen> -->
+  <!--  -->
+  <!--       <autogen> -->
+  <!--         __KeyDownUpToKey__ -->
+  <!--         KeyCode::I, -->
+  <!--         KeyCode::VK_OPEN_URL_APP_Iterm, -->
+  <!--       </autogen> -->
+  <!--  -->
+  <!--       <autogen> -->
+  <!--         __KeyDownUpToKey__ -->
+  <!--         KeyCode::T, -->
+  <!--         KeyCode::VK_OPEN_URL_APP_CocosStudio, -->
+  <!--       </autogen> -->
+  <!--  -->
+  <!--       <autogen> -->
+  <!--         __KeyDownUpToKey__ -->
+  <!--         KeyCode::M, -->
+  <!--         KeyCode::VK_OPEN_URL_APP_Itunes, -->
+  <!--       </autogen> -->
+  <!--     ]]> -->
+  <!--   </replacementvalue> -->
+  <!-- </replacementdef> -->
 
 <!-- Escapeでusに変更 -->
 <list>
@@ -166,7 +185,43 @@
     <autogen>--KeyToKey-- KeyCode::RETURN, KeyCode::BACKSLASH</autogen>
     <autogen>--KeyToKey-- KeyCode::RETURN, ModifierFlag::SHIFT_L, KeyCode::BACKSLASH, ModifierFlag::SHIFT_L</autogen>
     <autogen>--KeyToKey-- KeyCode::RETURN, ModifierFlag::FN, KeyCode::RETURN</autogen>
+    <!-- <autogen>&#45;&#45;KeyToKey&#45;&#45; KeyCode::ConsumerKeyCode::POWER, KeyCode::VK_CONSUMERKEY_MUSIC_PLAY</autogen> -->
+    <!-- <autogen>&#45;&#45;KeyToKey&#45;&#45; KeyCode::ConsumerKeyCode::ConsumerKeyCode::VOLUME_MUTE, KeyCode::VK_CONSUMERKEY_MUSIC_PREV</autogen> -->
+    <!-- <autogen>&#45;&#45;KeyToKey&#45;&#45; KeyCode::ConsumerKeyCode::EJECT, KeyCode::VK_CONSUMERKEY_MUSIC_NEXT</autogen> -->
+    <!-- <autogen>&#45;&#45;KeyToKey&#45;&#45; KeyCode::D, ModifierFlag::FN, KeyCode::VK_CONSUMERKEY_MUSIC_PLAY</autogen> -->
+    <!-- <autogen>&#45;&#45;KeyToKey&#45;&#45; KeyCode::F, ModifierFlag::FN, KeyCode::VK_CONSUMERKEY_MUSIC_PREV</autogen> -->
+    <!-- <autogen>&#45;&#45;KeyToKey&#45;&#45; KeyCode::G, ModifierFlag::FN, KeyCode::VK_CONSUMERKEY_MUSIC_NEXT</autogen> -->
 </item>
+
+<!-- OキーでLauncherモード  -->
+   <item>
+       <name>Custom Launcher mode (O+)</name>
+       <identifier>remap.custom_launcher_mode_o</identifier>
+       <autogen>
+           __KeyOverlaidModifier__
+           KeyCode::O
+           @begin
+           KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_custom_launcher_mode_o,
+           @end
+           @begin
+           KeyCode::O
+           @end
+       </autogen>
+   </item>
+   <item hidden="true">
+       <identifier vk_config="true">notsave_custom_launcher_mode_o</identifier>
+       <autogen>
+           __BlockUntilKeyUp__ KeyCode::O
+       </autogen>
+       <autogen>__KeyToKey__ KeyCode::I, KeyCode::I, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::X, KeyCode::X, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::V, KeyCode::V, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::A, KeyCode::A, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::S, KeyCode::S, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::C, KeyCode::C, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::F, KeyCode::F, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
+   </item>
+
 
 <!-- Fキーで矢印、DELETE、RETURNモード  -->
    <item>
@@ -268,7 +323,7 @@
    <item>
        <name> tab and mouse mode (S+)</name>
        <identifier>remap.tab_mouse_mode</identifier>
-       <only>XCODE, CHROME, SAFARI, ANDROID_STUDIO</only>
+       <only>XCODE, CHROME, SAFARI, VIVALDI, ANDROID_STUDIO</only>
        <autogen>
            __KeyOverlaidModifier__
            KeyCode::S
