@@ -45,36 +45,15 @@
         <appname>CHATWORK</appname>
         <equal>com.electron.chatwork</equal>
     </appdef>
+    <appdef>
+        <appname>MACVIM</appname>
+        <equal>org.vim.MacVim</equal>
+    </appdef>
 
 <!-- アプリ起動Launcher -->
   <!-- <vkopenurldef> -->
-  <!--   <name>KeyCode::VK_OPEN_URL_APP_Chrome</name> -->
-  <!--   <url type="file">/Applications/Google Chrome.app</url> -->
-  <!-- </vkopenurldef> -->
-  <!--  -->
-  <!-- <vkopenurldef> -->
   <!--   <name>KeyCode::VK_OPEN_URL_APP_Vivaldi</name> -->
   <!--   <url type="file">/Applications/Vivaldi.app</url> -->
-  <!-- </vkopenurldef> -->
-  <!--  -->
-  <!-- <vkopenurldef> -->
-  <!--   <name>KeyCode::VK_OPEN_URL_APP_Macvim</name> -->
-  <!--   <url type="file">/Applications/MacVim.app</url> -->
-  <!-- </vkopenurldef> -->
-  <!--  -->
-  <!-- <vkopenurldef> -->
-  <!--   <name>KeyCode::VK_OPEN_URL_APP_Iterm</name> -->
-  <!--   <url type="file">/Applications/iTerm.app</url> -->
-  <!-- </vkopenurldef> -->
-  <!--  -->
-  <!-- <vkopenurldef> -->
-  <!--   <name>KeyCode::VK_OPEN_URL_APP_CocosStudio</name> -->
-  <!--   <url type="file">/Applications/Cocos/Cocos Studio 2.app</url> -->
-  <!-- </vkopenurldef> -->
-  <!--  -->
-  <!-- <vkopenurldef> -->
-  <!--   <name>KeyCode::VK_OPEN_URL_APP_Itunes</name> -->
-  <!--   <url type="file">/Applications/iTunes.app</url> -->
   <!-- </vkopenurldef> -->
 
   <!-- <replacementdef> -->
@@ -83,45 +62,23 @@
   <!--     <![CDATA[ -->
   <!--       <autogen> -->
   <!--         __KeyDownUpToKey__ -->
-  <!--         KeyCode::C, -->
-  <!--         KeyCode::VK_OPEN_URL_APP_Chrome, -->
-  <!--       </autogen> -->
-  <!--  -->
-  <!--       <autogen> -->
-  <!--         __KeyDownUpToKey__ -->
   <!--         KeyCode::V, -->
   <!--         KeyCode::VK_OPEN_URL_APP_Vivaldi, -->
-  <!--       </autogen> -->
-  <!--  -->
-  <!--       <autogen> -->
-  <!--         __KeyDownUpToKey__ -->
-  <!--         KeyCode::M, -->
-  <!--         KeyCode::VK_OPEN_URL_APP_Macvim, -->
-  <!--       </autogen> -->
-  <!--  -->
-  <!--       <autogen> -->
-  <!--         __KeyDownUpToKey__ -->
-  <!--         KeyCode::I, -->
-  <!--         KeyCode::VK_OPEN_URL_APP_Iterm, -->
-  <!--       </autogen> -->
-  <!--  -->
-  <!--       <autogen> -->
-  <!--         __KeyDownUpToKey__ -->
-  <!--         KeyCode::T, -->
-  <!--         KeyCode::VK_OPEN_URL_APP_CocosStudio, -->
-  <!--       </autogen> -->
-  <!--  -->
-  <!--       <autogen> -->
-  <!--         __KeyDownUpToKey__ -->
-  <!--         KeyCode::M, -->
-  <!--         KeyCode::VK_OPEN_URL_APP_Itunes, -->
   <!--       </autogen> -->
   <!--     ]]> -->
   <!--   </replacementvalue> -->
   <!-- </replacementdef> -->
 
-<!-- Escapeでusに変更 -->
 <list>
+
+<!-- common -->
+    <item>
+        <name>common</name>
+        <identifier>private.common</identifier>
+       <autogen>__KeyToKey__ KeyCode::OPTION_R, KeyCode::SLASH</autogen>
+    </item>
+
+<!-- Escapeでusに変更 -->
     <item>
         <name>with EISUU (escape, Ctrl_L + Space, Ctrl_L + bracket+left)</name>
         <identifier>private.vim_alfred_with_eisuu</identifier>
@@ -250,6 +207,7 @@
        <autogen>__KeyToKey__ KeyCode::O, KeyCode::DELETE</autogen>
        <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::RETURN</autogen>
        <autogen>__KeyToKey__ KeyCode::SLASH, KeyCode::BACKQUOTE, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::OPTION_R, KeyCode::BACKQUOTE, ModifierFlag::SHIFT_L</autogen>
    </item>
 
 <!-- word jump and addressbar mode) -->
@@ -279,81 +237,12 @@
        </autogen>
    </item>
 
-<!-- Dキーでダッシュモード(Fキーの5倍) -->
-   <!-- <item> -->
-       <!--     <name>Cursor dash mode (null+)</name> -->
-       <!--     <identifier>remap.cursor_dash_mode</identifier> -->
-       <!--     <autogen> -->
-           <!--         __KeyOverlaidModifier__ -->
-           <!--         KeyCode::D -->
-           <!--         @begin -->
-           <!--         KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_cursor_dash_mode, -->
-           <!--         @end -->
-           <!--         @begin -->
-           <!--         KeyCode::D -->
-           <!--         @end -->
-           <!--     </autogen> -->
-       <!-- </item> -->
-   <!-- <item hidden="true"> -->
-       <!--     <identifier vk_config="true">notsave_cursor_dash_mode</identifier> -->
-       <!--     <autogen> -->
-           <!--         __BlockUntilKeyUp__ KeyCode::D -->
-           <!--     </autogen> -->
-       <!--     <autogen>__KeyToKey__ KeyCode::H, KeyCode::CURSOR_LEFT, KeyCode::CURSOR_LEFT, KeyCode::CURSOR_LEFT, -->
-           <!--         KeyCode::CURSOR_LEFT, KeyCode::CURSOR_LEFT</autogen> -->
-       <!--     <autogen>__KeyToKey__ KeyCode::J, KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN, -->
-           <!--         KeyCode::CURSOR_DOWN, KeyCode::CURSOR_DOWN</autogen> -->
-       <!--     <autogen>__KeyToKey__ KeyCode::K, KeyCode::CURSOR_UP, KeyCode::CURSOR_UP, KeyCode::CURSOR_UP, -->
-           <!--         KeyCode::CURSOR_UP, KeyCode::CURSOR_UP</autogen> -->
-       <!--     <autogen>__KeyToKey__ KeyCode::L, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, -->
-           <!--         KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT</autogen> -->
-       <!--     <autogen>__KeyToKey__ KeyCode::O, KeyCode::DELETE, KeyCode::DELETE, KeyCode::DELETE, KeyCode::DELETE</autogen> -->
-       <!--     <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::RETURN, KeyCode::RETURN, KeyCode::RETURN, KeyCode::RETURN</autogen> -->
-       <!--     <autogen>__KeyToKey__ KeyCode::SPACE, KeyCode::SPACE, KeyCode::SPACE, KeyCode::SPACE, KeyCode::SPACE</autogen> -->
-       <!-- </item> -->
-
    <item>
        <name>xcode editor focus</name>
        <identifier>private.xcode_editor_focus</identifier>
        <autogen>--KeyToKey-- KeyCode::J, ModifierFlag::COMMAND_L | ModifierFlag::NONE,
            KeyCode::J, ModifierFlag::COMMAND_L, KeyCode::RETURN
        </autogen>
-   </item>
-
-   <item>
-       <name> tab and mouse mode (S+)</name>
-       <identifier>remap.tab_mouse_mode</identifier>
-       <only>XCODE, CHROME, SAFARI, VIVALDI, ANDROID_STUDIO</only>
-       <autogen>
-           __KeyOverlaidModifier__
-           KeyCode::S
-           @begin
-           KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_tab_mouse_mode,
-           @end
-           @begin
-           KeyCode::S
-           @end
-       </autogen>
-   </item>
-   <item hidden="true">
-       <identifier vk_config="true">notsave_tab_mouse_mode</identifier>
-       <autogen>
-           __BlockUntilKeyUp__ KeyCode::S
-       </autogen>
-       <autogen>__KeyToKey__ KeyCode::N, KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_L, ModifierFlag::COMMAND_L</autogen>
-       <autogen>__KeyToKey__ KeyCode::P, KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L, ModifierFlag::COMMAND_L</autogen>
-       <autogen>__KeyToKey__ KeyCode::O, KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L, ModifierFlag::COMMAND_L</autogen>  <!-- hedge -->
-       <!-- mouse mode -->
-       <autogen>__KeyToKey__ KeyCode::H, KeyCode::VK_MOUSEKEY_LEFT</autogen>
-       <autogen>__KeyToKey__ KeyCode::J, KeyCode::VK_MOUSEKEY_DOWN</autogen>
-       <autogen>__KeyToKey__ KeyCode::K, KeyCode::VK_MOUSEKEY_UP</autogen>
-       <autogen>__KeyToKey__ KeyCode::L, KeyCode::VK_MOUSEKEY_RIGHT</autogen>
-       <autogen>__KeyToKey__ KeyCode::M, KeyCode::VK_MOUSEKEY_SCROLL_DOWN</autogen>
-       <autogen>__KeyToKey__ KeyCode::COMMA, KeyCode::VK_MOUSEKEY_SCROLL_UP</autogen>
-       <autogen>__KeyToKey__ KeyCode::F, KeyCode::VK_MOUSEKEY_HIGHSPEED</autogen>
-       <autogen>__KeyToKey__ KeyCode::SEMICOLON, PointingButton::LEFT</autogen>
-       <autogen>__KeyToKey__ KeyCode::G, KeyCode::VK_OPEN_URL_SHELL_warp_mouse_cursor_position_front_window_center</autogen>
-       <autogen>__KeyToKey__ KeyCode::I, KeyCode::VK_OPEN_URL_SHELL_warp_mouse_cursor_position_front_window_center</autogen>
    </item>
 
    <item>
@@ -376,16 +265,32 @@
        <autogen>
            __BlockUntilKeyUp__ KeyCode::S
        </autogen>
+       <autogen>__KeyToKey__ KeyCode::N, KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_L, ModifierFlag::COMMAND_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::P, KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L, ModifierFlag::COMMAND_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::O, KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L, ModifierFlag::COMMAND_L</autogen>  <!-- hedge -->
+
        <autogen>__KeyToKey__ KeyCode::H, KeyCode::VK_MOUSEKEY_LEFT</autogen>
        <autogen>__KeyToKey__ KeyCode::J, KeyCode::VK_MOUSEKEY_DOWN</autogen>
        <autogen>__KeyToKey__ KeyCode::K, KeyCode::VK_MOUSEKEY_UP</autogen>
        <autogen>__KeyToKey__ KeyCode::L, KeyCode::VK_MOUSEKEY_RIGHT</autogen>
+
+       <autogen>__KeyToKey__ KeyCode::F, KeyCode::VK_MOUSEKEY_HIGHSPEED</autogen>
+
+       <autogen>__KeyToKey__ KeyCode::SEMICOLON, PointingButton::LEFT</autogen>
+
        <autogen>__KeyToKey__ KeyCode::M, KeyCode::VK_MOUSEKEY_SCROLL_DOWN</autogen>
        <autogen>__KeyToKey__ KeyCode::COMMA, KeyCode::VK_MOUSEKEY_SCROLL_UP</autogen>
-       <autogen>__KeyToKey__ KeyCode::F, KeyCode::VK_MOUSEKEY_HIGHSPEED</autogen>
-       <autogen>__KeyToKey__ KeyCode::SEMICOLON, PointingButton::LEFT</autogen>
-       <autogen>__KeyToKey__ KeyCode::G, KeyCode::VK_OPEN_URL_SHELL_warp_mouse_cursor_position_front_window_center</autogen>
+
        <autogen>__KeyToKey__ KeyCode::I, KeyCode::VK_OPEN_URL_SHELL_warp_mouse_cursor_position_front_window_center</autogen>
+
+   </item>
+
+   <item>
+       <name>Vim Scroll</name>
+       <identifier>vim_scroll</identifier>
+       <not>TERMINAL, MACVIM</not>
+       <autogen>__KeyToKey__ KeyCode::Y, ModifierFlag::CONTROL_L, KeyCode::VK_MOUSEKEY_SCROLL_UP</autogen>
+       <autogen>__KeyToKey__ KeyCode::E, ModifierFlag::CONTROL_L, KeyCode::VK_MOUSEKEY_SCROLL_DOWN</autogen>
    </item>
 
 <!-- Sキーでtmux画面移動 -->
