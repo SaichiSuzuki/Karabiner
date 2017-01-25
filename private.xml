@@ -2,10 +2,19 @@
 <root>
 
 <!-- デバイス名定義 -->
+<!--  <devicevendordef> -->
+<!--      <vendorname>HHKB&#45;BT</vendorname> -->
+<!--      <vendorid>0x21701c27</vendorid> -->
+<!--  </devicevendordef> -->
+
  <devicevendordef>
-     <vendorname>HHKB-BT</vendorname>
-     <vendorid>0x21701c27</vendorid>
+     <vendorname>APPLE_VendorID</vendorname>
+     <vendorid>0x05ac</vendorid>
  </devicevendordef>
+ <deviceproductdef>
+     <productname>APPLE_KEYBOARD</productname>
+     <productid>0x0273</productid>
+ </deviceproductdef>
 
  <devicevendordef>
      <vendorname>HHKB_VendorID</vendorname>
@@ -73,8 +82,9 @@
 
 <!-- common -->
     <item>
-        <name>common</name>
-        <identifier>private.common</identifier>
+        <name>apple mode</name>
+        <device_only>DeviceVendor::APPLE_VendorID, DeviceProduct::APPLE_KEYBOARD</device_only>
+        <identifier>private.apple</identifier>
        <autogen>__KeyToKey__ KeyCode::OPTION_R, KeyCode::SLASH</autogen>
     </item>
 
@@ -142,6 +152,11 @@
     <autogen>--KeyToKey-- KeyCode::RETURN, KeyCode::BACKSLASH</autogen>
     <autogen>--KeyToKey-- KeyCode::RETURN, ModifierFlag::SHIFT_L, KeyCode::BACKSLASH, ModifierFlag::SHIFT_L</autogen>
     <autogen>--KeyToKey-- KeyCode::RETURN, ModifierFlag::FN, KeyCode::RETURN</autogen>
+    <autogen>--KeyToKey-- KeyCode::A, ModifierFlag::OPTION_R, KeyCode::VK_CONSUMERKEY_VOLUME_DOWN</autogen>
+    <autogen>--KeyToKey-- KeyCode::S, ModifierFlag::OPTION_R, KeyCode::VK_CONSUMERKEY_VOLUME_UP</autogen>
+    <autogen>--KeyToKey-- KeyCode::D, ModifierFlag::OPTION_R, KeyCode::VK_CONSUMERKEY_MUSIC_PLAY</autogen>
+    <autogen>--KeyToKey-- KeyCode::F, ModifierFlag::OPTION_R, KeyCode::VK_CONSUMERKEY_MUSIC_PREV</autogen>
+    <autogen>--KeyToKey-- KeyCode::G, ModifierFlag::OPTION_R, KeyCode::VK_CONSUMERKEY_MUSIC_NEXT</autogen>
     <!-- <autogen>&#45;&#45;KeyToKey&#45;&#45; KeyCode::ConsumerKeyCode::POWER, KeyCode::VK_CONSUMERKEY_MUSIC_PLAY</autogen> -->
     <!-- <autogen>&#45;&#45;KeyToKey&#45;&#45; KeyCode::ConsumerKeyCode::ConsumerKeyCode::VOLUME_MUTE, KeyCode::VK_CONSUMERKEY_MUSIC_PREV</autogen> -->
     <!-- <autogen>&#45;&#45;KeyToKey&#45;&#45; KeyCode::ConsumerKeyCode::EJECT, KeyCode::VK_CONSUMERKEY_MUSIC_NEXT</autogen> -->
@@ -283,15 +298,17 @@
 
        <autogen>__KeyToKey__ KeyCode::I, KeyCode::VK_OPEN_URL_SHELL_warp_mouse_cursor_position_front_window_center</autogen>
 
+       <autogen>__KeyToKey__ KeyCode::Y, KeyCode::VK_MOUSEKEY_SCROLL_UP</autogen>
+       <autogen>__KeyToKey__ KeyCode::E, KeyCode::VK_MOUSEKEY_SCROLL_DOWN</autogen>
    </item>
 
-   <item>
-       <name>Vim Scroll</name>
-       <identifier>vim_scroll</identifier>
-       <not>TERMINAL, MACVIM</not>
-       <autogen>__KeyToKey__ KeyCode::Y, ModifierFlag::CONTROL_L, KeyCode::VK_MOUSEKEY_SCROLL_UP</autogen>
-       <autogen>__KeyToKey__ KeyCode::E, ModifierFlag::CONTROL_L, KeyCode::VK_MOUSEKEY_SCROLL_DOWN</autogen>
-   </item>
+   <!-- <item> -->
+   <!--     <name>Vim Scroll</name> -->
+   <!--     <identifier>vim_scroll</identifier> -->
+   <!--     <not>TERMINAL, MACVIM</not> -->
+   <!--     <autogen>__KeyToKey__ KeyCode::Y, ModifierFlag::CONTROL_L, KeyCode::VK_MOUSEKEY_SCROLL_UP</autogen> -->
+   <!--     <autogen>__KeyToKey__ KeyCode::E, ModifierFlag::CONTROL_L, KeyCode::VK_MOUSEKEY_SCROLL_DOWN</autogen> -->
+   <!-- </item> -->
 
 <!-- Sキーでtmux画面移動 -->
    <item>
