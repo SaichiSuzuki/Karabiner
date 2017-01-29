@@ -232,13 +232,13 @@
 
 <!-- word jump and addressbar mode) -->
    <item>
-       <name>Custom Vi mode (semicoron+)</name>
-       <identifier>remap.custom_vi_mode_semicoron</identifier>
+       <name>Custom Vi mode (semicolon+)</name>
+       <identifier>remap.custom_vi_mode_semicolon</identifier>
        <autogen>
            __KeyOverlaidModifier__
            KeyCode::SEMICOLON
            @begin
-           KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_custom_vi_mode_semicoron,
+           KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_custom_vi_mode_semicolon,
            @end
            @begin
            KeyCode::SEMICOLON
@@ -246,11 +246,12 @@
        </autogen>
    </item>
    <item hidden="true">
-       <identifier vk_config="true">notsave_custom_vi_mode_semicoron</identifier>
+       <identifier vk_config="true">notsave_custom_vi_mode_semicolon</identifier>
        <autogen>__KeyToKey__ KeyCode::W, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L | ModifierFlag::NONE </autogen>
        <autogen>__KeyToKey__ KeyCode::B, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L | ModifierFlag::NONE </autogen>
-       <autogen>__KeyToKey__ KeyCode::Q, KeyCode::F, ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L | ModifierFlag::NONE, KeyCode::ESCAPE, KeyCode::CURSOR_RIGHT </autogen>
-       <autogen>__KeyToKey__ KeyCode::A, KeyCode::A, ModifierFlag::COMMAND_L | ModifierFlag::NONE, KeyCode::U, KeyCode::RETURN </autogen>
+       <!-- <autogen>__KeyToKey__ KeyCode::Q, KeyCode::F, ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L | ModifierFlag::NONE, KeyCode::ESCAPE, KeyCode::CURSOR_RIGHT </autogen> -->
+       <autogen>__KeyToKey__ KeyCode::Q, KeyCode::F8</autogen>
+       <!-- <autogen>__KeyToKey__ KeyCode::A, KeyCode::A, ModifierFlag::COMMAND_L | ModifierFlag::NONE, KeyCode::U, KeyCode::RETURN </autogen> -->
        <autogen>__KeyToKey__ KeyCode::V, KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::V</autogen>
        <autogen>
            __BlockUntilKeyUp__ KeyCode::SEMICOLON
