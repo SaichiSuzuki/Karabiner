@@ -58,6 +58,10 @@
         <appname>MACVIM</appname>
         <equal>org.vim.MacVim</equal>
     </appdef>
+    <appdef>
+        <appname>Toggl</appname>
+        <equal>com.toggl.toggldesktop.TogglDesktop</equal>
+    </appdef>
 
 <!-- アプリ起動Launcher -->
   <!-- <vkopenurldef> -->
@@ -192,6 +196,7 @@
        <autogen>__KeyToKey__ KeyCode::S, KeyCode::S, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
        <autogen>__KeyToKey__ KeyCode::C, KeyCode::C, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
        <autogen>__KeyToKey__ KeyCode::F, KeyCode::F, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::G, KeyCode::G, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
    </item>
 
 
@@ -261,6 +266,32 @@
    </item>
 
    <item>
+       <name>Scroll mode(Z+)</name>
+       <identifier>scroll_mode</identifier>
+       <not>TERMINAL</not>
+       <autogen>
+           __KeyOverlaidModifier__
+           KeyCode::Z, ModifierFlag::NONE,
+           @begin
+           KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_scroll_mode
+           @end
+           @begin
+           KeyCode::Z
+           @end
+       </autogen>
+   </item>
+   <item hidden="true">
+       <identifier vk_config="true">notsave_scroll_mode</identifier>
+       <autogen>
+           __BlockUntilKeyUp__ KeyCode::Z
+       </autogen>
+       <autogen>__KeyToKey__ KeyCode::H, KeyCode::VK_MOUSEKEY_SCROLL_LEFT</autogen>
+       <autogen>__KeyToKey__ KeyCode::J, KeyCode::VK_MOUSEKEY_SCROLL_DOWN</autogen>
+       <autogen>__KeyToKey__ KeyCode::K, KeyCode::VK_MOUSEKEY_SCROLL_UP</autogen>
+       <autogen>__KeyToKey__ KeyCode::L, KeyCode::VK_MOUSEKEY_SCROLL_RIGHT</autogen>
+   </item>
+
+   <item>
        <name>Mouse mode(S+)</name>
        <identifier>mouse_mode</identifier>
        <not>TERMINAL</not>
@@ -280,26 +311,26 @@
        <autogen>
            __BlockUntilKeyUp__ KeyCode::S
        </autogen>
+       <!-- tab move -->
        <autogen>__KeyToKey__ KeyCode::N, KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_L, ModifierFlag::COMMAND_L</autogen>
        <autogen>__KeyToKey__ KeyCode::P, KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L, ModifierFlag::COMMAND_L</autogen>
-       <autogen>__KeyToKey__ KeyCode::O, KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L, ModifierFlag::COMMAND_L</autogen>  <!-- hedge -->
-
+       <autogen>__KeyToKey__ KeyCode::O, KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L, ModifierFlag::COMMAND_L</autogen>
+       <!-- cursor -->
        <autogen>__KeyToKey__ KeyCode::H, KeyCode::VK_MOUSEKEY_LEFT</autogen>
        <autogen>__KeyToKey__ KeyCode::J, KeyCode::VK_MOUSEKEY_DOWN</autogen>
        <autogen>__KeyToKey__ KeyCode::K, KeyCode::VK_MOUSEKEY_UP</autogen>
        <autogen>__KeyToKey__ KeyCode::L, KeyCode::VK_MOUSEKEY_RIGHT</autogen>
-
        <autogen>__KeyToKey__ KeyCode::F, KeyCode::VK_MOUSEKEY_HIGHSPEED</autogen>
-
+       <!-- click -->
        <autogen>__KeyToKey__ KeyCode::SEMICOLON, PointingButton::LEFT</autogen>
-
-       <autogen>__KeyToKey__ KeyCode::M, KeyCode::VK_MOUSEKEY_SCROLL_DOWN</autogen>
-       <autogen>__KeyToKey__ KeyCode::COMMA, KeyCode::VK_MOUSEKEY_SCROLL_UP</autogen>
-
-       <autogen>__KeyToKey__ KeyCode::I, KeyCode::VK_OPEN_URL_SHELL_warp_mouse_cursor_position_front_window_center</autogen>
-
+       <autogen>__KeyToKey__ KeyCode::QUOTE, PointingButton::RIGHT</autogen>
+       <!-- scroll -->
        <autogen>__KeyToKey__ KeyCode::Y, KeyCode::VK_MOUSEKEY_SCROLL_UP</autogen>
        <autogen>__KeyToKey__ KeyCode::E, KeyCode::VK_MOUSEKEY_SCROLL_DOWN</autogen>
+       <!-- warp -->
+       <autogen>__KeyToKey__ KeyCode::I, KeyCode::VK_OPEN_URL_SHELL_warp_mouse_cursor_position_front_window_center</autogen>
+       <autogen>__KeyToKey__ KeyCode::Q, KeyCode::1, ModifierFlag::CONTROL_L, ModifierFlag::OPTION_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::U, KeyCode::2, ModifierFlag::CONTROL_L, ModifierFlag::OPTION_L</autogen>
    </item>
 
    <!-- <item> -->
