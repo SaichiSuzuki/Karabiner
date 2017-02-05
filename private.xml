@@ -313,34 +313,69 @@
            __BlockUntilKeyUp__ KeyCode::S
        </autogen>
        <!-- tab move -->
-       <autogen>__KeyToKey__ KeyCode::N, KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_L, ModifierFlag::COMMAND_L</autogen>
-       <autogen>__KeyToKey__ KeyCode::P, KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L, ModifierFlag::COMMAND_L</autogen>
-       <autogen>__KeyToKey__ KeyCode::O, KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L, ModifierFlag::COMMAND_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::NONE, KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_L, ModifierFlag::COMMAND_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::P, ModifierFlag::NONE, KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L, ModifierFlag::COMMAND_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::O, ModifierFlag::NONE, KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L, ModifierFlag::COMMAND_L</autogen>
        <!-- cursor -->
-       <autogen>__KeyToKey__ KeyCode::H, KeyCode::VK_MOUSEKEY_LEFT</autogen>
-       <autogen>__KeyToKey__ KeyCode::J, KeyCode::VK_MOUSEKEY_DOWN</autogen>
-       <autogen>__KeyToKey__ KeyCode::K, KeyCode::VK_MOUSEKEY_UP</autogen>
-       <autogen>__KeyToKey__ KeyCode::L, KeyCode::VK_MOUSEKEY_RIGHT</autogen>
+       <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::NONE, KeyCode::VK_MOUSEKEY_LEFT</autogen>
+       <autogen>__KeyToKey__ KeyCode::J, ModifierFlag::NONE, KeyCode::VK_MOUSEKEY_DOWN</autogen>
+       <autogen>__KeyToKey__ KeyCode::K, ModifierFlag::NONE, KeyCode::VK_MOUSEKEY_UP</autogen>
+       <autogen>__KeyToKey__ KeyCode::L, ModifierFlag::NONE, KeyCode::VK_MOUSEKEY_RIGHT</autogen>
        <autogen>__KeyToKey__ KeyCode::F, KeyCode::VK_MOUSEKEY_HIGHSPEED</autogen>
        <!-- click -->
-       <autogen>__KeyToKey__ KeyCode::SEMICOLON, PointingButton::LEFT</autogen>
-       <autogen>__KeyToKey__ KeyCode::QUOTE, PointingButton::RIGHT</autogen>
+       <autogen>__KeyToKey__ KeyCode::SEMICOLON, ModifierFlag::NONE, PointingButton::LEFT</autogen>
+       <autogen>__KeyToKey__ KeyCode::QUOTE, ModifierFlag::NONE, PointingButton::RIGHT</autogen>
        <!-- scroll -->
-       <autogen>__KeyToKey__ KeyCode::Y, KeyCode::VK_MOUSEKEY_SCROLL_UP</autogen>
-       <autogen>__KeyToKey__ KeyCode::E, KeyCode::VK_MOUSEKEY_SCROLL_DOWN</autogen>
-       <!-- warp -->
-       <autogen>__KeyToKey__ KeyCode::I, KeyCode::VK_OPEN_URL_SHELL_warp_mouse_cursor_position_front_window_center</autogen>
-       <autogen>__KeyToKey__ KeyCode::Q, KeyCode::1, ModifierFlag::CONTROL_L, ModifierFlag::OPTION_L</autogen>
-       <autogen>__KeyToKey__ KeyCode::U, KeyCode::2, ModifierFlag::CONTROL_L, ModifierFlag::OPTION_L</autogen>
+        <!-- <autogen>__KeyToKey__ KeyCode::Y, KeyCode::VK_MOUSEKEY_SCROLL_UP</autogen> -->
+        <!-- <autogen>__KeyToKey__ KeyCode::E, KeyCode::VK_MOUSEKEY_SCROLL_DOWN</autogen> -->
+       <!-- warp cross -->
+       <autogen>__KeyToKey__ KeyCode::I, ModifierFlag::NONE, KeyCode::VK_OPEN_URL_SHELL_warp_mouse_cursor_position_front_window_center</autogen>
+       <autogen>__KeyToKey__ KeyCode::U, ModifierFlag::NONE, KeyCode::U, ModifierFlag::SHIFT_L, ModifierFlag::OPTION_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::K, ModifierFlag::SHIFT_L, KeyCode::VK_OPEN_URL_SHELL_move_mouse_top_center</autogen>
+       <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::SHIFT_L, KeyCode::VK_OPEN_URL_SHELL_move_mouse_middle_left</autogen>
+       <autogen>__KeyToKey__ KeyCode::L, ModifierFlag::SHIFT_L, KeyCode::VK_OPEN_URL_SHELL_move_mouse_middle_right</autogen>
+       <autogen>__KeyToKey__ KeyCode::J, ModifierFlag::SHIFT_L, KeyCode::VK_OPEN_URL_SHELL_move_mouse_bottom_center</autogen>
+       <!-- warp corner -->
+       <autogen>__KeyToKey__ KeyCode::Y, ModifierFlag::SHIFT_L, KeyCode::VK_OPEN_URL_SHELL_move_mouse_top_left</autogen>
+       <autogen>__KeyToKey__ KeyCode::P, ModifierFlag::SHIFT_L, KeyCode::VK_OPEN_URL_SHELL_move_mouse_top_right</autogen>
+       <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::SHIFT_L, KeyCode::VK_OPEN_URL_SHELL_move_mouse_bottom_left</autogen>
+       <autogen>__KeyToKey__ KeyCode::DOT, ModifierFlag::SHIFT_L, KeyCode::VK_OPEN_URL_SHELL_move_mouse_bottom_right</autogen>
+       <!-- <autogen>__KeyToKey__ KeyCode::Q, KeyCode::1, ModifierFlag::CONTROL_L, ModifierFlag::OPTION_L</autogen> -->
+       <!-- <autogen>__KeyToKey__ KeyCode::U, KeyCode::2, ModifierFlag::CONTROL_L, ModifierFlag::OPTION_L</autogen> -->
    </item>
 
-   <!-- <item> -->
-   <!--     <name>Vim Scroll</name> -->
-   <!--     <identifier>vim_scroll</identifier> -->
-   <!--     <not>TERMINAL, MACVIM</not> -->
-   <!--     <autogen>__KeyToKey__ KeyCode::Y, ModifierFlag::CONTROL_L, KeyCode::VK_MOUSEKEY_SCROLL_UP</autogen> -->
-   <!--     <autogen>__KeyToKey__ KeyCode::E, ModifierFlag::CONTROL_L, KeyCode::VK_MOUSEKEY_SCROLL_DOWN</autogen> -->
-   <!-- </item> -->
+   <item>
+       <name>Mouse warp(D+)</name>
+       <identifier>mouse_warp</identifier>
+       <autogen>
+           __KeyOverlaidModifier__
+           KeyCode::D, ModifierFlag::NONE,
+           @begin
+           KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_mouse_warp
+           @end
+           @begin
+           KeyCode::D
+           @end
+       </autogen>
+   </item>
+   <item hidden="true">
+       <identifier vk_config="true">notsave_mouse_warp</identifier>
+       <autogen>
+           __BlockUntilKeyUp__ KeyCode::D
+       </autogen>
+       <!-- warp cross -->
+       <autogen>__KeyToKey__ KeyCode::I, KeyCode::VK_OPEN_URL_SHELL_warp_mouse_cursor_position_front_window_center</autogen>
+       <autogen>__KeyToKey__ KeyCode::U, ModifierFlag::NONE, KeyCode::U, ModifierFlag::SHIFT_L, ModifierFlag::OPTION_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::K, ModifierFlag::NONE, KeyCode::VK_OPEN_URL_SHELL_move_mouse_top_center</autogen>
+       <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::NONE, KeyCode::VK_OPEN_URL_SHELL_move_mouse_middle_left</autogen>
+       <autogen>__KeyToKey__ KeyCode::L, ModifierFlag::NONE, KeyCode::VK_OPEN_URL_SHELL_move_mouse_middle_right</autogen>
+       <autogen>__KeyToKey__ KeyCode::J, ModifierFlag::NONE, KeyCode::VK_OPEN_URL_SHELL_move_mouse_bottom_center</autogen>
+       <!-- warp corner -->
+       <autogen>__KeyToKey__ KeyCode::Y, ModifierFlag::NONE, KeyCode::VK_OPEN_URL_SHELL_move_mouse_top_left</autogen>
+       <autogen>__KeyToKey__ KeyCode::P, ModifierFlag::NONE, KeyCode::VK_OPEN_URL_SHELL_move_mouse_top_right</autogen>
+       <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::NONE, KeyCode::VK_OPEN_URL_SHELL_move_mouse_bottom_left</autogen>
+       <autogen>__KeyToKey__ KeyCode::DOT, ModifierFlag::NONE, KeyCode::VK_OPEN_URL_SHELL_move_mouse_bottom_right</autogen>
+   </item>
 
 <!-- Sキーでtmux画面移動 -->
    <item>
@@ -400,8 +435,8 @@
        <autogen>__KeyToKey__ KeyCode::K, KeyCode::F10, ModifierFlag::OPTION_L</autogen>
        <autogen>__KeyToKey__ KeyCode::L, KeyCode::F11, ModifierFlag::OPTION_L</autogen>
        <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::F12, ModifierFlag::OPTION_L</autogen>
-       <autogen>__KeyToKey__ KeyCode::W, KeyCode::F6, ModifierFlag::CONTROL_L</autogen>
-       <autogen>__KeyToKey__ KeyCode::R, KeyCode::F7, ModifierFlag::CONTROL_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::W, KeyCode::W, ModifierFlag::SHIFT_L, ModifierFlag::OPTION_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::R, KeyCode::R, ModifierFlag::SHIFT_L, ModifierFlag::OPTION_L</autogen>
    </item>
 
 <!-- Gキー gadget -->
@@ -429,6 +464,57 @@
        <autogen>__KeyToKey__ KeyCode::I, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L, ModifierFlag::SHIFT_L, KeyCode::X, ModifierFlag::COMMAND_L | ModifierFlag::NONE</autogen>
        <autogen>__KeyToKey__ KeyCode::V, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L, ModifierFlag::SHIFT_L</autogen>
    </item>
+
+
+ <!-- vk open url def -->
+  <vkopenurldef>
+    <name> KeyCode::VK_OPEN_URL_SHELL_move_mouse_bottom_left</name>
+    <url type="shell">
+      <![CDATA[ /Applications/Karabiner.app/Contents/Library/utilities/bin/warp-mouse-cursor-position front_window bottom +0 left +0 ]]>
+    </url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name> KeyCode::VK_OPEN_URL_SHELL_move_mouse_bottom_center</name>
+    <url type="shell">
+      <![CDATA[ /Applications/Karabiner.app/Contents/Library/utilities/bin/warp-mouse-cursor-position front_window bottom +0 center +0 ]]>
+    </url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name> KeyCode::VK_OPEN_URL_SHELL_move_mouse_bottom_right</name>
+    <url type="shell">
+      <![CDATA[ /Applications/Karabiner.app/Contents/Library/utilities/bin/warp-mouse-cursor-position front_window bottom +0 right +0 ]]>
+    </url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name> KeyCode::VK_OPEN_URL_SHELL_move_mouse_middle_left</name>
+    <url type="shell">
+      <![CDATA[ /Applications/Karabiner.app/Contents/Library/utilities/bin/warp-mouse-cursor-position front_window middle +0 left +0 ]]>
+    </url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name> KeyCode::VK_OPEN_URL_SHELL_move_mouse_middle_right</name>
+    <url type="shell">
+      <![CDATA[ /Applications/Karabiner.app/Contents/Library/utilities/bin/warp-mouse-cursor-position front_window middle +0 right +0 ]]>
+    </url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name> KeyCode::VK_OPEN_URL_SHELL_move_mouse_top_left</name>
+    <url type="shell">
+      <![CDATA[ /Applications/Karabiner.app/Contents/Library/utilities/bin/warp-mouse-cursor-position front_window top +0 left +0 ]]>
+    </url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name> KeyCode::VK_OPEN_URL_SHELL_move_mouse_top_center</name>
+    <url type="shell">
+      <![CDATA[ /Applications/Karabiner.app/Contents/Library/utilities/bin/warp-mouse-cursor-position front_window top +0 center +0 ]]>
+    </url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name> KeyCode::VK_OPEN_URL_SHELL_move_mouse_top_right</name>
+    <url type="shell">
+      <![CDATA[ /Applications/Karabiner.app/Contents/Library/utilities/bin/warp-mouse-cursor-position front_window top +0 right +0 ]]>
+    </url>
+  </vkopenurldef>
 
 </list>
 </root>
