@@ -141,6 +141,14 @@
 </item>
 
 <item>
+    <name>chmod file</name>
+    <identifier>private.chmodfile</identifier>
+    <autogen>--KeyToKey-- KeyCode::C, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L | ModifierFlag::NONE,
+        KeyCode::A, ModifierFlag::CONTROL_L, KeyCode::C, KeyCode::H, KeyCode::M, KeyCode::O, KeyCode::D, KeyCode::SPACE, KeyCode::7, KeyCode::5, KeyCode::5, KeyCode::SPACE, KeyCode::E, ModifierFlag::CONTROL_L, KeyCode::RETURN
+    </autogen>
+</item>
+
+<item>
     <name>terminal copy</name>
     <identifier>private.terminal_copy</identifier>
     <autogen>--KeyToKey-- KeyCode::P, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L | ModifierFlag::NONE,
