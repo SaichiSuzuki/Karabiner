@@ -84,12 +84,19 @@
 
 <list>
 
-<!-- common -->
+<!-- apple -->
     <item>
         <name>apple mode</name>
         <device_only>DeviceVendor::APPLE_VendorID, DeviceProduct::APPLE_KEYBOARD</device_only>
         <identifier>private.apple</identifier>
        <autogen>__KeyToKey__ KeyCode::OPTION_R, KeyCode::SLASH</autogen>
+    </item>
+
+<!-- common -->
+    <item>
+        <name>common</name>
+        <identifier>private.common</identifier>
+       <autogen>__KeyToKey__ KeyCode::RETURN, KeyCode::SLASH</autogen>
     </item>
 
 <!-- Escapeでusに変更 -->
@@ -228,6 +235,7 @@
        <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::RETURN</autogen>
        <autogen>__KeyToKey__ KeyCode::SLASH, KeyCode::BACKQUOTE, ModifierFlag::SHIFT_L</autogen>
        <autogen>__KeyToKey__ KeyCode::OPTION_R, KeyCode::BACKQUOTE, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::RETURN, KeyCode::BACKQUOTE, ModifierFlag::SHIFT_L</autogen>
    </item>
 
 <!-- word jump and addressbar mode) -->
