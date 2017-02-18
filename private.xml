@@ -2,11 +2,6 @@
 <root>
 
 <!-- デバイス名定義 -->
-<!--  <devicevendordef> -->
-<!--      <vendorname>HHKB&#45;BT</vendorname> -->
-<!--      <vendorid>0x21701c27</vendorid> -->
-<!--  </devicevendordef> -->
-
  <devicevendordef>
      <vendorname>APPLE_VendorID</vendorname>
      <vendorid>0x05ac</vendorid>
@@ -160,7 +155,6 @@
     <identifier>private.terminal_copy</identifier>
     <autogen>--KeyToKey-- KeyCode::P, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L | ModifierFlag::NONE,
         KeyCode::A, ModifierFlag::CONTROL_L, KeyCode::E, KeyCode::C, KeyCode::H, KeyCode::O, KeyCode::SPACE, KeyCode::QUOTE,  KeyCode::E, ModifierFlag::CONTROL_L, KeyCode::QUOTE, KeyCode::SPACE, KeyCode::BACKSLASH, ModifierFlag::SHIFT_L, KeyCode::SPACE, KeyCode::P, KeyCode::B, KeyCode::C, KeyCode::O, KeyCode::P, KeyCode::Y, KeyCode::RETURN,
-        <!-- KeyCode::CURSOR_UP, KeyCode::W, ModifierFlag::CONTROL_L, KeyCode::DELETE, KeyCode::DELETE, KeyCode::DELETE, KeyCode::DELETE, KeyCode::A, ModifierFlag::CONTROL_L, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, KeyCode::W, ModifierFlag::CONTROL_L, KeyCode::E, ModifierFlag::CONTROL_L -->
     </autogen>
 </item>
 
@@ -176,12 +170,6 @@
     <autogen>--KeyToKey-- KeyCode::D, ModifierFlag::OPTION_R, KeyCode::VK_CONSUMERKEY_MUSIC_PLAY</autogen>
     <autogen>--KeyToKey-- KeyCode::F, ModifierFlag::OPTION_R, KeyCode::VK_CONSUMERKEY_MUSIC_PREV</autogen>
     <autogen>--KeyToKey-- KeyCode::G, ModifierFlag::OPTION_R, KeyCode::VK_CONSUMERKEY_MUSIC_NEXT</autogen>
-    <!-- <autogen>&#45;&#45;KeyToKey&#45;&#45; KeyCode::ConsumerKeyCode::POWER, KeyCode::VK_CONSUMERKEY_MUSIC_PLAY</autogen> -->
-    <!-- <autogen>&#45;&#45;KeyToKey&#45;&#45; KeyCode::ConsumerKeyCode::ConsumerKeyCode::VOLUME_MUTE, KeyCode::VK_CONSUMERKEY_MUSIC_PREV</autogen> -->
-    <!-- <autogen>&#45;&#45;KeyToKey&#45;&#45; KeyCode::ConsumerKeyCode::EJECT, KeyCode::VK_CONSUMERKEY_MUSIC_NEXT</autogen> -->
-    <!-- <autogen>&#45;&#45;KeyToKey&#45;&#45; KeyCode::D, ModifierFlag::FN, KeyCode::VK_CONSUMERKEY_MUSIC_PLAY</autogen> -->
-    <!-- <autogen>&#45;&#45;KeyToKey&#45;&#45; KeyCode::F, ModifierFlag::FN, KeyCode::VK_CONSUMERKEY_MUSIC_PREV</autogen> -->
-    <!-- <autogen>&#45;&#45;KeyToKey&#45;&#45; KeyCode::G, ModifierFlag::FN, KeyCode::VK_CONSUMERKEY_MUSIC_NEXT</autogen> -->
 </item>
 
 <!-- OキーでLauncherモード  -->
@@ -265,10 +253,8 @@
        <identifier vk_config="true">notsave_custom_vi_mode_semicolon</identifier>
        <autogen>__KeyToKey__ KeyCode::W, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L | ModifierFlag::NONE </autogen>
        <autogen>__KeyToKey__ KeyCode::B, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L | ModifierFlag::NONE </autogen>
-       <!-- <autogen>__KeyToKey__ KeyCode::Q, KeyCode::F, ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L | ModifierFlag::NONE, KeyCode::ESCAPE, KeyCode::CURSOR_RIGHT </autogen> -->
-       <autogen>__KeyToKey__ KeyCode::Q, KeyCode::F8</autogen>
-       <!-- <autogen>__KeyToKey__ KeyCode::A, KeyCode::A, ModifierFlag::COMMAND_L | ModifierFlag::NONE, KeyCode::U, KeyCode::RETURN </autogen> -->
-       <autogen>__KeyToKey__ KeyCode::V, KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::V</autogen>
+       <!-- <autogen>__KeyToKey__ KeyCode::Q, KeyCode::F, ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L | ModifierFlag::NONE, KeyCode::ESCAPE, KeyCode::CURSOR_RIGHT </autogen> --> <!-- chrome address bar -->
+       <autogen>__KeyToKey__ KeyCode::Q, KeyCode::F8</autogen> <!-- vivaldi address bar -->
        <autogen>
            __BlockUntilKeyUp__ KeyCode::SEMICOLON
        </autogen>
@@ -341,56 +327,18 @@
        <!-- click -->
        <autogen>__KeyToKey__ KeyCode::SEMICOLON, ModifierFlag::NONE, PointingButton::LEFT</autogen>
        <autogen>__KeyToKey__ KeyCode::QUOTE, ModifierFlag::NONE, PointingButton::RIGHT</autogen>
-       <!-- scroll -->
-        <!-- <autogen>__KeyToKey__ KeyCode::Y, KeyCode::VK_MOUSEKEY_SCROLL_UP</autogen> -->
-        <!-- <autogen>__KeyToKey__ KeyCode::E, KeyCode::VK_MOUSEKEY_SCROLL_DOWN</autogen> -->
        <!-- warp cross -->
        <autogen>__KeyToKey__ KeyCode::I, ModifierFlag::NONE, KeyCode::VK_OPEN_URL_SHELL_warp_mouse_cursor_position_front_window_center</autogen>
-       <autogen>__KeyToKey__ KeyCode::U, ModifierFlag::NONE, KeyCode::U, ModifierFlag::SHIFT_L, ModifierFlag::OPTION_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::U, ModifierFlag::NONE, KeyCode::B, ModifierFlag::SHIFT_L, ModifierFlag::OPTION_L, KeyCode::U, ModifierFlag::SHIFT_L, ModifierFlag::OPTION_L</autogen> <!-- use better touch tool -->
        <autogen>__KeyToKey__ KeyCode::K, ModifierFlag::SHIFT_L, KeyCode::VK_OPEN_URL_SHELL_move_mouse_top_center</autogen>
        <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::SHIFT_L, KeyCode::VK_OPEN_URL_SHELL_move_mouse_middle_left</autogen>
        <autogen>__KeyToKey__ KeyCode::L, ModifierFlag::SHIFT_L, KeyCode::VK_OPEN_URL_SHELL_move_mouse_middle_right</autogen>
        <autogen>__KeyToKey__ KeyCode::J, ModifierFlag::SHIFT_L, KeyCode::VK_OPEN_URL_SHELL_move_mouse_bottom_center</autogen>
        <!-- warp corner -->
-       <autogen>__KeyToKey__ KeyCode::Y, ModifierFlag::SHIFT_L, KeyCode::VK_OPEN_URL_SHELL_move_mouse_top_left</autogen>
+       <autogen>__KeyToKey__ KeyCode::Y, KeyCode::VK_OPEN_URL_SHELL_move_mouse_top_left</autogen>
        <autogen>__KeyToKey__ KeyCode::P, ModifierFlag::SHIFT_L, KeyCode::VK_OPEN_URL_SHELL_move_mouse_top_right</autogen>
        <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::SHIFT_L, KeyCode::VK_OPEN_URL_SHELL_move_mouse_bottom_left</autogen>
        <autogen>__KeyToKey__ KeyCode::DOT, ModifierFlag::SHIFT_L, KeyCode::VK_OPEN_URL_SHELL_move_mouse_bottom_right</autogen>
-       <!-- <autogen>__KeyToKey__ KeyCode::Q, KeyCode::1, ModifierFlag::CONTROL_L, ModifierFlag::OPTION_L</autogen> -->
-       <!-- <autogen>__KeyToKey__ KeyCode::U, KeyCode::2, ModifierFlag::CONTROL_L, ModifierFlag::OPTION_L</autogen> -->
-   </item>
-
-   <item>
-       <name>Mouse warp(D+)</name>
-       <identifier>mouse_warp</identifier>
-       <autogen>
-           __KeyOverlaidModifier__
-           KeyCode::D, ModifierFlag::NONE,
-           @begin
-           KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_mouse_warp
-           @end
-           @begin
-           KeyCode::D
-           @end
-       </autogen>
-   </item>
-   <item hidden="true">
-       <identifier vk_config="true">notsave_mouse_warp</identifier>
-       <autogen>
-           __BlockUntilKeyUp__ KeyCode::D
-       </autogen>
-       <!-- warp cross -->
-       <autogen>__KeyToKey__ KeyCode::I, KeyCode::VK_OPEN_URL_SHELL_warp_mouse_cursor_position_front_window_center</autogen>
-       <autogen>__KeyToKey__ KeyCode::U, ModifierFlag::NONE, KeyCode::U, ModifierFlag::SHIFT_L, ModifierFlag::OPTION_L</autogen>
-       <autogen>__KeyToKey__ KeyCode::K, ModifierFlag::NONE, KeyCode::VK_OPEN_URL_SHELL_move_mouse_top_center</autogen>
-       <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::NONE, KeyCode::VK_OPEN_URL_SHELL_move_mouse_middle_left</autogen>
-       <autogen>__KeyToKey__ KeyCode::L, ModifierFlag::NONE, KeyCode::VK_OPEN_URL_SHELL_move_mouse_middle_right</autogen>
-       <autogen>__KeyToKey__ KeyCode::J, ModifierFlag::NONE, KeyCode::VK_OPEN_URL_SHELL_move_mouse_bottom_center</autogen>
-       <!-- warp corner -->
-       <autogen>__KeyToKey__ KeyCode::Y, ModifierFlag::NONE, KeyCode::VK_OPEN_URL_SHELL_move_mouse_top_left</autogen>
-       <autogen>__KeyToKey__ KeyCode::P, ModifierFlag::NONE, KeyCode::VK_OPEN_URL_SHELL_move_mouse_top_right</autogen>
-       <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::NONE, KeyCode::VK_OPEN_URL_SHELL_move_mouse_bottom_left</autogen>
-       <autogen>__KeyToKey__ KeyCode::DOT, ModifierFlag::NONE, KeyCode::VK_OPEN_URL_SHELL_move_mouse_bottom_right</autogen>
    </item>
 
 <!-- Sキーでtmux画面移動 -->
@@ -423,6 +371,7 @@
        <autogen>__KeyToKey__ KeyCode::R, KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::R</autogen>
        <autogen>__KeyToKey__ KeyCode::V, KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::V</autogen>
        <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::V</autogen>
+       <autogen>__KeyToKey__ KeyCode::U, ModifierFlag::NONE, KeyCode::B, ModifierFlag::SHIFT_L, ModifierFlag::OPTION_L, KeyCode::U, ModifierFlag::SHIFT_L, ModifierFlag::OPTION_L</autogen> <!-- use better touch tool -->
    </item>
 
 <!-- Aキーでウィンドウ位置変更(BetterTouchToolと連携) -->
