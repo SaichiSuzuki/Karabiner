@@ -88,11 +88,12 @@
     </item>
 
 <!-- common -->
-    <item>
-        <name>common</name>
-        <identifier>private.common</identifier>
-        <autogen>__KeyToKey__ KeyCode::RETURN, KeyCode::SLASH</autogen>
-    </item>
+    <!-- <item> -->
+    <!--     <name>common</name> -->
+    <!--     <identifier>private.common</identifier> -->
+    <!--     <device_only>DeviceVendor::APPLE_VendorID, DeviceProduct::APPLE_KEYBOARD</device_only> -->
+    <!--     <autogen>__KeyToKey__ KeyCode::RETURN, KeyCode::SLASH</autogen> -->
+    <!-- </item> -->
 
 <!-- Escapeでusに変更 -->
     <item>
