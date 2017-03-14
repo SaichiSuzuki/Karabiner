@@ -144,7 +144,7 @@
     </autogen>
     <!-- vim most recently file open -->
     <autogen>--KeyToKey-- KeyCode::K, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L | ModifierFlag::NONE,
-        KeyCode::V, KeyCode::I, KeyCode::M, KeyCode::RETURN, KeyCode::I, KeyCode::BACKSLASH, KeyCode::K, ModifierFlag::SHIFT_L, KeyCode::ESCAPE
+        KeyCode::V, KeyCode::I, KeyCode::M, KeyCode::RETURN, KeyCode::0, KeyCode::BACKSLASH, KeyCode::K, ModifierFlag::SHIFT_L, KeyCode::ESCAPE
     </autogen>
     <!-- chmod 755 xxx -->
     <autogen>--KeyToKey-- KeyCode::C, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L | ModifierFlag::NONE,
@@ -160,7 +160,7 @@
     </autogen>
     <!-- vim denite grep -->
     <autogen>--KeyToKey-- KeyCode::G, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L | ModifierFlag::NONE,
-        KeyCode::V, KeyCode::I, KeyCode::M, KeyCode::RETURN, KeyCode::I, KeyCode::BACKSLASH, KeyCode::G
+        KeyCode::V, KeyCode::I, KeyCode::M, KeyCode::RETURN, KeyCode::0, KeyCode::BACKSLASH, KeyCode::G
     </autogen>
 </item>
 
