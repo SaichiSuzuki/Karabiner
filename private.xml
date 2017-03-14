@@ -136,30 +136,27 @@
 </item>
 
 <item>
-    <name>vim open</name>
-    <identifier>private.vimopen</identifier>
+    <name>Utility</name>
+    <identifier>private.utility</identifier>
+    <!-- vim <(xxx) -->
     <autogen>--KeyToKey-- KeyCode::V, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L | ModifierFlag::NONE,
         KeyCode::A, ModifierFlag::CONTROL_L, KeyCode::V, KeyCode::I, KeyCode::M, KeyCode::SPACE, KeyCode::COMMA, ModifierFlag::SHIFT_L, KeyCode::9, ModifierFlag::SHIFT_L, KeyCode::E, ModifierFlag::CONTROL_L, KeyCode::0, ModifierFlag::SHIFT_L, KeyCode::RETURN
     </autogen>
-    <!-- <autogen>&#45;&#45;KeyToKey&#45;&#45; KeyCode::J, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L | ModifierFlag::NONE, KeyCode::H, ModifierFlag::CONTROL_L, KeyCode::J, ModifierFlag::CONTROL_L</autogen> -->
-    <!-- <autogen>&#45;&#45;KeyToKey&#45;&#45; KeyCode::K, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L | ModifierFlag::NONE, KeyCode::H, ModifierFlag::CONTROL_L, KeyCode::K, ModifierFlag::CONTROL_L</autogen> -->
-    <!-- <autogen>&#45;&#45;KeyToKey&#45;&#45; KeyCode::G, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L | ModifierFlag::NONE, KeyCode::H, ModifierFlag::CONTROL_L, KeyCode::G, ModifierFlag::CONTROL_L</autogen> -->
-    <autogen>--KeyToKey-- KeyCode::K, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L | ModifierFlag::NONE, KeyCode::J, ModifierFlag::CONTROL_L, KeyCode::I, KeyCode::BACKSLASH, KeyCode::K, ModifierFlag::SHIFT_L, KeyCode::ESCAPE</autogen>
-</item>
-
-<item>
-    <name>chmod file</name>
-    <identifier>private.chmodfile</identifier>
+    <!-- vim most recently file open -->
+    <autogen>--KeyToKey-- KeyCode::K, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L | ModifierFlag::NONE,
+        KeyCode::J, ModifierFlag::CONTROL_L, KeyCode::I, KeyCode::BACKSLASH, KeyCode::K, ModifierFlag::SHIFT_L, KeyCode::ESCAPE
+    </autogen>
+    <!-- chmod 755 xxx -->
     <autogen>--KeyToKey-- KeyCode::C, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L | ModifierFlag::NONE,
         KeyCode::A, ModifierFlag::CONTROL_L, KeyCode::C, KeyCode::H, KeyCode::M, KeyCode::O, KeyCode::D, KeyCode::SPACE, KeyCode::7, KeyCode::5, KeyCode::5, KeyCode::SPACE, KeyCode::E, ModifierFlag::CONTROL_L, KeyCode::RETURN
     </autogen>
-</item>
-
-<item>
-    <name>terminal copy</name>
-    <identifier>private.terminal_copy</identifier>
+    <!-- terminal copy -->
     <autogen>--KeyToKey-- KeyCode::P, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L | ModifierFlag::NONE,
-        KeyCode::A, ModifierFlag::CONTROL_L, KeyCode::E, KeyCode::C, KeyCode::H, KeyCode::O, KeyCode::SPACE, KeyCode::QUOTE,  KeyCode::E, ModifierFlag::CONTROL_L, KeyCode::QUOTE, KeyCode::SPACE, KeyCode::BACKSLASH, ModifierFlag::SHIFT_L, KeyCode::SPACE, KeyCode::P, KeyCode::B, KeyCode::C, KeyCode::O, KeyCode::P, KeyCode::Y, KeyCode::RETURN,
+        KeyCode::A, ModifierFlag::CONTROL_L, KeyCode::E, KeyCode::C, KeyCode::H, KeyCode::O, KeyCode::SPACE, KeyCode::QUOTE,  KeyCode::E, ModifierFlag::CONTROL_L, KeyCode::QUOTE, KeyCode::SPACE, KeyCode::BACKSLASH, ModifierFlag::SHIFT_L, KeyCode::SPACE, KeyCode::P, KeyCode::B, KeyCode::C, KeyCode::O, KeyCode::P, KeyCode::Y, KeyCode::RETURN
+    </autogen>
+    <!-- vim git status -->
+    <autogen>--KeyToKey-- KeyCode::S, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L | ModifierFlag::NONE,
+        KeyCode::V, KeyCode::I, KeyCode::M, KeyCode::SPACE, KeyCode::Z, KeyCode::RETURN, KeyCode::SPACE, KeyCode::S, ModifierFlag::SHIFT_L
     </autogen>
 </item>
 
