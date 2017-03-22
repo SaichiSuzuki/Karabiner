@@ -158,9 +158,9 @@
     <autogen>--KeyToKey-- KeyCode::S, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L | ModifierFlag::NONE,
         KeyCode::V, KeyCode::I, KeyCode::M, KeyCode::SPACE, KeyCode::Z, KeyCode::RETURN, KeyCode::SPACE, KeyCode::S, ModifierFlag::SHIFT_L
     </autogen>
-    <!-- vim denite grep -->
+    <!-- vim ag(何かのキー(SPACE)を事前に打つ必要がある) -->
     <autogen>--KeyToKey-- KeyCode::G, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L | ModifierFlag::NONE,
-        KeyCode::V, KeyCode::I, KeyCode::M, KeyCode::RETURN, KeyCode::0, KeyCode::BACKSLASH, KeyCode::G
+        KeyCode::V, KeyCode::I, KeyCode::M, KeyCode::RETURN, KeyCode::SPACE, KeyCode::SPACE, KeyCode::G
     </autogen>
 </item>
 
@@ -171,6 +171,9 @@
     <autogen>--KeyToKey-- KeyCode::RETURN, KeyCode::BACKSLASH</autogen>
     <autogen>--KeyToKey-- KeyCode::RETURN, ModifierFlag::SHIFT_L, KeyCode::BACKSLASH, ModifierFlag::SHIFT_L</autogen>
     <autogen>--KeyToKey-- KeyCode::RETURN, ModifierFlag::FN, KeyCode::RETURN</autogen>
+    <autogen>--KeyToKey-- KeyCode::DELETE, KeyCode::EQUAL</autogen>
+    <autogen>--KeyToKey-- KeyCode::DELETE, ModifierFlag::SHIFT_L, KeyCode::EQUAL, ModifierFlag::SHIFT_L</autogen>
+    <autogen>--KeyToKey-- KeyCode::DELETE, ModifierFlag::FN, KeyCode::DELETE</autogen>
     <autogen>--KeyToKey-- KeyCode::A, ModifierFlag::OPTION_R, KeyCode::VK_CONSUMERKEY_VOLUME_DOWN</autogen>
     <autogen>--KeyToKey-- KeyCode::S, ModifierFlag::OPTION_R, KeyCode::VK_CONSUMERKEY_VOLUME_UP</autogen>
     <autogen>--KeyToKey-- KeyCode::D, ModifierFlag::OPTION_R, KeyCode::VK_CONSUMERKEY_MUSIC_PLAY</autogen>
