@@ -158,9 +158,9 @@
     <autogen>--KeyToKey-- KeyCode::S, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L | ModifierFlag::NONE,
         KeyCode::V, KeyCode::I, KeyCode::M, KeyCode::SPACE, KeyCode::Z, KeyCode::RETURN, KeyCode::SPACE, KeyCode::S, ModifierFlag::SHIFT_L
     </autogen>
-    <!-- vim ag(何かのキー(SPACE)を事前に打つ必要がある) -->
+    <!-- vim ag(何かのキー(CURSOR_RIGHT)を事前に打つ必要がある) -->
     <autogen>--KeyToKey-- KeyCode::G, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L | ModifierFlag::NONE,
-        KeyCode::V, KeyCode::I, KeyCode::M, KeyCode::RETURN, KeyCode::SPACE, KeyCode::SPACE, KeyCode::G
+        KeyCode::V, KeyCode::I, KeyCode::M, KeyCode::RETURN, KeyCode::CURSOR_RIGHT, KeyCode::G, KeyCode::A
     </autogen>
 </item>
 
