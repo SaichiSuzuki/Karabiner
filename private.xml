@@ -272,9 +272,19 @@
 
    <item>
        <name>xcode editor focus</name>
+       <only>XCODE</only>
        <identifier>private.xcode_editor_focus</identifier>
        <autogen>--KeyToKey-- KeyCode::J, ModifierFlag::COMMAND_L | ModifierFlag::NONE,
            KeyCode::J, ModifierFlag::COMMAND_L, KeyCode::RETURN
+       </autogen>
+   </item>
+
+   <item>
+       <name>android-studio editor focus</name>
+       <only>ANDROID_STUDIO</only>
+       <identifier>private.android_studio_editor_focus</identifier>
+       <autogen>--KeyToKey-- KeyCode::J, ModifierFlag::COMMAND_L | ModifierFlag::NONE,
+           KeyCode::VK_OPEN_URL_SHELL_warp_mouse_cursor_position_front_window_center, PointingButton::LEFT
        </autogen>
    </item>
 
