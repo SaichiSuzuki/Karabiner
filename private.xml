@@ -23,7 +23,9 @@
 <!-- アプリケーション名定義 -->
     <appdef>
         <appname>TERMINAL</appname>
+        <equal>com.apple.Terminal</equal>
         <equal>com.googlecode.iterm2</equal>
+        <equal>org.pqrs.unknownapp.alacritty</equal>
     </appdef>
     <appdef>
         <appname>XCODE</appname>
@@ -163,8 +165,12 @@
         KeyCode::V, KeyCode::I, KeyCode::M, KeyCode::RETURN, KeyCode::CURSOR_RIGHT, KeyCode::G, KeyCode::SLASH
     </autogen>
 
-    <autogen>--KeyToKey-- KeyCode::DELETE, KeyCode::F13</autogen>
-    <autogen>--KeyToKey-- KeyCode::H, ModifierFlag::CONTROL_L, KeyCode::F13</autogen>
+    <!-- alacritty shortcut -->
+    <autogen>__KeyToKey__ KeyCode::I, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, KeyCode::A, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
+
+    <!-- <autogen>&#45;&#45;KeyToKey&#45;&#45; KeyCode::DELETE, KeyCode::F13</autogen> -->
+    <!-- <autogen>&#45;&#45;KeyToKey&#45;&#45; KeyCode::H, ModifierFlag::CONTROL_L, KeyCode::F13</autogen> -->
+    <autogen>--KeyToKey-- KeyCode::H, ModifierFlag::CONTROL_L, KeyCode::F12</autogen>
 </item>
 
 <item>
@@ -206,6 +212,7 @@
        <autogen>__KeyToKey__ KeyCode::I, KeyCode::I, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
        <autogen>__KeyToKey__ KeyCode::X, KeyCode::X, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
        <autogen>__KeyToKey__ KeyCode::V, KeyCode::V, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::B, KeyCode::B, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
        <autogen>__KeyToKey__ KeyCode::A, KeyCode::A, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
        <autogen>__KeyToKey__ KeyCode::S, KeyCode::S, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
        <autogen>__KeyToKey__ KeyCode::C, KeyCode::C, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
@@ -240,12 +247,37 @@
        <autogen>__KeyToKey__ KeyCode::K, KeyCode::CURSOR_UP</autogen>
        <autogen>__KeyToKey__ KeyCode::L, KeyCode::CURSOR_RIGHT</autogen>
        <autogen>__KeyToKey__ KeyCode::O, KeyCode::DELETE</autogen>
-       <autogen>__KeyToKey__ KeyCode::P, KeyCode::EQUAL</autogen>
+       <autogen>__KeyToKey__ KeyCode::P, KeyCode::MINUS</autogen>
+       <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, KeyCode::EQUAL</autogen>
        <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::RETURN</autogen>
        <autogen>__KeyToKey__ KeyCode::SLASH, KeyCode::BACKQUOTE, ModifierFlag::SHIFT_L</autogen>
        <autogen>__KeyToKey__ KeyCode::OPTION_R, KeyCode::BACKQUOTE, ModifierFlag::SHIFT_L</autogen>
        <autogen>__KeyToKey__ KeyCode::RETURN, KeyCode::BACKQUOTE, ModifierFlag::SHIFT_L</autogen>
    </item>
+
+   <!-- can't vim <C-d> -->
+   <!-- <item> -->
+   <!--     <name>Custom Vi mode (D+)</name> -->
+   <!--     <identifier>remap.custom_vi_mode_d</identifier> -->
+   <!--     <autogen> -->
+   <!--         __KeyOverlaidModifier__ -->
+   <!--         KeyCode::D -->
+   <!--         @begin -->
+   <!--         KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_custom_vi_mode_d, -->
+   <!--         @end -->
+   <!--         @begin -->
+   <!--         KeyCode::D -->
+   <!--         @end -->
+   <!--     </autogen> -->
+   <!-- </item> -->
+   <!-- <item hidden="true"> -->
+   <!--     <identifier vk_config="true">notsave_custom_vi_mode_d</identifier> -->
+   <!--     <autogen> -->
+   <!--         __BlockUntilKeyUp__ KeyCode::D -->
+   <!--     </autogen> -->
+   <!--     <autogen>__KeyToKey__ KeyCode::L, KeyCode::MINUS</autogen> -->
+   <!--     <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::EQUAL</autogen> -->
+   <!-- </item> -->
 
 <!-- word jump and addressbar mode) -->
    <item>
