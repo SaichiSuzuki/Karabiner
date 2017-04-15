@@ -60,8 +60,8 @@
         <equal>org.vim.MacVim</equal>
     </appdef>
     <appdef>
-        <appname>Toggl</appname>
-        <equal>com.toggl.toggldesktop.TogglDesktop</equal>
+        <appname>ALFRED</appname>
+        <equal>com.runningwithcrayons.Alfred-3</equal>
     </appdef>
 
 <!-- アプリ起動Launcher -->
@@ -105,8 +105,7 @@
     <item>
         <name>with EISUU (escape, Ctrl_L + Space, Ctrl_L + bracket+left)</name>
         <identifier>private.vim_alfred_with_eisuu</identifier>
-        <not>ALACRITTY</not>
-        <autogen>--KeyToKey-- KeyCode::ESCAPE, KeyCode::ESCAPE, KeyCode::JIS_EISUU</autogen>
+        <not>ALACRITTY,ALFRED</not>
         <autogen>--KeyToKey-- KeyCode::SPACE, ModifierFlag::CONTROL_L, KeyCode::SPACE, ModifierFlag::CONTROL_L, KeyCode::JIS_EISUU</autogen>
         <autogen>--KeyToKey-- KeyCode::BRACKET_LEFT, ModifierFlag::CONTROL_L, KeyCode::BRACKET_LEFT, ModifierFlag::CONTROL_L, KeyCode::JIS_EISUU</autogen>
         <autogen>--KeyToKey-- KeyCode::JIS_BRACKET_LEFT, VK_CONTROL, KeyCode::JIS_BRACKET_LEFT, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
@@ -116,7 +115,7 @@
     <item>
         <name>cmd seal</name>
         <identifier>private.cmd_seal</identifier>
-        <appname>ALACRITTY</appname>
+        <only>ALACRITTY</only>
         <autogen>--KeyToKey-- KeyCode::COMMAND_L, KeyCode::COMMAND_L</autogen>
         <autogen>--KeyToKey-- KeyCode::COMMAND_R, KeyCode::COMMAND_R</autogen>
     </item>
