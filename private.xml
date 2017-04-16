@@ -142,12 +142,20 @@
     </autogen>
 </item>
 
-<!-- <C-w> word delete  -->
 <item>
-    <name> word delete</name>
-    <identifier>private.worddelete</identifier>
+    <name>Not terminal util</name>
+    <identifier>private.notterminalutil</identifier>
     <not>TERMINAL</not>
+    <!-- <C-w> word delete  -->
     <autogen>--KeyToKey-- KeyCode::W, ModifierFlag::CONTROL_L | ModifierFlag::NONE, KeyCode::DELETE, ModifierFlag::OPTION_L </autogen>
+</item>
+
+<item>
+    <name>Terminal util</name>
+    <identifier>private.terminalutil</identifier>
+    <only>TERMINAL</only>
+    <!-- use vim <C-i> -->
+    <autogen>--KeyToKey-- KeyCode::I, ModifierFlag::CONTROL_L, KeyCode::F11</autogen>
 </item>
 
 <item>
@@ -181,8 +189,7 @@
     <!-- alacritty shortcut -->
     <autogen>__KeyToKey__ KeyCode::I, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, KeyCode::A, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
 
-    <!-- <autogen>&#45;&#45;KeyToKey&#45;&#45; KeyCode::DELETE, KeyCode::F13</autogen> -->
-    <!-- <autogen>&#45;&#45;KeyToKey&#45;&#45; KeyCode::H, ModifierFlag::CONTROL_L, KeyCode::F13</autogen> -->
+    <!-- use vim tcomment -->
     <autogen>--KeyToKey-- KeyCode::H, ModifierFlag::CONTROL_L, KeyCode::F12</autogen>
 </item>
 
