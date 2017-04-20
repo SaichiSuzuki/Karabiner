@@ -118,6 +118,7 @@
         <only>ALACRITTY</only>
         <autogen>--KeyToKey-- KeyCode::COMMAND_L, KeyCode::COMMAND_L</autogen>
         <autogen>--KeyToKey-- KeyCode::COMMAND_R, KeyCode::COMMAND_R</autogen>
+        <autogen>--KeyToKey-- KeyCode::JIS_KANA, KeyCode::COMMAND_R</autogen>
     </item>
 
 <!-- スティッキーズ整理 -->
@@ -183,14 +184,18 @@
     </autogen>
     <!-- vim ag(何かのキー(CURSOR_RIGHT)を事前に打つ必要がある) -->
     <autogen>--KeyToKey-- KeyCode::G, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L | ModifierFlag::NONE,
-        KeyCode::V, KeyCode::I, KeyCode::M, KeyCode::RETURN, KeyCode::CURSOR_RIGHT, KeyCode::G, KeyCode::SLASH
+        KeyCode::V, KeyCode::I, KeyCode::M, KeyCode::RETURN, KeyCode::CURSOR_RIGHT, KeyCode::G, KeyCode::A
     </autogen>
-
-    <!-- alacritty shortcut -->
-    <autogen>__KeyToKey__ KeyCode::I, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, KeyCode::A, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
 
     <!-- use vim tcomment -->
     <autogen>--KeyToKey-- KeyCode::H, ModifierFlag::CONTROL_L, KeyCode::F12</autogen>
+</item>
+
+<item>
+    <name>alacritty shortcut</name>
+    <identifier>private.alacritty_shorcut</identifier>
+    <not>ALACRITTY</not>
+    <autogen>__KeyToKey__ KeyCode::I, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, KeyCode::I, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
 </item>
 
 <item>
@@ -267,8 +272,9 @@
        <autogen>__KeyToKey__ KeyCode::K, KeyCode::CURSOR_UP</autogen>
        <autogen>__KeyToKey__ KeyCode::L, KeyCode::CURSOR_RIGHT</autogen>
        <autogen>__KeyToKey__ KeyCode::O, KeyCode::DELETE</autogen>
-       <autogen>__KeyToKey__ KeyCode::P, KeyCode::MINUS</autogen>
-       <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, KeyCode::EQUAL</autogen>
+       <autogen>__KeyToKey__ KeyCode::P, KeyCode::EQUAL</autogen>
+       <!-- <autogen>__KeyToKey__ KeyCode::P, KeyCode::MINUS</autogen> -->
+       <!-- <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, KeyCode::EQUAL</autogen> -->
        <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::RETURN</autogen>
        <autogen>__KeyToKey__ KeyCode::SLASH, KeyCode::BACKQUOTE, ModifierFlag::SHIFT_L</autogen>
        <autogen>__KeyToKey__ KeyCode::OPTION_R, KeyCode::BACKQUOTE, ModifierFlag::SHIFT_L</autogen>
@@ -477,6 +483,9 @@
        <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::F12, ModifierFlag::OPTION_L</autogen>
        <autogen>__KeyToKey__ KeyCode::W, KeyCode::W, ModifierFlag::SHIFT_L, ModifierFlag::OPTION_L</autogen>
        <autogen>__KeyToKey__ KeyCode::R, KeyCode::R, ModifierFlag::SHIFT_L, ModifierFlag::OPTION_L</autogen>
+
+       <autogen>__KeyToKey__ KeyCode::O, KeyCode::MINUS</autogen>
+       <autogen>__KeyToKey__ KeyCode::P, KeyCode::EQUAL</autogen>
    </item>
 
 <!-- Gキー gadget -->
