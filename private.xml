@@ -103,10 +103,10 @@
 
 <!-- Escapeでusに変更 -->
     <item>
-        <name>with EISUU (escape, Ctrl_L + Space, Ctrl_L + bracket+left)</name>
+        <name>Escape with EISUU (escape, Ctrl_L + Space, Ctrl_L + bracket+left)</name>
         <identifier>private.vim_alfred_with_eisuu</identifier>
         <not>ALACRITTY,ALFRED</not>
-        <autogen>--KeyToKey-- KeyCode::SPACE, ModifierFlag::CONTROL_L, KeyCode::SPACE, ModifierFlag::CONTROL_L, KeyCode::JIS_EISUU</autogen>
+        <autogen>--KeyToKey-- KeyCode::SPACE, ModifierFlag::CONTROL_L | ModifierFlag::NONE, KeyCode::SPACE, ModifierFlag::CONTROL_L, KeyCode::JIS_EISUU</autogen>
         <autogen>--KeyToKey-- KeyCode::BRACKET_LEFT, ModifierFlag::CONTROL_L, KeyCode::BRACKET_LEFT, ModifierFlag::CONTROL_L, KeyCode::JIS_EISUU</autogen>
         <autogen>--KeyToKey-- KeyCode::JIS_BRACKET_LEFT, VK_CONTROL, KeyCode::JIS_BRACKET_LEFT, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
     </item>
@@ -184,11 +184,12 @@
     </autogen>
     <!-- vim ag(何かのキー(CURSOR_RIGHT)を事前に打つ必要がある) -->
     <autogen>--KeyToKey-- KeyCode::G, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L | ModifierFlag::NONE,
-        KeyCode::V, KeyCode::I, KeyCode::M, KeyCode::RETURN, KeyCode::CURSOR_RIGHT, KeyCode::G, KeyCode::A
+        KeyCode::V, KeyCode::I, KeyCode::M, KeyCode::RETURN, KeyCode::CURSOR_RIGHT, KeyCode::G, KeyCode::A, KeyCode::CURSOR_LEFT
     </autogen>
-
     <!-- use vim tcomment -->
     <autogen>--KeyToKey-- KeyCode::H, ModifierFlag::CONTROL_L, KeyCode::F12</autogen>
+    <!-- alfred input jis mode -->
+    <!-- <autogen>&#45;&#45;KeyToKey&#45;&#45; KeyCode::J, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L | ModifierFlag::NONE, KeyCode::J, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, KeyCode::JIS_KANA, KeyCode::SPACE, ModifierFlag::CONTROL_L, KeyCode::J, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, KeyCode::JIS_KANA</autogen> -->
 </item>
 
 <item>
@@ -273,12 +274,13 @@
        <autogen>__KeyToKey__ KeyCode::L, KeyCode::CURSOR_RIGHT</autogen>
        <autogen>__KeyToKey__ KeyCode::O, KeyCode::DELETE</autogen>
        <autogen>__KeyToKey__ KeyCode::P, KeyCode::EQUAL</autogen>
-       <!-- <autogen>__KeyToKey__ KeyCode::P, KeyCode::MINUS</autogen> -->
+       <autogen>__KeyToKey__ KeyCode::I, KeyCode::MINUS</autogen>
+       <!-- <autogen>__KeyToKey__ KeyCode::P, KeyCode::EQUAL, ModifierFlag::SHIFT_L</autogen> -->
        <!-- <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, KeyCode::EQUAL</autogen> -->
        <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::RETURN</autogen>
        <autogen>__KeyToKey__ KeyCode::SLASH, KeyCode::BACKQUOTE, ModifierFlag::SHIFT_L</autogen>
        <autogen>__KeyToKey__ KeyCode::OPTION_R, KeyCode::BACKQUOTE, ModifierFlag::SHIFT_L</autogen>
-       <autogen>__KeyToKey__ KeyCode::RETURN, KeyCode::BACKQUOTE, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::RETURN, KeyCode::SLASH</autogen>
    </item>
 
    <!-- can't vim <C-d> -->
@@ -324,8 +326,12 @@
        <identifier vk_config="true">notsave_custom_vi_mode_semicolon</identifier>
        <autogen>__KeyToKey__ KeyCode::W, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L | ModifierFlag::NONE </autogen>
        <autogen>__KeyToKey__ KeyCode::B, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L | ModifierFlag::NONE </autogen>
-       <!-- <autogen>__KeyToKey__ KeyCode::Q, KeyCode::F, ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L | ModifierFlag::NONE, KeyCode::ESCAPE, KeyCode::CURSOR_RIGHT </autogen> --> <!-- chrome address bar -->
-       <autogen>__KeyToKey__ KeyCode::Q, KeyCode::F8</autogen> <!-- vivaldi address bar -->
+
+       <!-- chrome address bar -->
+       <!-- <autogen>__KeyToKey__ KeyCode::Q, KeyCode::F, ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L | ModifierFlag::NONE, KeyCode::ESCAPE, KeyCode::CURSOR_RIGHT </autogen> -->
+
+       <!-- vivaldi address bar -->
+       <autogen>__KeyToKey__ KeyCode::Q, KeyCode::F8</autogen>
        <autogen>
            __BlockUntilKeyUp__ KeyCode::SEMICOLON
        </autogen>
@@ -455,6 +461,30 @@
        <autogen>__KeyToKey__ KeyCode::U, ModifierFlag::NONE, KeyCode::B, ModifierFlag::SHIFT_L, ModifierFlag::OPTION_L, KeyCode::U, ModifierFlag::SHIFT_L, ModifierFlag::OPTION_L</autogen> <!-- use better touch tool -->
    </item>
 
+<!-- Pキー -->
+   <item>
+       <name> p mode(P+)</name>
+       <identifier>p_mode</identifier>
+       <autogen>
+           __KeyOverlaidModifier__
+           KeyCode::P, ModifierFlag::NONE,
+           @begin
+           KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_p_mode
+           @end
+           @begin
+           KeyCode::P
+           @end
+       </autogen>
+   </item>
+   <item hidden="true">
+       <identifier vk_config="true">notsave_p_mode</identifier>
+       <autogen>
+           __BlockUntilKeyUp__ KeyCode::P
+       </autogen>
+       <autogen>__KeyToKey__ KeyCode::W, KeyCode::W, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::B, KeyCode::B, ModifierFlag::SHIFT_L</autogen>
+   </item>
+
 <!-- Aキーでウィンドウ位置変更(BetterTouchToolと連携) -->
    <item>
        <name>Window mode(A+)</name>
@@ -488,6 +518,40 @@
        <autogen>__KeyToKey__ KeyCode::P, KeyCode::EQUAL</autogen>
    </item>
 
+<!-- Spaceキー -->
+   <item>
+       <name> p mode(Space+)</name>
+       <identifier>space_mode</identifier>
+       <autogen>
+           __KeyOverlaidModifier__
+           KeyCode::SPACE, ModifierFlag::NONE,
+           @begin
+           KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_space_mode
+           @end
+           @begin
+           KeyCode::SPACE
+           @end
+       </autogen>
+   </item>
+   <item hidden="true">
+       <identifier vk_config="true">notsave_space_mode</identifier>
+       <autogen>
+           __BlockUntilKeyUp__ KeyCode::SPACE
+       </autogen>
+       <autogen>__KeyToKey__ KeyCode::Q, KeyCode::1</autogen>
+       <autogen>__KeyToKey__ KeyCode::W, KeyCode::2</autogen>
+       <autogen>__KeyToKey__ KeyCode::E, KeyCode::3</autogen>
+       <autogen>__KeyToKey__ KeyCode::R, KeyCode::4</autogen>
+       <autogen>__KeyToKey__ KeyCode::T, KeyCode::5</autogen>
+       <autogen>__KeyToKey__ KeyCode::Y, KeyCode::6</autogen>
+       <autogen>__KeyToKey__ KeyCode::U, KeyCode::7</autogen>
+       <autogen>__KeyToKey__ KeyCode::I, KeyCode::8</autogen>
+       <autogen>__KeyToKey__ KeyCode::O, KeyCode::9</autogen>
+       <autogen>__KeyToKey__ KeyCode::P, KeyCode::0</autogen>
+       <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, KeyCode::MINUS</autogen>
+       <autogen>__KeyToKey__ KeyCode::BRACKET_RIGHT, KeyCode::EQUAL</autogen>
+   </item>
+
 <!-- Gキー gadget -->
    <item>
        <name>Gadget mode(G+)</name>
@@ -513,7 +577,6 @@
        <autogen>__KeyToKey__ KeyCode::I, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L, ModifierFlag::SHIFT_L, KeyCode::X, ModifierFlag::COMMAND_L | ModifierFlag::NONE</autogen>
        <autogen>__KeyToKey__ KeyCode::V, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L, ModifierFlag::SHIFT_L</autogen>
    </item>
-
 
  <!-- vk open url def -->
   <vkopenurldef>
