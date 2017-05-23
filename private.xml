@@ -283,29 +283,29 @@
        <autogen>__KeyToKey__ KeyCode::RETURN, KeyCode::SLASH</autogen>
    </item>
 
-   <!-- can't vim <C-d> -->
-   <!-- <item> -->
-   <!--     <name>Custom Vi mode (D+)</name> -->
-   <!--     <identifier>remap.custom_vi_mode_d</identifier> -->
-   <!--     <autogen> -->
-   <!--         __KeyOverlaidModifier__ -->
-   <!--         KeyCode::D -->
-   <!--         @begin -->
-   <!--         KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_custom_vi_mode_d, -->
-   <!--         @end -->
-   <!--         @begin -->
-   <!--         KeyCode::D -->
-   <!--         @end -->
-   <!--     </autogen> -->
-   <!-- </item> -->
-   <!-- <item hidden="true"> -->
-   <!--     <identifier vk_config="true">notsave_custom_vi_mode_d</identifier> -->
-   <!--     <autogen> -->
-   <!--         __BlockUntilKeyUp__ KeyCode::D -->
-   <!--     </autogen> -->
-   <!--     <autogen>__KeyToKey__ KeyCode::L, KeyCode::MINUS</autogen> -->
-   <!--     <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::EQUAL</autogen> -->
-   <!-- </item> -->
+   <item>
+       <name>Custom alt mode (D+)</name>
+       <identifier>remap.custom_alt_mode</identifier>
+       <autogen>
+           __KeyOverlaidModifier__
+           KeyCode::D
+           @begin
+           KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_custom_alt_mode,
+           @end
+           @begin
+           KeyCode::D
+           @end
+       </autogen>
+   </item>
+   <item hidden="true">
+       <identifier vk_config="true">notsave_custom_alt_mode</identifier>
+       <autogen>
+           __BlockUntilKeyUp__ KeyCode::D
+       </autogen>
+       <autogen>__KeyToKey__ KeyCode::L, KeyCode::L, ModifierFlag::OPTION_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::H, KeyCode::H, ModifierFlag::OPTION_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::MINUS</autogen>
+   </item>
 
 <!-- word jump and addressbar mode) -->
    <item>
@@ -550,6 +550,19 @@
        <autogen>__KeyToKey__ KeyCode::P, KeyCode::0</autogen>
        <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, KeyCode::MINUS</autogen>
        <autogen>__KeyToKey__ KeyCode::BRACKET_RIGHT, KeyCode::EQUAL</autogen>
+
+       <autogen>__KeyToKey__ KeyCode::A, KeyCode::1</autogen>
+       <autogen>__KeyToKey__ KeyCode::S, KeyCode::2</autogen>
+       <autogen>__KeyToKey__ KeyCode::D, KeyCode::3</autogen>
+       <autogen>__KeyToKey__ KeyCode::F, KeyCode::4</autogen>
+       <autogen>__KeyToKey__ KeyCode::G, KeyCode::5</autogen>
+       <autogen>__KeyToKey__ KeyCode::H, KeyCode::6</autogen>
+       <autogen>__KeyToKey__ KeyCode::J, KeyCode::7</autogen>
+       <autogen>__KeyToKey__ KeyCode::K, KeyCode::8</autogen>
+       <autogen>__KeyToKey__ KeyCode::L, KeyCode::9</autogen>
+       <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::0</autogen>
+       <autogen>__KeyToKey__ KeyCode::QUOTE, KeyCode::MINUS</autogen>
+       <autogen>__KeyToKey__ KeyCode::BACKSLASH, KeyCode::EQUAL</autogen>
    </item>
 
 <!-- Gキー gadget -->
@@ -576,6 +589,7 @@
        <autogen>__KeyToKey__ KeyCode::Y, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L, ModifierFlag::SHIFT_L, KeyCode::C, ModifierFlag::COMMAND_L</autogen>
        <autogen>__KeyToKey__ KeyCode::I, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L, ModifierFlag::SHIFT_L, KeyCode::X, ModifierFlag::COMMAND_L | ModifierFlag::NONE</autogen>
        <autogen>__KeyToKey__ KeyCode::V, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::EQUAL</autogen>
    </item>
 
  <!-- vk open url def -->
