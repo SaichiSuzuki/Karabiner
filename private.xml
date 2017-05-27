@@ -332,6 +332,9 @@
 
        <!-- vivaldi address bar -->
        <autogen>__KeyToKey__ KeyCode::Q, KeyCode::F8</autogen>
+
+       <!-- zsh normal mode -->
+       <autogen>__KeyToKey__ KeyCode::A, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L</autogen>
        <autogen>
            __BlockUntilKeyUp__ KeyCode::SEMICOLON
        </autogen>
