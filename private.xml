@@ -517,9 +517,11 @@
        <autogen>__KeyToKey__ KeyCode::W, KeyCode::W, ModifierFlag::SHIFT_L, ModifierFlag::OPTION_L</autogen>
        <autogen>__KeyToKey__ KeyCode::R, KeyCode::R, ModifierFlag::SHIFT_L, ModifierFlag::OPTION_L</autogen>
 
+       <!-- util -->
        <autogen>__KeyToKey__ KeyCode::O, KeyCode::MINUS</autogen>
        <autogen>__KeyToKey__ KeyCode::P, KeyCode::EQUAL, ModifierFlag::SHIFT_L</autogen>
        <autogen>__KeyToKey__ KeyCode::I, KeyCode::MINUS, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::N, KeyCode::ESCAPE, KeyCode::ESCAPE</autogen>
    </item>
 
 <!-- Spaceキー -->
