@@ -187,9 +187,11 @@
         KeyCode::V, KeyCode::I, KeyCode::M, KeyCode::RETURN, KeyCode::CURSOR_RIGHT, KeyCode::G, KeyCode::A, KeyCode::CURSOR_LEFT
     </autogen>
     <!-- use vim tcomment -->
-    <autogen>--KeyToKey-- KeyCode::H, ModifierFlag::CONTROL_L, KeyCode::F12</autogen>
+    <autogen>--KeyToKey-- KeyCode::H, ModifierFlag::CONTROL_L, KeyCode::F12, KeyCode::F12</autogen>
     <!-- alfred input jis mode -->
     <!-- <autogen>&#45;&#45;KeyToKey&#45;&#45; KeyCode::J, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L | ModifierFlag::NONE, KeyCode::J, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, KeyCode::JIS_KANA, KeyCode::SPACE, ModifierFlag::CONTROL_L, KeyCode::J, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, KeyCode::JIS_KANA</autogen> -->
+    <!-- <autogen>&#45;&#45;KeyToKey&#45;&#45; KeyCode::U, ModifierFlag::CONTROL_L | ModifierFlag::NONE, KeyCode::J, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, KeyCode::JIS_KANA</autogen> -->
+    <!-- <autogen>&#45;&#45;KeyToKey&#45;&#45; KeyCode::U, ModifierFlag::CONTROL_L | ModifierFlag::NONE, KeyCode::J</autogen> -->
 </item>
 
 <item>
@@ -245,6 +247,7 @@
        <autogen>__KeyToKey__ KeyCode::F, KeyCode::F, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
        <autogen>__KeyToKey__ KeyCode::G, KeyCode::G, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
        <autogen>__KeyToKey__ KeyCode::D, KeyCode::D, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::T, KeyCode::T, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
    </item>
 
 
@@ -274,6 +277,7 @@
        <autogen>__KeyToKey__ KeyCode::L, KeyCode::CURSOR_RIGHT</autogen>
        <autogen>__KeyToKey__ KeyCode::O, KeyCode::DELETE</autogen>
        <autogen>__KeyToKey__ KeyCode::P, KeyCode::EQUAL</autogen>
+       <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, KeyCode::MINUS</autogen>
        <autogen>__KeyToKey__ KeyCode::I, KeyCode::MINUS</autogen>
        <!-- <autogen>__KeyToKey__ KeyCode::P, KeyCode::EQUAL, ModifierFlag::SHIFT_L</autogen> -->
        <!-- <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, KeyCode::EQUAL</autogen> -->
@@ -304,7 +308,7 @@
        </autogen>
        <autogen>__KeyToKey__ KeyCode::L, KeyCode::L, ModifierFlag::OPTION_L</autogen>
        <autogen>__KeyToKey__ KeyCode::H, KeyCode::H, ModifierFlag::OPTION_L</autogen>
-       <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::MINUS</autogen>
+       <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::SEMICOLON, ModifierFlag::SHIFT_L</autogen>
    </item>
 
 <!-- word jump and addressbar mode) -->
@@ -522,6 +526,8 @@
        <autogen>__KeyToKey__ KeyCode::P, KeyCode::EQUAL, ModifierFlag::SHIFT_L</autogen>
        <autogen>__KeyToKey__ KeyCode::I, KeyCode::MINUS, ModifierFlag::SHIFT_L</autogen>
        <autogen>__KeyToKey__ KeyCode::N, KeyCode::ESCAPE, KeyCode::ESCAPE</autogen>
+       <!-- alfred input jis mode -->
+       <autogen>--KeyToKey-- KeyCode::COMMAND_R, KeyCode::BACKSLASH, ModifierFlag::CONTROL_L</autogen>
    </item>
 
 <!-- Spaceキー -->
