@@ -309,6 +309,10 @@
        <autogen>__KeyToKey__ KeyCode::L, KeyCode::L, ModifierFlag::OPTION_L</autogen>
        <autogen>__KeyToKey__ KeyCode::H, KeyCode::H, ModifierFlag::OPTION_L</autogen>
        <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::SEMICOLON, ModifierFlag::SHIFT_L</autogen>
+       <!-- tab move -->
+       <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::NONE, KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_L, ModifierFlag::COMMAND_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::P, ModifierFlag::NONE, KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L, ModifierFlag::COMMAND_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::O, ModifierFlag::NONE, KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L, ModifierFlag::COMMAND_L</autogen>
    </item>
 
 <!-- word jump and addressbar mode) -->
@@ -408,10 +412,6 @@
        <autogen>
            __BlockUntilKeyUp__ KeyCode::S
        </autogen>
-       <!-- tab move -->
-       <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::NONE, KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_L, ModifierFlag::COMMAND_L</autogen>
-       <autogen>__KeyToKey__ KeyCode::P, ModifierFlag::NONE, KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L, ModifierFlag::COMMAND_L</autogen>
-       <autogen>__KeyToKey__ KeyCode::O, ModifierFlag::NONE, KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L, ModifierFlag::COMMAND_L</autogen>
        <!-- cursor -->
        <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::NONE, KeyCode::VK_MOUSEKEY_LEFT</autogen>
        <autogen>__KeyToKey__ KeyCode::J, ModifierFlag::NONE, KeyCode::VK_MOUSEKEY_DOWN</autogen>
@@ -423,16 +423,10 @@
        <autogen>__KeyToKey__ KeyCode::QUOTE, ModifierFlag::NONE, PointingButton::RIGHT</autogen>
        <!-- warp cross -->
        <autogen>__KeyToKey__ KeyCode::I, ModifierFlag::NONE, KeyCode::VK_OPEN_URL_SHELL_warp_mouse_cursor_position_front_window_center</autogen>
-       <autogen>__KeyToKey__ KeyCode::U, ModifierFlag::NONE, KeyCode::B, ModifierFlag::SHIFT_L, ModifierFlag::OPTION_L, KeyCode::U, ModifierFlag::SHIFT_L, ModifierFlag::OPTION_L</autogen> <!-- use better touch tool -->
-       <autogen>__KeyToKey__ KeyCode::K, ModifierFlag::SHIFT_L, KeyCode::VK_OPEN_URL_SHELL_move_mouse_top_center</autogen>
-       <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::SHIFT_L, KeyCode::VK_OPEN_URL_SHELL_move_mouse_middle_left</autogen>
-       <autogen>__KeyToKey__ KeyCode::L, ModifierFlag::SHIFT_L, KeyCode::VK_OPEN_URL_SHELL_move_mouse_middle_right</autogen>
-       <autogen>__KeyToKey__ KeyCode::J, ModifierFlag::SHIFT_L, KeyCode::VK_OPEN_URL_SHELL_move_mouse_bottom_center</autogen>
-       <!-- warp corner -->
        <autogen>__KeyToKey__ KeyCode::Y, KeyCode::VK_OPEN_URL_SHELL_move_mouse_top_left</autogen>
-       <autogen>__KeyToKey__ KeyCode::P, ModifierFlag::SHIFT_L, KeyCode::VK_OPEN_URL_SHELL_move_mouse_top_right</autogen>
-       <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::SHIFT_L, KeyCode::VK_OPEN_URL_SHELL_move_mouse_bottom_left</autogen>
-       <autogen>__KeyToKey__ KeyCode::DOT, ModifierFlag::SHIFT_L, KeyCode::VK_OPEN_URL_SHELL_move_mouse_bottom_right</autogen>
+       <autogen>__KeyToKey__ KeyCode::P, KeyCode::VK_OPEN_URL_SHELL_move_mouse_top_right</autogen>
+       <autogen>__KeyToKey__ KeyCode::N, KeyCode::VK_OPEN_URL_SHELL_move_mouse_bottom_left</autogen>
+       <autogen>__KeyToKey__ KeyCode::COMMA, KeyCode::VK_OPEN_URL_SHELL_move_mouse_bottom_right</autogen>
    </item>
 
 <!-- Sキーでtmux画面移動 -->
@@ -520,6 +514,11 @@
        <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::F12, ModifierFlag::OPTION_L</autogen>
        <autogen>__KeyToKey__ KeyCode::W, KeyCode::W, ModifierFlag::SHIFT_L, ModifierFlag::OPTION_L</autogen>
        <autogen>__KeyToKey__ KeyCode::R, KeyCode::R, ModifierFlag::SHIFT_L, ModifierFlag::OPTION_L</autogen>
+
+       <autogen>__KeyToKey__ KeyCode::Y, KeyCode::F12, ModifierFlag::SHIFT_L, ModifierFlag::OPTION_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::P, KeyCode::F11, ModifierFlag::SHIFT_L, ModifierFlag::OPTION_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::N, KeyCode::F10, ModifierFlag::SHIFT_L, ModifierFlag::OPTION_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::COMMA, KeyCode::F9,  ModifierFlag::SHIFT_L, ModifierFlag::OPTION_L</autogen>
 
        <!-- util -->
        <autogen>__KeyToKey__ KeyCode::O, KeyCode::MINUS</autogen>
