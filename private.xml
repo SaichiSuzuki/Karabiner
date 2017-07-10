@@ -528,7 +528,7 @@
        <autogen>__KeyToKey__ KeyCode::I, KeyCode::MINUS, ModifierFlag::SHIFT_L</autogen>
        <autogen>__KeyToKey__ KeyCode::N, KeyCode::ESCAPE, KeyCode::ESCAPE</autogen>
        <!-- alfred input jis mode -->
-       <autogen>--KeyToKey-- KeyCode::COMMAND_R, KeyCode::BACKSLASH, ModifierFlag::CONTROL_L</autogen>
+       <autogen>--KeyToKey-- KeyCode::COMMAND_R, KeyCode::BRACKET_RIGHT, ModifierFlag::CONTROL_L</autogen>
    </item>
 
 <!-- Spaceキー -->
