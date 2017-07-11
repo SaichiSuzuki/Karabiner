@@ -325,6 +325,8 @@
        <autogen>__KeyToKey__ KeyCode::P, KeyCode::VK_OPEN_URL_SHELL_move_mouse_top_right</autogen>
        <autogen>__KeyToKey__ KeyCode::N, KeyCode::VK_OPEN_URL_SHELL_move_mouse_bottom_left</autogen>
        <autogen>__KeyToKey__ KeyCode::COMMA, KeyCode::VK_OPEN_URL_SHELL_move_mouse_bottom_right</autogen>
+       <!-- dock -->
+       <autogen>__KeyToKey__ KeyCode::U, ModifierFlag::NONE, KeyCode::B, ModifierFlag::SHIFT_L, ModifierFlag::OPTION_L, KeyCode::U, ModifierFlag::SHIFT_L, ModifierFlag::OPTION_L</autogen> <!-- use better touch tool -->
    </item>
 
 <!-- word jump and addressbar mode) -->
@@ -461,7 +463,6 @@
        <autogen>__KeyToKey__ KeyCode::R, KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::R</autogen>
        <autogen>__KeyToKey__ KeyCode::V, KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::V</autogen>
        <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::V</autogen>
-       <autogen>__KeyToKey__ KeyCode::U, ModifierFlag::NONE, KeyCode::B, ModifierFlag::SHIFT_L, ModifierFlag::OPTION_L, KeyCode::U, ModifierFlag::SHIFT_L, ModifierFlag::OPTION_L</autogen> <!-- use better touch tool -->
    </item>
 
 <!-- Pキー -->
