@@ -157,6 +157,8 @@
     <only>TERMINAL</only>
     <!-- use vim <C-i> -->
     <autogen>--KeyToKey-- KeyCode::I, ModifierFlag::CONTROL_L, KeyCode::F11</autogen>
+    <!-- use vim <C-;> -->
+    <autogen>--KeyToKey-- KeyCode::SEMICOLON, ModifierFlag::CONTROL_L, KeyCode::A, KeyCode::F10</autogen>
 </item>
 
 <item>
@@ -286,6 +288,8 @@
        <autogen>__KeyToKey__ KeyCode::SLASH, KeyCode::BACKQUOTE, ModifierFlag::SHIFT_L</autogen>
        <autogen>__KeyToKey__ KeyCode::OPTION_R, KeyCode::BACKQUOTE, ModifierFlag::SHIFT_L</autogen>
        <autogen>__KeyToKey__ KeyCode::RETURN, KeyCode::SLASH</autogen>
+       <!-- vim 日本語補完用 -->
+       <!-- <autogen>__KeyToKey__ KeyCode::SPACE, KeyCode::X, ModifierFlag::CONTROL_L, KeyCode::U, ModifierFlag::CONTROL_L</autogen> -->
    </item>
 
    <!-- <item> -->
