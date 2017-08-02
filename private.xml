@@ -26,6 +26,8 @@
         <equal>com.apple.Terminal</equal>
         <equal>com.googlecode.iterm2</equal>
         <equal>org.pqrs.unknownapp.alacritty</equal>
+        <equal>uk.foon.Neovim</equal>
+        <equal>org.vim.MacVim</equal>
     </appdef>
     <appdef>
         <appname>ALACRITTY</appname>
