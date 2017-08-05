@@ -26,6 +26,8 @@
         <equal>com.apple.Terminal</equal>
         <equal>com.googlecode.iterm2</equal>
         <equal>org.pqrs.unknownapp.alacritty</equal>
+        <equal>uk.foon.Neovim</equal>
+        <equal>org.vim.MacVim</equal>
     </appdef>
     <appdef>
         <appname>ALACRITTY</appname>
@@ -156,7 +158,8 @@
     <identifier>private.terminalutil</identifier>
     <only>TERMINAL</only>
     <!-- use vim <C-i> -->
-    <autogen>--KeyToKey-- KeyCode::I, ModifierFlag::CONTROL_L, KeyCode::F11</autogen>
+        <autogen>--KeyToKey-- KeyCode::I, ModifierFlag::CONTROL_L | ModifierFlag::NONE,
+            KeyCode::F11</autogen>
     <!-- use vim <C-;> -->
     <autogen>--KeyToKey-- KeyCode::SEMICOLON, ModifierFlag::CONTROL_L, KeyCode::A, KeyCode::F10</autogen>
 </item>
@@ -200,7 +203,8 @@
     <name>alacritty shortcut</name>
     <identifier>private.alacritty_shorcut</identifier>
     <not>ALACRITTY</not>
-    <autogen>__KeyToKey__ KeyCode::I, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, KeyCode::I, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::I, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L | ModifierFlag::NONE,
+        KeyCode::I, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
 </item>
 
 <item>
@@ -251,6 +255,7 @@
        <autogen>__KeyToKey__ KeyCode::D, KeyCode::D, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
        <autogen>__KeyToKey__ KeyCode::T, KeyCode::T, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
        <autogen>__KeyToKey__ KeyCode::U, KeyCode::U, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::N, KeyCode::N, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
    </item>
 
 
