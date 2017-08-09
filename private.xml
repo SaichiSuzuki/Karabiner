@@ -258,6 +258,29 @@
        <autogen>__KeyToKey__ KeyCode::N, KeyCode::N, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
    </item>
 
+<!-- I+  -->
+   <item>
+       <name>Custom Launcher mode (I+)</name>
+       <identifier>remap.custom_launcher_mode_i</identifier>
+       <autogen>
+           __KeyOverlaidModifier__
+           KeyCode::I
+           @begin
+           KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_custom_launcher_mode_i,
+           @end
+           @begin
+           KeyCode::I
+           @end
+       </autogen>
+   </item>
+   <item hidden="true">
+       <identifier vk_config="true">notsave_custom_launcher_mode_i</identifier>
+       <not>CHROME</not>
+       <autogen>
+           __BlockUntilKeyUp__ KeyCode::I
+       </autoge>
+       <autogen>__KeyToKey__ KeyCode::C, KeyCode::B, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L, KeyCode::1, ModifierFlag::COMMAND_L</autogen>
+   </item>
 
 <!-- Fキーで矢印、DELETE、RETURNモード  -->
    <item>
