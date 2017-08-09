@@ -320,6 +320,31 @@
        <!-- <autogen>__KeyToKey__ KeyCode::SPACE, KeyCode::X, ModifierFlag::CONTROL_L, KeyCode::U, ModifierFlag::CONTROL_L</autogen> -->
    </item>
 
+<!-- Xキーで矢印、DELETE、RETURNモード  -->
+   <item>
+       <name>Custom Vi mode (X+)</name>
+       <identifier>remap.custom_vi_mode_x</identifier>
+       <autogen>
+           __KeyOverlaidModifier__
+           KeyCode::X
+           @begin
+           KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_custom_vi_mode_x,
+           @end
+           @begin
+           KeyCode::X
+           @end
+       </autogen>
+   </item>
+   <item hidden="true">
+       <identifier vk_config="true">notsave_custom_vi_mode_x</identifier>
+       <autogen>
+           __BlockUntilKeyUp__ KeyCode::X
+       </autogen>
+       <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::F2</autogen>
+       <!-- vim 日本語補完用 -->
+       <!-- <autogen>__KeyToKey__ KeyCode::SPACE, KeyCode::X, ModifierFlag::CONTROL_L, KeyCode::U, ModifierFlag::CONTROL_L</autogen> -->
+   </item>
+
    <!-- <item> -->
    <!--     <name>Custom alt mode (D+)</name> -->
    <!--     <identifier>remap.custom_alt_mode</identifier> -->
