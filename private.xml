@@ -256,6 +256,7 @@
        <autogen>__KeyToKey__ KeyCode::T, KeyCode::T, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
        <autogen>__KeyToKey__ KeyCode::U, KeyCode::U, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
        <autogen>__KeyToKey__ KeyCode::N, KeyCode::N, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::K, KeyCode::K, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
 
        <autogen>__KeyToKey__ KeyCode::1, KeyCode::V, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L, KeyCode::1, ModifierFlag::COMMAND_L</autogen>
        <autogen>__KeyToKey__ KeyCode::2, KeyCode::V, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L, KeyCode::2, ModifierFlag::COMMAND_L</autogen>
