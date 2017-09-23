@@ -26,8 +26,6 @@
         <equal>com.apple.Terminal</equal>
         <equal>com.googlecode.iterm2</equal>
         <equal>org.pqrs.unknownapp.alacritty</equal>
-        <equal>uk.foon.Neovim</equal>
-        <equal>org.vim.MacVim</equal>
     </appdef>
     <appdef>
         <appname>ALACRITTY</appname>
@@ -161,7 +159,7 @@
         <autogen>--KeyToKey-- KeyCode::I, ModifierFlag::CONTROL_L | ModifierFlag::NONE,
             KeyCode::F11</autogen>
     <!-- use vim <C-;> -->
-    <autogen>--KeyToKey-- KeyCode::SEMICOLON, ModifierFlag::CONTROL_L, KeyCode::A, KeyCode::F10</autogen>
+    <!-- <autogen>&#45;&#45;KeyToKey&#45;&#45; KeyCode::SEMICOLON, ModifierFlag::CONTROL_L, KeyCode::A, KeyCode::F10</autogen> -->
 </item>
 
 <item>
@@ -185,7 +183,7 @@
     </autogen>
     <!-- vim git status -->
     <autogen>--KeyToKey-- KeyCode::S, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L | ModifierFlag::NONE,
-        KeyCode::V, KeyCode::I, KeyCode::M, KeyCode::SPACE, KeyCode::Z, KeyCode::RETURN, KeyCode::SPACE, KeyCode::S, ModifierFlag::SHIFT_L
+        KeyCode::V, KeyCode::I, KeyCode::M, KeyCode::SPACE, KeyCode::Z, KeyCode::RETURN, KeyCode::SPACE, KeyCode::G, KeyCode::G
     </autogen>
     <!-- vim ag(何かのキー(CURSOR_RIGHT)を事前に打つ必要がある) -->
     <autogen>--KeyToKey-- KeyCode::G, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L | ModifierFlag::NONE,
@@ -344,7 +342,7 @@
        <autogen>
            __BlockUntilKeyUp__ KeyCode::X
        </autogen>
-       <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::F2</autogen>
+       <!-- <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::F2</autogen> -->
        <!-- vim 日本語補完用 -->
        <!-- <autogen>__KeyToKey__ KeyCode::SPACE, KeyCode::X, ModifierFlag::CONTROL_L, KeyCode::U, ModifierFlag::CONTROL_L</autogen> -->
    </item>
@@ -375,16 +373,16 @@
 
 <!-- word jump and addressbar mode) -->
    <item>
-       <name>Custom Vi mode (semicolon+)</name>
+       <name>Custom Vi mode (quote+)</name>
        <identifier>remap.custom_vi_mode_semicolon</identifier>
        <autogen>
            __KeyOverlaidModifier__
-           KeyCode::SEMICOLON
+           KeyCode::QUOTE
            @begin
            KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_custom_vi_mode_semicolon,
            @end
            @begin
-           KeyCode::SEMICOLON
+           KeyCode::QUOTE
            @end
        </autogen>
    </item>
@@ -402,7 +400,7 @@
        <!-- zsh normal mode -->
        <autogen>__KeyToKey__ KeyCode::A, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L</autogen>
        <autogen>
-           __BlockUntilKeyUp__ KeyCode::SEMICOLON
+           __BlockUntilKeyUp__ KeyCode::QUOTE
        </autogen>
    </item>
 
@@ -581,7 +579,10 @@
        <autogen>__KeyToKey__ KeyCode::J, KeyCode::F9, ModifierFlag::OPTION_L</autogen>
        <autogen>__KeyToKey__ KeyCode::K, KeyCode::F10, ModifierFlag::OPTION_L</autogen>
        <autogen>__KeyToKey__ KeyCode::L, KeyCode::F11, ModifierFlag::OPTION_L</autogen>
+       <!-- <autogen>__KeyToKey__ KeyCode::I, KeyCode::F12, ModifierFlag::OPTION_L</autogen> -->
        <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::F12, ModifierFlag::OPTION_L</autogen>
+       <!-- <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::SEMICOLON</autogen> -->
+       <!-- <autogen>__KeyToKey__ KeyCode::QUOTE, KeyCode::SEMICOLON, ModifierFlag::SHIFT_L</autogen> -->
        <autogen>__KeyToKey__ KeyCode::W, KeyCode::W, ModifierFlag::SHIFT_L, ModifierFlag::OPTION_L</autogen>
        <autogen>__KeyToKey__ KeyCode::R, KeyCode::R, ModifierFlag::SHIFT_L, ModifierFlag::OPTION_L</autogen>
 
@@ -683,11 +684,20 @@
        <autogen>
            __BlockUntilKeyUp__ KeyCode::G
        </autogen>
-       <autogen>__KeyToKey__ KeyCode::R, KeyCode::F, ModifierFlag::CONTROL_L, KeyCode::8, ModifierFlag::SHIFT_L, KeyCode::R</autogen>
+       <!-- <autogen>__KeyToKey__ KeyCode::R, KeyCode::F, ModifierFlag::CONTROL_L, KeyCode::8, ModifierFlag::SHIFT_L, KeyCode::R</autogen> -->
+       <autogen>__KeyToKey__ KeyCode::R, KeyCode::V, KeyCode::I, KeyCode::M, KeyCode::RETURN, KeyCode::CURSOR_RIGHT, KeyCode::SPACE, KeyCode::F, KeyCode::8, ModifierFlag::SHIFT_L, KeyCode::R</autogen>
        <autogen>__KeyToKey__ KeyCode::Y, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L, ModifierFlag::SHIFT_L, KeyCode::C, ModifierFlag::COMMAND_L</autogen>
        <autogen>__KeyToKey__ KeyCode::I, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L, ModifierFlag::SHIFT_L, KeyCode::X, ModifierFlag::COMMAND_L | ModifierFlag::NONE</autogen>
        <autogen>__KeyToKey__ KeyCode::V, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L, ModifierFlag::SHIFT_L</autogen>
        <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::EQUAL</autogen>
+   </item>
+
+   <item>
+       <name>Sticky Shift</name>
+       <appendix>Use semicolon to Sticky Shift_L</appendix>
+       <identifier>private.semicolon_to_sticky_shift_l</identifier>
+       <inputmode_only>JAPANESE</inputmode_only>
+       <autogen>--KeyToKey-- KeyCode::SEMICOLON, KeyCode::VK_STICKY_SHIFT_L</autogen>
    </item>
 
  <!-- vk open url def -->
