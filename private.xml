@@ -202,7 +202,7 @@
     <identifier>private.alacritty_shorcut</identifier>
     <not>ALACRITTY</not>
     <autogen>__KeyToKey__ KeyCode::I, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L | ModifierFlag::NONE,
-        KeyCode::I, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
+       KeyCode::JIS_EISUU, KeyCode::I, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
 </item>
 
 <item>
