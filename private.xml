@@ -322,29 +322,29 @@
        <!-- <autogen>__KeyToKey__ KeyCode::SPACE, KeyCode::X, ModifierFlag::CONTROL_L, KeyCode::U, ModifierFlag::CONTROL_L</autogen> -->
    </item>
 
-<!-- UキーでUnityモード  -->
-   <item>
-       <name>Custom Vi mode (U+)</name>
-       <identifier>remap.custom_vi_mode_u</identifier>
-       <autogen>
-           __KeyOverlaidModifier__
-           KeyCode::U
-           @begin
-           KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_custom_vi_mode_u,
-           @end
-           @begin
-           KeyCode::U
-           @end
-       </autogen>
-   </item>
-   <item hidden="true">
-       <identifier vk_config="true">notsave_custom_vi_mode_u</identifier>
-       <autogen>
-           __BlockUntilKeyUp__ KeyCode::U
-       </autogen>
-       <autogen>__KeyToKey__ KeyCode::F, KeyCode::P, ModifierFlag::SHIFT_L, KeyCode::F, ModifierFlag::COMMAND_L</autogen>
-       <autogen>__KeyToKey__ KeyCode::H, KeyCode::H, ModifierFlag::SHIFT_L, KeyCode::F, ModifierFlag::COMMAND_L</autogen>
-   </item>
+<!-- <!&#45;&#45; UキーでUnityモード  &#45;&#45;> -->
+<!--    <item> -->
+<!--        <name>Custom Vi mode (U+)</name> -->
+<!--        <identifier>remap.custom_vi_mode_u</identifier> -->
+<!--        <autogen> -->
+<!--            __KeyOverlaidModifier__ -->
+<!--            KeyCode::U -->
+<!--            @begin -->
+<!--            KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_custom_vi_mode_u, -->
+<!--            @end -->
+<!--            @begin -->
+<!--            KeyCode::U -->
+<!--            @end -->
+<!--        </autogen> -->
+<!--    </item> -->
+<!--    <item hidden="true"> -->
+<!--        <identifier vk_config="true">notsave_custom_vi_mode_u</identifier> -->
+<!--        <autogen> -->
+<!--            __BlockUntilKeyUp__ KeyCode::U -->
+<!--        </autogen> -->
+<!--        <autogen>__KeyToKey__ KeyCode::F, KeyCode::P, ModifierFlag::SHIFT_L, KeyCode::F, ModifierFlag::COMMAND_L</autogen> -->
+<!--        <autogen>__KeyToKey__ KeyCode::H, KeyCode::H, ModifierFlag::SHIFT_L, KeyCode::F, ModifierFlag::COMMAND_L</autogen> -->
+<!--    </item> -->
 
 <!-- Xキーで矢印、DELETE、RETURNモード  -->
    <item>
@@ -396,22 +396,23 @@
    <!-- </item> -->
 
 <!-- word jump and addressbar mode) -->
+<!-- ;はstickeys-shiftで使えない -->
    <item>
-       <name>Custom Vi mode (quote+)</name>
-       <identifier>remap.custom_vi_mode_semicolon</identifier>
+       <name>Custom Vi mode (comma+)</name>
+       <identifier>remap.custom_vi_mode_comma</identifier>
        <autogen>
            __KeyOverlaidModifier__
-           KeyCode::QUOTE
+           KeyCode::COMMA
            @begin
-           KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_custom_vi_mode_semicolon,
+           KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_custom_vi_mode_comma,
            @end
            @begin
-           KeyCode::QUOTE
+           KeyCode::COMMA
            @end
        </autogen>
    </item>
    <item hidden="true">
-       <identifier vk_config="true">notsave_custom_vi_mode_semicolon</identifier>
+       <identifier vk_config="true">notsave_custom_vi_mode_comma</identifier>
        <autogen>__KeyToKey__ KeyCode::W, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L | ModifierFlag::NONE </autogen>
        <autogen>__KeyToKey__ KeyCode::B, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L | ModifierFlag::NONE </autogen>
 
@@ -424,7 +425,7 @@
        <!-- zsh normal mode -->
        <autogen>__KeyToKey__ KeyCode::A, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L</autogen>
        <autogen>
-           __BlockUntilKeyUp__ KeyCode::QUOTE
+           __BlockUntilKeyUp__ KeyCode::COMMA
        </autogen>
    </item>
 
@@ -622,6 +623,8 @@
        <autogen>__KeyToKey__ KeyCode::N, KeyCode::ESCAPE, KeyCode::ESCAPE</autogen>
        <!-- alfred input jis mode -->
        <autogen>--KeyToKey-- KeyCode::COMMAND_R, KeyCode::EQUAL, ModifierFlag::CONTROL_L</autogen>
+       <!-- unity find -->
+       <autogen>__KeyToKey__ KeyCode::F, KeyCode::P, ModifierFlag::SHIFT_L, KeyCode::F, ModifierFlag::COMMAND_L</autogen>
    </item>
 
 <!-- Spaceキー -->
