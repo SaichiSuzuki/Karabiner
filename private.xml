@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <root>
-
+<!-- Disable an internal keyboard while external keyboards are connected -->
 <!-- デバイス名定義 -->
  <devicevendordef>
      <vendorname>APPLE_VendorID</vendorname>
@@ -187,7 +187,7 @@
     </autogen>
     <!-- vim ag(何かのキー(CURSOR_RIGHT)を事前に打つ必要がある) -->
     <autogen>--KeyToKey-- KeyCode::G, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L | ModifierFlag::NONE,
-        KeyCode::V, KeyCode::I, KeyCode::M, KeyCode::RETURN, KeyCode::CURSOR_RIGHT, KeyCode::G, KeyCode::A, KeyCode::CURSOR_LEFT
+        KeyCode::V, KeyCode::I, KeyCode::M, KeyCode::RETURN, KeyCode::CURSOR_RIGHT, KeyCode::SEMICOLON, KeyCode::A, KeyCode::G, KeyCode::SPACE, KeyCode::CURSOR_LEFT
     </autogen>
     <!-- use vim tcomment -->
     <autogen>--KeyToKey-- KeyCode::H, ModifierFlag::CONTROL_L, KeyCode::F12, KeyCode::F12</autogen>
@@ -255,6 +255,7 @@
        <autogen>__KeyToKey__ KeyCode::U, KeyCode::U, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
        <autogen>__KeyToKey__ KeyCode::N, KeyCode::N, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
        <autogen>__KeyToKey__ KeyCode::K, KeyCode::K, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::M, KeyCode::M, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
 
        <autogen>__KeyToKey__ KeyCode::1, KeyCode::V, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L, KeyCode::1, ModifierFlag::COMMAND_L</autogen>
        <autogen>__KeyToKey__ KeyCode::2, KeyCode::V, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L, KeyCode::2, ModifierFlag::COMMAND_L</autogen>
@@ -512,6 +513,7 @@
        <autogen>__KeyToKey__ KeyCode::L, KeyCode::VK_OPEN_URL_SHELL_move_mouse_middle_right</autogen>
        <autogen>__KeyToKey__ KeyCode::Y, ModifierFlag::SHIFT_L, KeyCode::VK_OPEN_URL_SHELL_move_mouse_top_left</autogen>
        <autogen>__KeyToKey__ KeyCode::P, ModifierFlag::SHIFT_L, KeyCode::VK_OPEN_URL_SHELL_move_mouse_top_right</autogen>
+       <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, KeyCode::VK_OPEN_URL_SHELL_move_mouse_top_right</autogen>
        <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::SHIFT_L, KeyCode::VK_OPEN_URL_SHELL_move_mouse_bottom_left</autogen>
        <autogen>__KeyToKey__ KeyCode::COMMA, ModifierFlag::SHIFT_L, KeyCode::VK_OPEN_URL_SHELL_move_mouse_bottom_right</autogen>
 
@@ -550,7 +552,7 @@
        <autogen>__KeyToKey__ KeyCode::O, KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::Z</autogen>
        <autogen>__KeyToKey__ KeyCode::R, KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::R</autogen>
        <autogen>__KeyToKey__ KeyCode::V, KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::V</autogen>
-       <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::V</autogen>
+       <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::Q</autogen>
        <!-- dock -->
        <autogen>__KeyToKey__ KeyCode::U, ModifierFlag::NONE, KeyCode::B, ModifierFlag::SHIFT_L, ModifierFlag::OPTION_L, KeyCode::U, ModifierFlag::SHIFT_L, ModifierFlag::OPTION_L</autogen> <!-- use better touch tool -->
    </item>
