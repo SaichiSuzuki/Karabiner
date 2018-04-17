@@ -111,6 +111,13 @@
         <autogen>--KeyToKey-- KeyCode::JIS_BRACKET_LEFT, VK_CONTROL, KeyCode::JIS_BRACKET_LEFT, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
     </item>
 
+    <item>
+        <name>Skk with EISUU (escape, Ctrl_L + Space, Ctrl_L + bracket+left)</name>
+        <identifier>private.vim_alfred_with_skk</identifier>
+        <not>ALACRITTY,ALFRED</not>
+        <autogen>--KeyToKey-- KeyCode::SPACE, ModifierFlag::CONTROL_L | ModifierFlag::NONE, KeyCode::SPACE, ModifierFlag::CONTROL_L, KeyCode::N, ModifierFlag::CONTROL_L, KeyCode::L</autogen>
+    </item>
+
 <!-- Cmd seal -->
     <item>
         <name>cmd seal</name>
@@ -202,7 +209,8 @@
     <identifier>private.alacritty_shorcut</identifier>
     <not>ALACRITTY</not>
     <autogen>__KeyToKey__ KeyCode::I, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L | ModifierFlag::NONE,
-       KeyCode::JIS_EISUU, KeyCode::I, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
+       KeyCode::I, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
+       <!-- KeyCode::JIS_EISUU, KeyCode::I, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen> -->
 </item>
 
 <item>
@@ -370,6 +378,54 @@
        <!-- <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::F2</autogen> -->
        <!-- vim 日本語補完用 -->
        <!-- <autogen>__KeyToKey__ KeyCode::SPACE, KeyCode::X, ModifierFlag::CONTROL_L, KeyCode::U, ModifierFlag::CONTROL_L</autogen> -->
+   </item>
+
+<!-- ;キーで矢印、DELETE、RETURNモード  -->
+   <item>
+       <name>Custom Vi mode (;+)</name>
+       <identifier>remap.custom_vi_mode_semicolon</identifier>
+       <autogen>
+           __KeyOverlaidModifier__
+           KeyCode::SEMICOLON
+           @begin
+           KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_custom_vi_mode_semicolon,
+           @end
+           @begin
+           KeyCode::SEMICOLON
+           @end
+       </autogen>
+   </item>
+   <item hidden="true">
+       <identifier vk_config="true">notsave_custom_vi_mode_semicolon</identifier>
+       <autogen>
+           __BlockUntilKeyUp__ KeyCode::SEMICOLON
+       </autogen>
+       <autogen>__KeyToKey__ KeyCode::A, KeyCode::A, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::B, KeyCode::B, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::C, KeyCode::C, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::D, KeyCode::D, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::E, KeyCode::E, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::F, KeyCode::F, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::G, KeyCode::G, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::H, KeyCode::H, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::I, KeyCode::I, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::J, KeyCode::J, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::K, KeyCode::K, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::L, KeyCode::L, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::M, KeyCode::M, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::N, KeyCode::N, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::O, KeyCode::O, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::P, KeyCode::P, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::Q, KeyCode::Q, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::R, KeyCode::R, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::S, KeyCode::S, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::T, KeyCode::T, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::U, KeyCode::U, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::V, KeyCode::V, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::W, KeyCode::W, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::X, KeyCode::X, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::Y, KeyCode::Y, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::Z, KeyCode::Z, ModifierFlag::SHIFT_L</autogen>
    </item>
 
    <!-- <item> -->
