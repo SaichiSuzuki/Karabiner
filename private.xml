@@ -111,13 +111,6 @@
         <autogen>--KeyToKey-- KeyCode::JIS_BRACKET_LEFT, VK_CONTROL, KeyCode::JIS_BRACKET_LEFT, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
     </item>
 
-    <item>
-        <name>Skk with EISUU (escape, Ctrl_L + Space, Ctrl_L + bracket+left)</name>
-        <identifier>private.vim_alfred_with_skk</identifier>
-        <not>ALACRITTY,ALFRED</not>
-        <autogen>--KeyToKey-- KeyCode::SPACE, ModifierFlag::CONTROL_L | ModifierFlag::NONE, KeyCode::SPACE, ModifierFlag::CONTROL_L, KeyCode::N, ModifierFlag::CONTROL_L, KeyCode::L</autogen>
-    </item>
-
 <!-- Cmd seal -->
     <item>
         <name>cmd seal</name>
@@ -380,7 +373,7 @@
        <!-- <autogen>__KeyToKey__ KeyCode::SPACE, KeyCode::X, ModifierFlag::CONTROL_L, KeyCode::U, ModifierFlag::CONTROL_L</autogen> -->
    </item>
 
-<!-- ;キーで矢印、DELETE、RETURNモード  -->
+<!-- ;モード  -->
    <item>
        <name>Custom Vi mode (;+)</name>
        <identifier>remap.custom_vi_mode_semicolon</identifier>
@@ -777,12 +770,25 @@
        <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::EQUAL</autogen>
    </item>
 
+   <!-- スティッキーモードフラグ用意 -->
+   <item hidden="true">
+        <identifier vk_config="true">notsave.knu_directinput</identifier>
+   </item>
+
    <item>
        <name>Sticky Shift</name>
        <appendix>Use semicolon to Sticky Shift_L</appendix>
        <identifier>private.semicolon_to_sticky_shift_l</identifier>
-       <inputmode_only>JAPANESE</inputmode_only>
+       <config_only>notsave.knu_directinput</config_only>
        <autogen>--KeyToKey-- KeyCode::SEMICOLON, KeyCode::VK_STICKY_SHIFT_L</autogen>
+   </item>
+
+   <item>
+       <name>Sticky Shift_flag</name>
+       <appendix>Use semicolon to Sticky Shift_L_Flag</appendix>
+       <identifier>private.semicolon_to_sticky_shift_l_flag</identifier>
+       <autogen>--KeyToKey-- KeyCode::L, KeyCode::L, KeyCode::VK_CONFIG_FORCE_OFF_notsave_knu_directinput</autogen>
+       <autogen>--KeyToKey-- KeyCode::J, ModifierFlag::CONTROL_L, KeyCode::J, ModifierFlag::CONTROL_L, KeyCode::VK_CONFIG_FORCE_ON_notsave_knu_directinput</autogen>
    </item>
 
  <!-- vk open url def -->
