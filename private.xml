@@ -257,6 +257,7 @@
        <autogen>__KeyToKey__ KeyCode::N, KeyCode::N, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
        <autogen>__KeyToKey__ KeyCode::K, KeyCode::K, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
        <autogen>__KeyToKey__ KeyCode::M, KeyCode::M, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
+       <autogen>__KeyToKey__ KeyCode::Q, KeyCode::Q, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L</autogen>
 
        <autogen>__KeyToKey__ KeyCode::1, KeyCode::V, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L, KeyCode::1, ModifierFlag::COMMAND_L</autogen>
        <autogen>__KeyToKey__ KeyCode::2, KeyCode::V, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L, KeyCode::2, ModifierFlag::COMMAND_L</autogen>
@@ -676,6 +677,10 @@
        <autogen>--KeyToKey-- KeyCode::COMMAND_R, KeyCode::EQUAL, ModifierFlag::CONTROL_L</autogen>
        <!-- unity find -->
        <autogen>__KeyToKey__ KeyCode::F, KeyCode::P, ModifierFlag::SHIFT_L, KeyCode::F, ModifierFlag::COMMAND_L</autogen>
+       <!-- <autogen>__KeyToKey__ KeyCode::8, KeyCode::B, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L, KeyCode::SPACE, ModifierFlag::CONTROL_L, KeyCode::V, ModifierFlag::COMMAND_L, KeyCode::A, ModifierFlag::CONTROL_L, -->
+<!-- KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT,  -->
+<!-- KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, KeyCode::CURSOR_RIGHT, KeyCode::SLASH, KeyCode::J, KeyCode::A, KeyCode::RETURN -->
+       </autogen>
    </item>
 
 <!-- Spaceキー -->
